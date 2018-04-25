@@ -1,0 +1,29 @@
+//- VARIABLE
+//- ==========
+-
+  var dropdownLocationArr = [
+    "Тула",
+    "Архангельск",
+    "Белгород"
+  ];
+//- ==========
+
+
+.dropdown
+  a(href="#" class="dropdown__button" title="" dropdown-choose)
+    i.icon-marker
+    span.dropdown__button-name!= "Тула"
+    i.icon-corner
+
+  .dropdown__menu
+    -for(var i = 0, len = dropdownLocationArr.length; i < len; i++)
+      a(
+        href="#"
+        title=""
+        dropdown-btn
+        class!= (i === 0) ? "dropdown__menu-button is-active":"dropdown__menu-button"
+      )
+        span.icon-wrap
+          i.icon-marker
+          i.icon-marker--hover
+        span(dropdown-name)!= dropdownLocationArr[i]

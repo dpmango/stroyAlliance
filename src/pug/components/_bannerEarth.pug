@@ -1,0 +1,45 @@
+// BANNER :: START
+
+
+//- VARIABLE
+//- ==========
+-
+  var sliderLocationArr = [
+    "<span>Петровский</span> <span>квартал</span>",
+    "<span>Поселок</span> <span>Мясново</span>",
+    "<span>Поселок</span> <span>Горелки</span>",
+    "<span>Поселок</span> <span>Плеханово</span>"
+  ];
+//- ==========
+//- MIXIN
+//- ==========
+mixin swapInfoEarth()
+  div(class="banner__swap banner__swap--earth")
+    div(swap-earth-js)
+      -for(var i = 0; i < 5; i++)
+        div(
+          class="banner__swap-content"
+        )
+          p.banner__swap-title!= "Земельный участок"
+          .banner__swap-wrap
+            p!= "от <span>500м<sup>2</sup></span>"
+            p!= "от <span>20Га</span>"
+          a(href="#" class="banner__swap-btn" title="")!= "ПОДРОБНЕЕ"
+//- ==========
+
+
+.banner
+  .banner__gradient
+
+  +carouselBg("earth", "carousel-earth-js", "earth")
+
+  .container.container--slider
+    +sliderLocation("earth", "slider-earth-js", sliderLocationArr)
+
+  .container.container--swap
+    +swapInfoEarth()
+
+  include ../macros/_mouse
+
+
+// BANNER :: END

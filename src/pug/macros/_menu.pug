@@ -1,0 +1,16 @@
+//- VARIABLE
+//- ==========
+-
+  var headerMenuArr = [
+  "Инвесторам",
+  "Ипотека",
+  "Контакты",
+  "О компании"
+  ];
+//- ==========
+
+
+ul.menu
+  -for(var i = 0, len = headerMenuArr.length; i < len; i++)
+    li.menu__item
+      a(href="#" class="menu__link" title="")!= headerMenuArr[i]

@@ -1,0 +1,313 @@
+// BANNER
+// ===============
+.banner
+  position: relative
+  +rmin($mobile-s)
+    min-height: 800px
+  +rmin($tablet)
+    min-height: 900px
+
+  &--inner
+    +rmin($mobile-s)
+      min-height: 655px
+    +rmin($tablet)
+      min-height: 885px
+
+    .container.container--slider
+      +rmin($mobile-s)
+        margin-top: 130px
+      +rmin($tablet)
+        margin-top: 270px
+
+
+  &__gradient
+    z-index: 0
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 250px
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%)
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%)
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=0 )
+
+
+  .container
+    &--slider
+      +rmin($mobile-s)
+        margin-top: 130px
+      +rmin($tablet)
+        margin-top: 250px
+
+    &--swap
+      +rmin($mobile-s)
+        margin-top: 87px
+      +rmin($tablet)
+        margin-top: 107px
+
+
+  &__carousel
+    z-index: 0
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+    &--blur,
+    &--normal
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+
+    &--blur
+      height: 100%
+      .banner__carousel-image
+        filter: url(#svg-blur)
+
+    &--normal
+      +rmin($mobile-s)
+        height: calc(100% - 150px)
+      +rmin($tablet)
+        height: calc(100% - 105px)
+
+    .slick-slider,
+    .slick-list,
+    .slick-track
+      height: 100%
+
+    &-image
+      width: 100%
+      height: 100%
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+
+
+  &__slider
+    width: 90%
+    margin-left: auto
+    margin-right: auto
+    color: $colorWhite
+
+    &-badge
+      display: none
+      margin-bottom: 15px
+      margin-left: auto
+      margin-right: auto
+      border-radius: 2em
+      padding: 8px 12px
+      background-color: $colorVioletBlue
+      font-size: 10px
+      font-weight: bold
+      .slick-center &,
+      .slick-active &
+        display: table
+
+    &-name
+      text-shadow: 0 9px 90px rgba(0, 0, 0, 0.9)
+
+      .slick-center &,
+      .slick-active &
+        font-weight: 800
+        +rmin($mobile-s)
+          font-size: 35px
+        +rmin($mobile)
+          font-size: 50px
+        +rmin($tablet)
+          font-size: 55px
+        +rmin($desktop)
+          font-size: 65px
+
+        > span
+          display: block
+          line-height: 1
+
+      .banner__slider--quarter &,
+      .banner__slider--house &,
+      .banner__slider--flat &
+        font-weight: 800
+        +rmin($mobile-s)
+          font-size: 35px
+        +rmin($mobile)
+          font-size: 50px
+        +rmin($tablet)
+          font-size: 55px
+        +rmin($desktop)
+          font-size: 69px
+
+    &-info
+      display: none
+      margin-top: 8px
+      text-shadow: 0 9px 90px rgba(0, 0, 0, 0.9)
+      font-size: 20px
+      .banner__slider--quarter &,
+      .banner__slider--flat &
+        display: block
+      .slick-center &,
+      .slick-active &
+        display: block
+
+    .slick
+      &-btn
+        cursor: pointer
+        position: absolute
+        top: 0
+        height: 100%
+        background-color: transparent
+        border: none
+
+        &.slick-prev
+          left: -5%
+        &.slick-next
+          right: -5%
+
+      &-slider
+        display: flex
+        align-items: center
+        min-height: 250px
+
+      &-track
+        display: flex
+        align-items: center
+
+      &-slide
+        text-align: center
+        font-weight: 500
+        margin-right: 5px
+        margin-left: 5px
+        +rmin($mobile-s)
+          font-size: 35px
+        +rmin($mobile)
+          font-size: 50px
+        +rmin($tablet)
+          font-size: 55px
+        +rmin($desktop)
+          font-size: 16px
+
+
+      &-center
+        width: 470px !important
+
+  &__swap
+
+    &-content
+      color: $colorWhite
+      text-align: center
+
+    &-title
+      margin-bottom: 20px
+      text-shadow: 0 0 13px rgba(0, 0, 0, 0.9)
+      font-size: 24px
+      font-weight: bold
+
+    &-wrap
+      display: flex
+      align-items: center
+      justify-content: space-between
+      max-width: 570px
+      margin-left: auto
+      margin-right: auto
+      font-size: 20px
+      font-weight: 500
+      +rmin($mobile-s)
+        display: block
+      +rmin($tablet)
+        display: flex
+
+      .banner__swap--storerooms &
+        max-width: 370px
+
+      .banner__swap--earth &
+        max-width: 270px
+
+      .banner__swap--parking &
+        max-width: 350px
+
+      &--left,
+      &--right
+        display: flex
+        justify-content: center
+
+
+      p
+        text-shadow: 0 0 13px rgba(0, 0, 0, 0.9)
+
+        .banner__swap--commercial &
+          &:first-child
+            position: relative
+            display: flex
+            align-items: center
+            margin-right: 30px
+
+            &:before
+              content: ""
+              position: absolute
+              right: -15px
+              top: 0
+              width: 2px
+              height: 100%
+              background-color: $colorWhite
+
+          &:last-child
+            text-align: left
+            span
+              display: block
+
+      span
+        color: $colorGold
+        font-weight: bold
+
+    &-btn
+      display: table
+      height: 45px
+      line-height: 45px
+      margin-top: 40px
+      margin-left: auto
+      margin-right: auto
+      padding-left: 25px
+      padding-right: 25px
+      border-radius: 2em
+      background-color: $colorGold
+      color: $colorBlack
+      font-size: 15px
+      font-weight: 500
+
+    .slick
+      &-dots
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        left: 0
+        bottom: -50px
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+
+        li
+          display: flex
+          align-items: center
+          justify-content: center
+          cursor: pointer
+          width: 30px
+          height: 10px
+          margin:
+            left: 7.5px
+            right: 7.5px
+
+          span
+            display: block
+            width: 100%
+            height: 1px
+            background-color: rgba($colorWhite, 0.5)
+            border-top: 1px solid transparent
+            +transition(background-color, border-top)
+
+          &.slick-active
+            span
+              background-color: $colorWhite
+              border-top: 1px solid $colorWhite
+              +transition(background-color, border-top)

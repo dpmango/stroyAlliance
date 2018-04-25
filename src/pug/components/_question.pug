@@ -1,0 +1,33 @@
+// QUESTION :: START
+
+
+//- VARIABLE
+//- ==========
+
+//- ==========
+//- MIXIN
+//- ==========
+
+//- ==========
+
+
+.question
+  .container
+
+    h3.main__title!= "Остались вопросы?"
+
+    form(class="question__form" question-form-js)
+
+      .form__field
+        input(type="name" name="name" class="form__input question__form-input" placeholder="Ваше имя")
+
+      .form__field
+        input(type="tel" name="phone" class="form__input question__form-input")
+
+      .form__field
+        textarea(class="form__message question__form-message" name="message" placeholder="Сообщение")
+
+      button(type="submit" class="form__button question__form-btn")!= "ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"
+
+
+// QUESTION :: END

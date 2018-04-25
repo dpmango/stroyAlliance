@@ -1,0 +1,7 @@
+<svg id="Layout" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 48">
+    <defs>
+        <style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px;}.cls-2{fill:#fff;}</style>
+    </defs>
+    <path fill="none" stroke="#fff" class="cls-1" d="M649.11,375.62c-.51-4-2.94-9.22-12.5-9.22s-12,5.24-12.5,9.22a106.86,106.86,0,0,0-1,13.78,91.69,91.69,0,0,0,1,13.78c.36,2.88,2.94,9.22,12.5,9.22s12.14-6.34,12.5-9.22a91.69,91.69,0,0,0,1-13.78A106.86,106.86,0,0,0,649.11,375.62Z" transform="translate(-622.11 -365.4)"/>
+    <path fill="#fff" class="cls-2" d="M643.52,388.93l-6.91,6.92-6.91-6.92a1.24,1.24,0,0,1,1.76-1.76l5.15,5.14,5.15-5.14a1.24,1.24,0,0,1,1.76,1.76Z" transform="translate(-622.11 -365.4)"/>
+</svg>

@@ -1,0 +1,40 @@
+// BUY :: START
+
+
+//- VARIABLE
+//- ==========
+
+//- ==========
+//- MIXIN
+//- ==========
+
+//- ==========
+
+
+#buy.buy
+
+  h3.main__title!= "Где купить?"
+
+  .buy__row
+
+    .buy__block
+      p.buy__block-title!= "Офисы продаж:"
+      a(href="#" class="buy__block-location" title="" location-js)
+        .icon-wrap
+          i.icon.icon-marker-black
+        != "Тула, ул. Тургеневская 7а (вход с улицы)"
+      a(href="#" class="buy__block-location is-active" title="" location-js)
+        .icon-wrap
+          i.icon.icon-marker-black
+        != "Тула, мкрн Петровский квартал,</br>ул. К. Паустовского, д. 8, оф. 3"
+
+      p.buy__block-title!= "Телефон отдела продаж:"
+      a(href="tel:+74872521034" class="buy__block-phone" title="")!= "+7 (4872) 52-10-34"
+
+      p.buy__block-title!= "Email:"
+      a(href="mailto:pk@petrkvartal.ru" class="buy__block-email" title="")!= "pk@petrkvartal.ru"
+
+    #map-buy.buy__maps
+
+
+// BUY :: END

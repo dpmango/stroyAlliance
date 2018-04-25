@@ -1,0 +1,90 @@
+// HEADER
+// ===============
+.header
+  z-index: 1
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  padding-top: 15px
+
+
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 20px
+
+
+  &__container
+    display: flex
+    align-items: center
+
+
+  &_logo
+    &--tab
+      height: 30px
+
+
+  &__row
+    &-0
+      width: 300px
+      +rmin($mobile-s)
+        width: auto
+        padding-left: 0
+        padding-right: 30px
+      +rmin($desktop)
+        padding-right: 30px
+        padding-left: 20px
+      +rmin($wide)
+        width: 300px
+
+      img
+        margin-top: 6px
+        +rmin($mobile-s)
+          height: 30px
+          margin-top: 0
+        +rmin($desktop)
+          height: auto
+          margin-top: 6px
+
+
+    &-3
+      width: 180px
+      text-align: right
+      +rmin($mobile-s)
+        display: flex
+        width: auto
+        align-items: center
+      +rmin($tablet)
+        display: block
+        width: auto
+        padding-left: 15px
+      +rmin($desktop)
+        width: 180px
+
+
+  &__phone
+    position: relative
+    top: -5px
+    color: $colorWhite
+    font-weight: 500
+    +rmin($mobile-s)
+      top: 0
+      font-size: 12px
+    +rmin($mobile)
+      font-size: 20px
+    +rmin($tablet)
+      top: -5px
+      font-size: 16px
+    +rmin($desktop)
+      font-size: 20px
+
+    &--tab
+      +r($mobile-max)
+        display: block
+        text-align: center
+        font-size: 30px
+        color: $colorDimGray
+        padding-top: 45px
+        padding-bottom: 45px

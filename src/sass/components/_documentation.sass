@@ -1,0 +1,80 @@
+// DOCUMENTATION
+// ===============
+.documentation
+  padding-top: 75px
+  padding-bottom: 45px
+
+
+  .main__title
+    margin-bottom: 45px
+
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+
+    &-item
+      margin-bottom: 30px
+      padding-right: 30px
+      +rmin($mobile-s)
+        width: calc(100% / 1)
+      +rmin($mobile)
+        width: calc(100% / 2)
+      +rmin($desktop)
+        width: calc(100% / 3)
+      +rmin($wide)
+        width: calc(100% / 4)
+
+      &:hover
+        a
+          text-decoration: underline
+          +transition(text-decoration)
+        i
+          opacity: 0.75
+          +transition(opacity)
+        p
+          text-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+          +transition(text-shadow)
+
+
+    &-btn
+      display: flex
+
+      a
+        +transition(text-decoration)
+
+      div
+        width: 32px
+        padding-right: 10px
+
+        i
+          display: block
+          +transition(opacity)
+
+        
+      p
+        font-size: 14px
+        color: $colorNero
+        +transition(text-shadow)
+
+
+  &__button
+    display: table
+    margin-top: 45px
+    margin-left: auto
+    margin-right: auto
+    min-width: 190px
+    height: 45px
+    line-height: 45px
+    border-radius: 2em
+    border: 2px solid $colorGold
+    background-color: transparent
+    text-align: center
+    font-size: 15px
+    font-weight: 500
+    +transition(background-color)
+
+    &:hover
+      background-color: $colorGold
+      +transition(background-color)
+

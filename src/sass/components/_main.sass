@@ -1,0 +1,192 @@
+// MAIN
+// ===============
+.main
+  min-height: 420px
+  padding-top: 52px
+  padding-bottom: 47px
+
+
+  &__wrapper
+    h1,
+    > p
+      text-align: center
+
+    h1
+      margin-bottom: 15px
+      font-weight: 800
+      +rmin($mobile-s)
+        font-size: 30px
+      +rmin($mobile)
+        font-size: 40px
+
+    > p
+      width: 100%
+      margin-bottom: 53px
+      margin-left: auto
+      margin-right: auto
+      color: $colorDimGray
+      line-height: 1.45
+      +rmin($wide)
+        width: 92%
+
+
+  &__container
+    display: flex
+    +rmin($mobile-s)
+      flex-direction: column
+    +rmin($mobile)
+      flex-direction: row
+      flex-wrap: wrap
+    +rmin($desktop)
+      flex-wrap: nowrap
+
+
+  &__row
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    max-width: 270px
+    +rmin($mobile-s)
+      width: 100%
+      max-width: 100%
+    +rmin($mobile)
+      width: 50%
+      max-width: 50%
+    +rmin($desktop)
+      width: 100%
+      max-width: 270px
+
+    h4
+      font-size: 0
+      line-height: 1
+
+      span
+        display: inline-block
+        vertical-align: middle
+        margin-right: -3px
+
+    &-0,
+    &-1,
+    &-2,
+    &-3
+      h4
+        margin-bottom: 19px
+
+        span
+          font-weight: 800
+          &:first-child
+            font-size: 60px
+            +rmin($desktop)
+              font-size: 50px
+            +rmin($wide)
+              font-size: 60px
+
+    &-1,
+    &-2
+      margin-left: 15px
+      margin-right: 15px
+      +rmin($mobile-s)
+        margin-left: 0
+        margin-right: 0
+        margin-bottom: 30px
+      +rmin($mobile)
+        margin-bottom: 0
+      +rmin($desktop)
+        margin-left: 15px
+        margin-right: 15px
+
+      h4
+        span
+          &:first-child
+            position: relative
+            left: 10px
+          &:nth-child(2)
+            transform: rotate(-90deg)
+            font-size: 21px
+          &:last-child
+            position: relative
+            right: 8px
+            font-size: 60px
+            +rmin($desktop)
+              font-size: 50px
+            +rmin($wide)
+              font-size: 60px
+            sup
+              font-size: 35px
+              +rmin($desktop)
+                font-size: 25px
+              +rmin($wide)
+                font-size: 35px
+
+    &-0
+      margin-right: 15px
+      +rmin($mobile-s)
+        margin-right: 0
+        margin-bottom: 30px
+      +rmin($mobile)
+        margin-bottom: 15px
+      +rmin($desktop)
+        margin-right: 15px
+
+      h4
+        color: $colorNavyBlue
+
+        span
+          &:first-child
+            position: relative
+            left: 10px
+          &:last-child
+            transform: rotate(-90deg)
+            font-size: 25px
+            +rmin($desktop)
+              font-size: 21px
+            +rmin($wide)
+              font-size: 25px
+
+    &-1
+      +rmin($mobile-s)
+        margin-bottom: 30px
+      +rmin($mobile)
+        margin-bottom: 15px
+      +rmin($tablet)
+        margin-bottom: 0
+
+      h4
+        color: $colorDarkTangerine
+
+    &-2
+      h4
+        color: $colorFern
+
+    &-3
+      margin-left: 15px
+      +rmin($mobile-s)
+        margin-left: 0
+      +rmin($desktop)
+        margin-left: 15px
+
+      h4
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 0
+        color: $colorCardinal
+        +rmin($desktop)
+          margin-bottom: 0
+        +rmin($wide)
+          margin-bottom: 8px
+
+
+        span
+          &:last-child
+            position: relative
+            top: -10px
+            font-size: 21px
+
+    p
+      text-align: center
+      color: $colorMatterhorn
+      font:
+        size: 15px
+        weight: 500

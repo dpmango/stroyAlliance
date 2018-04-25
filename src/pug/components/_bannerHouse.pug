@@ -1,0 +1,31 @@
+// BANNER :: START
+
+
+//- VARIABLE
+//- ==========
+-
+  var sliderLocationArr = [
+    "Петровский Квартал",
+    "Петровский Квартал",
+    "Петровский Квартал",
+    "Петровский Квартал"
+  ];
+//- ==========
+//- MIXIN
+//- ==========
+
+//- ==========
+
+
+.banner.banner--inner
+  .banner__gradient
+
+  +carouselBlurBg("houseBlur", "carousel-houseBlue-js", "house")
+
+  .container.container--slider
+    +sliderInnerLocation("house", "slider-house-js", sliderLocationArr)
+
+  include ../macros/_submenu
+
+
+// BANNER :: END

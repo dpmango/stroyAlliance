@@ -1,0 +1,49 @@
+// DOCUMENTATION :: START
+
+
+//- VARIABLE
+//- ==========
+-
+  var documentationNameArr = [
+    "Проектная декларация - 8 этап",
+    "Проектная декларация - 11/2 этап",
+    "Изменения в проектную декларацию от 21.02.2017",
+    "Проектная декларация - 11/2 этап",
+    "Проектная декларация - 11/2 этап",
+    "Изменения в проектную декларацию от 21.02.2017",
+    "Проектная декларация - 8 этап",
+    "Проектная декларация - 11/2 этап"
+  ];
+//- ==========
+//- MIXIN
+//- ==========
+
+//- ==========
+
+
+.documentation
+  .container
+
+    h3.main__title!= "Документация"
+
+    .documentation__row
+      ul.documentation__list
+        -for(var i = 0, len = documentationNameArr.length; i < len; i++)
+          li.documentation__list-item
+            a(
+              href="#"
+              class="documentation__list-btn"
+              title=""
+            )
+              div
+                i.icon-doc
+              p!= documentationNameArr[i]
+
+      a(
+        href="#"
+        class="documentation__button"
+        title=""
+      )!= "ВСЕ ДОКУМЕНТЫ"
+
+
+// DOCUMENTATION :: END

@@ -1,0 +1,31 @@
+// BANNER :: START
+
+
+//- VARIABLE
+//- ==========
+-
+  var sliderLocationArr = [
+    "ЖК на ул. Макаренко",
+    "ЖК на ул. Макаренко",
+    "ЖК на ул. Макаренко",
+    "ЖК на ул. Макаренко"
+  ];
+//- ==========
+//- MIXIN
+//- ==========
+
+//- ==========
+
+
+.banner.banner--inner
+  .banner__gradient
+
+  +carouselBlurBg("flatBlur", "carousel-flatBlue-js", "flat")
+
+  .container.container--slider
+    +sliderInnerLocation("flat", "slider-flat-js", sliderLocationArr)
+
+  include ../macros/_submenu
+
+
+// BANNER :: END

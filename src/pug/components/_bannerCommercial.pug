@@ -1,0 +1,53 @@
+// BANNER :: START
+
+
+//- VARIABLE
+//- ==========
+-
+  var sliderLocationArr = [
+    "<span>ЖК</span> <span>«Гринхаус»</span>",
+    "<span>Петровский</span> <span>квартал</span>",
+    "<span>ЖК на</span> <span>ул. Макаренко</span>",
+    "<span>Luxury</span> <span>Village</span>"
+  ];
+//- ==========
+//- MIXIN
+//- ==========
+mixin swapInfoCommercial()
+  div(class="banner__swap banner__swap--commercial")
+    div(swap-commercial-js)
+      -for(var i = 0; i < 5; i++)
+        div(
+        class="banner__swap-content"
+        )
+          p.banner__swap-title!= "Коммерческие площади"
+          .banner__swap-wrap
+            .banner__swap-wrap--left
+              p!= "Продажа"
+              p
+                span!= "от 5 500 000₽"
+                span!= "до 23 500 000₽"
+            .banner__swap-wrap--right
+              p!= "Аренда"
+              p
+                span!= "от 1000₽ за м2"
+                span!= "до 10 000₽ за м2"
+          a(href="#" class="banner__swap-btn" title="")!= "ПОДРОБНЕЕ"
+//- ==========
+
+
+.banner
+  .banner__gradient
+
+  +carouselBg("commercial", "carousel-commercial-js", "commercial")
+
+  .container.container--slider
+    +sliderLocation("commercial", "slider-commercial-js", sliderLocationArr)
+
+  .container.container--swap
+    +swapInfoCommercial()
+
+  include ../macros/_mouse
+
+
+// BANNER :: END

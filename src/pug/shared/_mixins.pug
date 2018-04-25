@@ -1,0 +1,138 @@
+- var svgSprite = 'img/sprite.svg'
+
+mixin icon(name, modClass)
+  if modClass == undefined
+    - var modClass = ''
+  else
+    - var modClass = ' ' + modClass
+  svg(class="ico " + name + modClass)
+    use(xlink:href= svgSprite + '#' + name)
+
+
+//- TAB
+//- ========================================
+mixin tabComponent(countForActive)
+  .tab
+    .tab__header
+      .container
+        .tab__header-wrap
+          .tab__header--left
+            img(
+              src="./img/img-logo__tab.png" srcset="./img/img-logo__tab@2x.png 2x"
+              class="header_logo header_logo--tab"
+              alt=""
+              title=""
+            )
+
+
+          .tab__header--right
+            include ../macros/_dropdown
+
+            .header__hamburger
+              .hamburger.hamburger--squeeze.is-active(js-hamburger-close)
+                .hamburger-box
+                  .hamburger-inner
+
+    ul.tab__list
+      -for(var i = 0, len = tabMenuArr.length; i < len; i++)
+        li.tab__item(
+          class!= (countForActive === i) ? "is-active tab__item-" + i:"tab__item-" + i
+          data-tab= tabMenuAttr[i]
+          tab-js
+        )
+          a(
+            href!= tabHrefAttr[i] + ".html"
+            class!="tab__link tab__link--" + tabMenuColorArr[i]
+            title=""
+          )!= tabMenuArr[i]
+
+    .tab__footer
+      a(href="tel:4872702524" class="header__phone header__phone--tab" title="")!= "(4872) 70-25-24"
+
+      include ../macros/_menu
+
+//- BANNER BG CAROUSEL
+//- ========================================
+mixin carouselBg(className, jsName, imageName)
+  div(class="banner__carousel banner__carousel--" + className)
+    div(data-js!= jsName)
+      -for(var i = 0; i < 5; i++)
+        div(
+          class="banner__carousel-image"
+          style="background-image: url('./img/img-bg__" + imageName + ".jpg')"
+        )
+
+
+//- BANNER BG CAROUSEL + BLUR
+//- ========================================
+mixin carouselBlurBg(className, jsName, imageName)
+  div(class="banner__carousel banner__carousel--" + className)
+    div(data-js!= jsName)
+      -for(var i = 0; i < 5; i++)
+        div.banner__carousel-wrap
+          div.banner__carousel--blur
+            div(
+              class="banner__carousel-image"
+              style="background-image: url('./img/img-bg__" + imageName + ".jpg')"
+            )
+          div.banner__carousel--normal
+            div(
+              class="banner__carousel-image"
+              style="background-image: url('./img/img-bg__" + imageName + ".jpg')"
+            )
+
+
+//- BANNER SLIDER
+//- ========================================
+mixin sliderLocation(className, jsName, arrLocation)
+  div(class="banner__slider banner__slider--" + className)
+    div(data-js!= jsName)
+      -for(var i = 0, len = arrLocation.length; i < len; i++)
+        div(class="slider__banner-content" style="width: 180px;")
+          p.banner__slider-badge!= "НОВЫЕ КОРПУСА С ОТДЕЛКОЙ"
+          p.banner__slider-name!= arrLocation[i]
+          p.banner__slider-info!= "г. Тула, ул. Фрунзе, д. 20"
+
+
+//- BANNER INNER SLIDER
+//- ========================================
+mixin sliderInnerLocation(className, jsName, arrLocation)
+  div(class="banner__slider banner__slider--" + className)
+    div(data-js!= jsName)
+      -for(var i = 0, len = arrLocation.length; i < len; i++)
+        div(class="slider__banner-content")
+          p.banner__slider-name!= arrLocation[i]
+          p.banner__slider-info!= "г. Тула, ул. Фрунзе, д. 20"
+
+
+//- SELECT
+//- ========================================
+mixin select(arr)
+  .select
+    .select__wrap
+      span.select__value
+      select(name="select")
+        -for (var i = 0, len = arr.length; i < len; i++)
+          option!= arr[i]
+      i.select__icon.icon-arrow
+
+
+//- RADIO
+//- ========================================
+mixin radioBtn(idName, text)
+  div(class="radio", radio-js)
+    input(type="radio", id!=idName, name!="radio")
+    label(for!= idName)
+      span!= text
+
+
+//- CHECKBOX
+//- ========================================
+mixin checkboxBtn(className, text)
+  div(class="checkbox " + className)
+    input(type="checkbox" name="checkbox" id="inputCheckbox")
+    label(for="inputCheckbox")
+      .checkbox__icon
+        span
+      .checkbox__name
+        p!= text

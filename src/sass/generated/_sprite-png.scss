@@ -1,0 +1,189 @@
+$sprite: (
+	arrow: (
+		offset-x: 0px,
+		offset-y: -78px,
+		width: 16px,
+		height: 9px,
+		total-width: 90px,
+		total-height: 87px,
+		image: '../img/sprite.png'
+	),
+	corner: (
+		offset-x: -54px,
+		offset-y: -55px,
+		width: 11px,
+		height: 7px,
+		total-width: 90px,
+		total-height: 87px,
+		image: '../img/sprite.png'
+	),
+	doc: (
+		offset-x: 0px,
+		offset-y: 0px,
+		width: 22px,
+		height: 28px,
+		total-width: 90px,
+		total-height: 87px,
+		image: '../img/sprite.png'
+	),
+	done: (
+		offset-x: -54px,
+		offset-y: 0px,
+		width: 15px,
+		height: 15px,
+		total-width: 90px,
+		total-height: 87px,
+		image: '../img/sprite.png'
+	),
+	marker--hover: (
+		offset-x: -79px,
+		offset-y: -47px,
+		width: 10px,
+		height: 13px,
+		total-width: 90px,
+		total-height: 87px,
+		image: '../img/sprite.png'
+	),
+	marker-active: (
+		offset-x: -32px,
+		offset-y: -40px,
+		width: 11px,
+		height: 14px,
+		total-width: 90px,
+		total-height: 87px,
+		image: '../img/sprite.png'
+	),
+	marker-black: (
+		offset-x: -79px,
+		offset-y: 0px,
+		width: 11px,
+		height: 14px,
+		total-width: 90px,
+		total-height: 87px,
+		image: '../img/sprite.png'
+	),
+	marker: (
+		offset-x: -79px,
+		offset-y: -24px,
+		width: 10px,
+		height: 13px,
+		total-width: 90px,
+		total-height: 87px,
+		image: '../img/sprite.png'
+	),
+	next: (
+		offset-x: -32px,
+		offset-y: 0px,
+		width: 12px,
+		height: 30px,
+		total-width: 90px,
+		total-height: 87px,
+		image: '../img/sprite.png'
+	),
+	prev: (
+		offset-x: 0px,
+		offset-y: -38px,
+		width: 12px,
+		height: 30px,
+		total-width: 90px,
+		total-height: 87px,
+		image: '../img/sprite.png'
+	),
+	submenuArrow: (
+		offset-x: -54px,
+		offset-y: -25px,
+		width: 9px,
+		height: 20px,
+		total-width: 90px,
+		total-height: 87px,
+		image: '../img/sprite.png'
+	),
+);
+
+
+@mixin sprite-size($image) {
+	background-size: map-get(map-get($sprite, $image), 'total-width') map-get(map-get($sprite, $image), 'total-height');
+}
+
+@mixin sprite-width($image) {
+	width: map-get(map-get($sprite, $image), 'width');
+}
+
+@mixin sprite-height($image) {
+	height: map-get(map-get($sprite, $image), 'height');
+}
+
+@mixin sprite-position($image) {
+	background-position: map-get(map-get($sprite, $image), 'offset-x') map-get(map-get($sprite, $image), 'offset-y');
+}
+
+@mixin sprite-image($image) {
+	background-image: url(map-get(map-get($sprite, $image), 'image'));
+}
+
+@mixin sprite-image-retina($image) {
+	$image-path: map-get(map-get($sprite, $image), 'image');
+	$image-path-retina: str-slice($image-path, 1, str-index($image-path, '.png') - 1) + '@2x.png';
+
+	background-image: url($image-path-retina);
+}
+
+@mixin sprite($image, $size: true) {
+	@include sprite-image($image);
+	@include sprite-position($image);
+	background-repeat: no-repeat;
+
+	@if $size {
+		@include sprite-width($image);
+		@include sprite-height($image);
+	}
+
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (   min--moz-device-pixel-ratio: 2),
+		only screen and (     -o-min-device-pixel-ratio: 2/1),
+		only screen and (        min-device-pixel-ratio: 2),
+		only screen and (                min-resolution: 192dpi),
+		only screen and (                min-resolution: 2dppx) {
+
+		@include sprite-size($image);
+		@include sprite-image-retina($image);
+
+	}
+}
+
+
+
+	.icon-arrow {
+		@include sprite(arrow)
+	}
+	.icon-corner {
+		@include sprite(corner)
+	}
+	.icon-doc {
+		@include sprite(doc)
+	}
+	.icon-done {
+		@include sprite(done)
+	}
+	.icon-marker--hover {
+		@include sprite(marker--hover)
+	}
+	.icon-marker-active {
+		@include sprite(marker-active)
+	}
+	.icon-marker-black {
+		@include sprite(marker-black)
+	}
+	.icon-marker {
+		@include sprite(marker)
+	}
+	.icon-next {
+		@include sprite(next)
+	}
+	.icon-prev {
+		@include sprite(prev)
+	}
+	.icon-submenuArrow {
+		@include sprite(submenuArrow)
+	}

@@ -1,0 +1,40 @@
+// PROGRESS :: START
+
+
+//- VARIABLE
+//- ==========
+
+//- ==========
+//- MIXIN
+//- ==========
+
+//- ==========
+
+
+.progress
+
+  h3.main__title!= "Ход строительства"
+
+  svg(id="svg-filter")
+    filter(id="svg-blur-0")
+      feGaussianBlur(in="SourceGraphic" stdDeviation="8")
+
+  .progress__row
+    .progress__block.progress__block-0
+      div(style="background-image: url('./img/img-bg-1__progress.png');")
+
+    .progress__block.progress__block-1
+      div(style="background-image: url('./img/img-bg-1__progress.png');")
+      p!= "Ноябрь 2017г."
+    .progress__block.progress__block-2
+      div(style="background-image: url('./img/img-bg-2__progress.png');")
+      p!= "Декабрь 2017г."
+    .progress__block.progress__block-3
+      div(style="background-image: url('./img/img-bg-3__progress.png');")
+      p!= "Январь 2018г."
+    .progress__block.progress__block-4
+      div(style="background-image: url('./img/img-bg-1__progress.png');")
+
+
+
+// PROGRESS :: END

@@ -1,0 +1,167 @@
+// FOOTER
+// ===============
+.footer
+  min-height: 240px
+  padding-top: 45px
+  padding-bottom: 45px
+  background-color: $colorMatterhorn
+  color: $colorVeryLightGrey
+
+
+  &__wrapper
+    display: flex
+    +rmin($mobile-s)
+      flex-wrap: wrap
+    +rmin($tablet)
+      flex-wrap: nowrap
+
+
+  &__row
+    width: 100%
+    padding-right: 30px
+
+    h2
+      margin-bottom: 15px
+      color: $colorWhite
+      font:
+        size: 14px
+        weight: bold
+
+    &-0
+      +rmin($mobile-s)
+        order: 3
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: space-between
+        max-width: 100%
+        padding-right: 0
+      +rmin($mobile)
+        flex-direction: row
+        align-items: center
+      +rmin($tablet)
+        order: 0
+        display: block
+        max-width: 345px
+        padding-right: 30px
+
+      .footer__logo
+        +rmin($mobile)
+          margin-bottom: 0
+          margin-right: 30px
+        +rmin($tablet)
+          margin-bottom: 28px
+          margin-right: 0
+
+
+      p
+        margin-bottom: 11px
+        font-size: 10px
+        br
+          display: none
+        +rmin($desktop)
+          br
+            display: inline-block
+
+        &:last-child
+          margin-bottom: 0
+
+    &-1
+      +rmin($mobile-s)
+        order: 0
+        max-width: 50%
+        margin-bottom: 30px
+      +rmin($tablet)
+        order: 1
+        max-width: 300px
+        margin-bottom: 0
+
+    &-2
+      +rmin($mobile-s)
+        order: 1
+        max-width: 50%
+      +rmin($tablet)
+        order: 2
+        max-width: 110px
+        padding-right: 0
+      +rmin($desktop)
+        max-width: 200px
+        padding-right: 30px
+      +rmin($wide)
+        max-width: 240px
+
+    &-1,
+    &-2
+      h2
+        margin-bottom: 17px
+      a
+        display: block
+        margin-bottom: 12px
+        font-size: 12px
+        +transition(color)
+
+        &:last-child
+          margin-bottom: 0
+
+        &:hover
+          color: $colorWhite
+          +transition(color)
+
+    &-3
+      +rmin($mobile-s)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: space-between
+        order: 2
+        max-width: 100%
+        margin-bottom: 30px
+        padding-right: 0
+      +rmin($mobile)
+        flex-direction: row
+        align-items: center
+      +rmin($tablet)
+        display: block
+        order: 3
+        max-width: 250px
+        margin-bottom: 0
+        padding-right: 0
+      +rmin($desktop)
+        padding-right: 30px
+
+      > a
+        display: block
+        margin-bottom: 30px
+        font-size: 28px
+        +transition(color)
+        +rmin($mobile)
+          margin-bottom: 0
+        +rmin($tablet)
+          margin-bottom: 30px
+          font-size: 20px
+        +rmin($desktop)
+          font-size: 28px
+
+        &:hover
+          color: $colorWhite
+          +transition(color)
+
+      svg
+        width: 30px
+        height: 30px
+        margin-right: 15px
+        fill: $colorVeryLightGrey
+        +transition(fill)
+        +rmin($tablet)
+          margin-right: 10px
+        +rmin($desktop)
+          margin-right: 15px
+
+        &:hover
+          fill: $colorWhite
+          +transition(fill)
+
+
+  &__logo
+    display: block
+    margin-bottom: 28px

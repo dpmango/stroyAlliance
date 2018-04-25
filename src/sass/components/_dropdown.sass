@@ -1,0 +1,111 @@
+// DROPDOWN
+// ===============
+.dropdown
+  display: none
+  position: relative
+  top: -5px
+  +rmin($tablet)
+    display: block
+
+  .tab &
+    +r($mobile-max)
+      display: inline-block
+      top: 0
+
+
+  &__button
+    display: flex
+    align-items: center
+    justify-content: space-between
+    min-width: 90px
+    height: 30px
+    padding-left: 10px
+    padding-right: 10px
+    border: 1px solid $colorWhite
+    border-radius: 2em
+    background-color: transparent
+    color: $colorWhite
+    font:
+      size: 12px
+      weight: 500
+
+    .tab &
+      +r($mobile-max)
+        border-color: $colorVeryLightGrey
+        background-color: $colorVeryLightGrey
+
+    .dropdown__button-name
+      padding-left: 10px
+      padding-right: 10px
+
+
+  &__menu
+    display: none
+    overflow: hidden
+    z-index: 5
+    position: absolute
+    top: 0
+    right: 0
+    min-width: 140px
+    border-radius: 1em
+    background-color: rgba($colorMatterhorn, 0.75)
+    box-shadow: 0 11px 40px 0 rgba(0, 0, 0, 0.6)
+
+    &.is-show
+      display: block
+
+    &-button
+      display: flex
+      align-items: center
+      justify-content: space-between
+      height: 30px
+      padding-left: 10px
+      padding-right: 15px
+      color: $colorWhite
+      font:
+        size: 12px
+        weight: 500
+      +transition(background-color)
+
+      &.is-active
+        .icon
+          &-marker
+            opacity: 0
+            &--hover
+              opacity: 1
+
+        &:hover
+          .icon
+            &-marker
+              opacity: 1
+              &--hover
+                opacity: 0
+
+
+      &:hover
+        background-color: $colorIrisBlue
+        +transition(background-color)
+
+        .icon
+          &-marker
+            opacity: 1
+            +transition(opacity)
+            &--hover
+              opacity: 0
+              +transition(opacity)
+
+      .icon
+        &-wrap
+          display: block
+          position: relative
+          height: 30px
+        &-marker
+          opacity: 0.5
+          &--hover
+            opacity: 0
+
+      i
+        position: absolute
+        top: (30px - 13px) / 2
+        left: 0
+        +transition(opacity)

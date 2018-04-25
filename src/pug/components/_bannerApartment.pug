@@ -1,0 +1,45 @@
+// BANNER :: START
+
+
+//- VARIABLE
+//- ==========
+-
+  var sliderLocationArr = [
+    "<span>ЖК</span> <span>«Гринхаус»</span>",
+    "<span>Петровский</span> <span>квартал</span>",
+    "<span>ЖК на</span> <span>ул. Макаренко</span>",
+    "<span>Luxury</span> <span>Village</span>"
+  ];
+//- ==========
+//- MIXIN
+//- ==========
+mixin swapInfoApartment()
+  div(class="banner__swap banner__swap--apartment")
+    div(swap-apartment-js)
+      -for(var i = 0; i < 5; i++)
+        div(
+          class="banner__swap-content"
+        )
+          p.banner__swap-title!= "Квартиры"
+            .banner__swap-wrap
+              p!= "2 комн. <span>от 5 500 000₽</span>"
+              p!= "5 комн. <span>от 16 000 000₽</span>"
+          a(href="#" class="banner__swap-btn" title="")!= "ПОДОБРАТЬ КВАРТИРУ"
+//- ==========
+
+
+.banner
+  .banner__gradient
+
+  +carouselBg("apartment", "carousel-apartment-js", "apartment")
+
+  .container.container--slider
+    +sliderLocation("apartment", "slider-apartment-js", sliderLocationArr)
+
+  .container.container--swap
+    +swapInfoApartment()
+
+  include ../macros/_mouse
+
+
+// BANNER :: END

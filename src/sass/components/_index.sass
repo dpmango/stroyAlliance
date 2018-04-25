@@ -1,0 +1,244 @@
+// INDEX
+// ===============
+
+
+// MAIN TITLE
+// ===============
+.main__title
+  margin-bottom: 15px
+  text-align: center
+  font-weight: 800
+  +rmin($mobile-s)
+    font-size: 30px
+  +rmin($mobile)
+    font-size: 35px
+  +rmin($tablet)
+    font-size: 40px
+  +rmin($wide)
+    font-size: 50px
+
+
+// FORM COMPONENT
+// ===============
+.form
+  &__input,
+  &__message
+    border-radius: 2em
+    border: 1px solid rgba($colorVeryLightGrey, 0.5)
+    background-color: $colorWhite
+    color: $colorNero
+    font-size: 14px
+    font-family: 'TTNorms', Arial, sans-serif
+
+  &__input
+    width: 100%
+    height: 45px
+    padding-left: 20px
+    padding-right: 20px
+
+  &__message
+    width: 100%
+    height: 170px
+    resize: none
+    padding: 20px
+
+  &__button
+    cursor: pointer
+    width: 100%
+    max-width: 260px
+    height: 45px
+    line-height: 40px
+    padding-left: 15px
+    padding-right: 15px
+    border: 2px solid $colorGold
+    border-radius: 2em
+    background-color: $colorGold
+    font-size: 15px
+    font-weight: 500
+    +transition(background-color)
+    &:hover
+      background-color: transparent
+      +transition(background-color)
+
+
+// SELECT
+// ===============
+.select
+  cursor: pointer
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  min-width: 95px
+  height: 45px
+  padding-left: 20px
+  padding-right: 50px
+  border-radius: 2em
+  background-color: $colorSolitude
+
+  select
+    cursor: pointer
+    opacity: 0
+    z-index: 100
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    font-size: initial
+
+  &__value
+    +rmin($mobile-s)
+      font-size: 18px
+    +rmin($mobile)
+      font-size: 20px
+
+  &__icon
+    position: absolute
+    top: 50%
+    right: 15px
+    transform: translateY(-50%)
+
+
+// RADIO
+// ===============
+.radio
+  cursor: pointer
+  position: relative
+
+  input[type="radio"]
+    position: absolute
+    width: 0
+    height: 0
+    opacity: 0
+    border: none
+    margin: 0
+    padding: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    outline: none
+
+  label
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 45px
+    height: 45px
+    border-radius: 100%
+    background-color: $colorSolitude
+    +transition(background-color, color)
+
+
+    span
+      font-size: 20px
+
+  &.is-active
+    label
+      color: $colorWhite
+      background-color: $colorIrisBlue
+      +transition(background-color, color)
+
+
+// CHECKBOX
+// ===============
+.checkbox
+  position: relative
+  cursor: pointer
+
+  input[type="checkbox"]
+    position: absolute
+    width: 0
+    height: 0
+    opacity: 0
+    border: none
+    margin: 0
+    padding: 0
+    filter: alpha(opacity=0)
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    outline: none
+
+  label
+    cursor: pointer
+    display: flex
+    align-items: center
+    margin-bottom: 15px
+
+  &__icon
+    position: relative
+    width: 33px
+    margin-right: 12px
+
+    span
+      display: block
+      width: 100%
+      height: 15px
+      border-radius: 2em
+      background-color: $colorSolitude
+      &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 15px
+        height: 15px
+        border-radius: 100%
+        background-color: $colorDimGray
+        +transition(background-color, left)
+
+        .is-active &
+          left: calc(100% - 12px)
+
+        .is-active.checkbox--irisBlue &
+          background-color: $colorIrisBlue
+          +transition(background-color, left)
+        .is-active.checkbox--deepCerise &
+          background-color: $colorDeepCerise
+          +transition(background-color, left)
+        .is-active.checkbox--darkTangerine &
+          background-color: $colorDarkTangerine
+          +transition(background-color, left)
+        .is-active.checkbox--fern &
+          background-color: $colorFern
+          +transition(background-color, left)
+        .is-active.checkbox--violetBlue &
+          background-color: $colorVioletBlue
+          +transition(background-color, left)
+
+  &__name
+    font-size: 14px
+
+
+
+//
+//  ANIMATED
+//
+//.animated
+  //animation-duration: 1s
+  //animation-fill-mode: both
+
+
+//
+//  INFINITY
+//
+//.animated.infinite
+//  animation-iteration-count: infinite
+
+//
+//  BOUNCE
+//
+//@keyframes bounce
+    //0%,100%,20%,50%,60%
+    //    transform: translateY(0)
+    //
+    //40%,80%
+    //    transform: translateY(0)
+
+.bounce
+    //animation-name: bounce
+    //animation-direction: normal
+    //animation-duration: 2s
+    //animation-iteration-count: infinite

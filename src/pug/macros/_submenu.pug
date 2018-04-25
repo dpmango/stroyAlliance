@@ -1,0 +1,82 @@
+//- VARIABLE
+//- ==========
+-
+  var submenuQuarterArr = [
+    "ДРУГИЕ ОБЪЕКТЫ",
+    "Генплан",
+    "Описание объекта",
+    "Что рядом",
+    "Где купить"
+  ];
+  var submenuFlatArr = [
+    "ДРУГИЕ ДОМА",
+    "Выбрать квартиру",
+    "Описание объекта",
+    "Что рядом",
+    "Где купить"
+  ];
+  var submenuHouseArr = [
+    "НАЗАД К ПРОЕКТУ",
+    "Выбрать квартиру",
+    "Описание объекта",
+    "Где купить",
+    "ДРУГИЕ ДОМА"
+  ];
+  var submenuHrefQurterArr = [
+    "#",
+    "#masterplan",
+    "#about",
+    "#nearby",
+    "#buy"
+  ];
+  var submenuHrefFlarArr = [
+    "#",
+    "#choose",
+    "#about",
+    "#nearby",
+    "#buy"
+  ];
+  var submenuHrefHouseArr = [
+    "#",
+    "#choose",
+    "#about",
+    "#buy",
+    "#"
+  ];
+//- ==========
+//- MIXIN
+//- ==========
+mixin submenuLink(hrefArr, count, arr)
+  a.submenu__btn(
+    href!= hrefArr[count]
+    class!= (count === 1) ? "":""
+    title!=""
+    data-js!= (count > 0) ? "submenu-js":""
+  )!= arr[count]
+//- ==========
+
+
+.submenu
+  svg(id="svg-filter")
+    filter(id="svg-blur")
+      feGaussianBlur(in="SourceGraphic" stdDeviation="24")
+
+  .container
+    if(bodyClass === "flat")
+      ul.submenu__list.submenu__list--flat
+        -for(var i = 0, len = submenuFlatArr.length; i < len; i++)
+          li.submenu__item
+            +submenuLink(submenuHrefFlarArr, i, submenuFlatArr)
+
+    else if(bodyClass === "quarter")
+      ul.submenu__list.submenu__list--quarter
+        -for(var i = 0, len = submenuQuarterArr.length; i < len; i++)
+          li.submenu__item
+            +submenuLink(submenuHrefQurterArr, i, submenuQuarterArr)
+
+    else if(bodyClass === "house")
+      ul.submenu__list.submenu__list--house
+        -for(var i = 0, len = submenuHouseArr.length; i < len; i++)
+          li.submenu__item
+            +submenuLink(submenuHrefHouseArr, i, submenuHouseArr)
+

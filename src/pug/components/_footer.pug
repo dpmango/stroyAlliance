@@ -1,0 +1,80 @@
+// FOOTER :: START
+
+
+//- VARIABLE
+//- ==========
+-
+  var arrMenu1Title = "Недвижимость";
+  var arrMenu1 = [
+    "Квартиры",
+    "Коммерческая недвижимость",
+    "Земля",
+    "Кладовые",
+    "Машиноместа"
+  ];
+
+  var arrMenu2Title = "Компания";
+  var arrMenu2 = [
+    "Инвесторам",
+    "Ипотека",
+    "Контакты",
+    "О компании"
+  ];
+
+  var socialArr = [
+    "vk",
+    "fb",
+    "in",
+    "yt"
+  ];
+
+//- ==========
+//- MIXIN
+//- ==========
+
+mixin footerMenu(title, arrMenuItem)
+  h2!= title
+  -for(var i = 0, len = arrMenuItem.length; i < len; i++)
+    a(href="#" title="")!= arrMenuItem[i]
+
+//- ==========
+
+
+footer.footer
+  .container
+    .footer__wrapper
+
+      .footer__row.footer__row-0
+        img(
+          src="./img/img-logo__footer.png" srcset="./img/img-logo__footer@2x.png 2x"
+          class="footer__logo"
+          alt=""
+          title=""
+        )
+        .footer__row-wrap
+          p!= "Группа компаний Стройальянс"
+          p!= "Все права на публикуемые на сайте материалы</br>принадлежат группе компаний «Стройальянс»"
+          p!= "© 2002 - 2017"
+
+
+      .footer__row.footer__row-1
+        +footerMenu(arrMenu1Title, arrMenu1)
+
+
+      .footer__row.footer__row-2
+        +footerMenu(arrMenu2Title, arrMenu2)
+
+
+      .footer__row.footer__row-3
+        a(href="tel:4872702524" title="")!= "(4872) 70-25-24"
+
+        .footer__row-wrap
+          h2!= "Социальные сети"
+
+          .social
+            -for(var i = 0, len = socialArr.length; i < len; i++)
+              a(href="#" class="social__link" title="")
+                +icon("ico-" + socialArr[i])
+
+      
+// FOOTER :: END

@@ -1,0 +1,108 @@
+// ABOUT
+// ===============
+.about
+  padding-top: 30px
+  padding-bottom: 30px
+
+  &--house
+    position: relative
+    display: flex
+    align-items: flex-end
+    min-height: 405px
+    padding-top: 0
+    padding-bottom: 0
+    padding-left: 15px
+    padding-right: 15px
+
+    img
+      z-index: 0
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+
+    .container
+      z-index: 1
+      position: relative
+      max-width: 960px
+      background-color: rgba($colorWhite, 0.9)
+      +rmin($mobile-s)
+        padding-top: 30px
+        padding-bottom: 30px
+      +rmin($wide)
+        padding-top: 45px
+        padding-bottom: 45px
+
+      h2
+        font-weight: 800
+        text-align: center
+        +rmin($mobile-s)
+          margin-bottom: 15px
+          font-size: 30px
+        +rmin($mobile)
+          margin-bottom: 30px
+          font-size: 35px
+        +rmin($tablet)
+          margin-bottom: 35px
+          font-size: 40px
+        +rmin($desktop)
+          margin-bottom: 40px
+          font-size: 45px
+        +rmin($wide)
+          margin-bottom: 45px
+          font-size: 50px
+
+      p
+        color: $colorDimGray
+        text-align: center
+        line-height: 1.4
+        +rmin($mobile-s)
+          font-size: 16px
+        +rmin($mobile)
+          font-size: 18px
+        +rmin($desktop)
+          font-size: 20px
+
+
+  .main__title
+    +rmin($mobile-s)
+      margin-bottom: 15px
+    +rmin($tablet)
+      margin-bottom: 30px
+    +rmin($desktop)
+      margin-bottom: 45px
+
+
+  &__row
+    display: flex
+    +rmin($mobile-s)
+      flex-direction: column
+    +rmin($desktop)
+      flex-direction: row
+
+
+
+  &__left
+    padding-top: 30px
+    text-align: center
+    +rmin($mobile-s)
+      width: 100%
+      margin-bottom: 30px
+    +rmin($desktop)
+      width: 400px
+
+
+  &__right
+    +rmin($mobile-s)
+      width: 100%
+      text-align: center
+    +rmin($desktop)
+      width: calc(100% - 400px)
+      text-align: left
+
+    p
+      font-size: 16px
+      line-height: 1.8

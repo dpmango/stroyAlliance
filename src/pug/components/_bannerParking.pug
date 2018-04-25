@@ -1,0 +1,45 @@
+// BANNER :: START
+
+
+//- VARIABLE
+//- ==========
+-
+  var sliderLocationArr = [
+    "<span>ЖК</span> <span>«Гринхаус»</span>",
+    "<span>Петровский</span> <span>квартал</span>",
+    "<span>ЖК на</span> <span>ул. Макаренко</span>",
+    "<span>Luxury</span> <span>Village</span>"
+  ];
+//- ==========
+//- MIXIN
+//- ==========
+mixin swapInfoParking()
+  div(class="banner__swap banner__swap--parking")
+    div(swap-parking-js)
+      -for(var i = 0; i < 5; i++)
+        div(
+          class="banner__swap-content"
+        )
+          p.banner__swap-title!= "Паркинг"
+          .banner__swap-wrap
+            p!= "от <span>1 500 000₽</span>"
+            p!= "от <span>4 000 000₽</span>"
+          a(href="#" class="banner__swap-btn" title="")!= "ПОДРОБНЕЕ"
+//- ==========
+
+
+.banner
+  .banner__gradient
+
+  +carouselBg("parking", "carousel-parking-js", "carParking")
+
+  .container.container--slider
+    +sliderLocation("parking", "slider-parking-js", sliderLocationArr)
+
+  .container.container--swap
+    +swapInfoParking()
+
+  include ../macros/_mouse
+
+
+// BANNER :: END

@@ -1,0 +1,137 @@
+// PROGRESS
+// ===============
+.progress
+  padding-top: 45px
+  padding-bottom: 45px
+
+
+  .main__title
+    margin-bottom: 30px
+
+
+  svg
+    z-index: 0
+    position: absolute
+    left: -9999px
+    top: -9999px
+
+
+  &__row
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+  &__block
+    position: relative
+    +rmin($mobile-s)
+      height: 255px
+    +rmin($mobile)
+      height: 285px
+    +rmin($tablet)
+      height: 315px
+    +rmin($desktop)
+      height: 345px
+    +rmin($wide)
+      height: 365px
+    +rmin($hd)
+      height: 395px
+      width: calc(100% / 5)
+
+
+    > div
+      width: 100%
+      height: 100%
+      background-size: cover
+      background-position: center
+      box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.15)
+
+    > p
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      text-align: center
+      color: $colorWhite
+      font-weight: bold
+      +rmin($tablet)
+        white-space: nowrap
+        font-size: 21px
+      +rmin($desktop)
+        font-size: 24px
+      +rmin($wide)
+        font-size: 27px
+      +rmin($hd)
+        font-size: 30px
+
+
+    &-0
+      z-index: 3
+      padding-top: 20px
+      padding-bottom: 20px
+      filter: url(#svg-blur-0)
+      +rmin($mobile-s)
+        width: calc((100% / 5) - 50px)
+      +rmin($mobile)
+        width: calc((100% / 5) - 80px)
+      +rmin($tablet)
+        width: calc((100% / 5) - 120px)
+      +rmin($desktop)
+        width: calc((100% / 5) - 120px)
+      +rmin($wide)
+        width: calc((100% / 5) - 100px)
+    &-1
+      z-index: 4
+      padding-top: 10px
+      padding-bottom: 10px
+      +rmin($mobile-s)
+        width: calc((100% / 5) + 30px)
+      +rmin($mobile)
+        width: calc((100% / 5) + 40px)
+      +rmin($tablet)
+        width: calc((100% / 5) + 80px)
+      +rmin($desktop)
+        width: calc((100% / 5) + 60px)
+      +rmin($wide)
+        width: calc((100% / 5) + 50px)
+    &-2
+      z-index: 5
+      +rmin($mobile-s)
+        width: calc((100% / 5) + 40px)
+      +rmin($mobile)
+        width: calc((100% / 5) + 80px)
+      +rmin($tablet)
+        width: calc((100% / 5) + 100px)
+      +rmin($desktop)
+        width: calc((100% / 5) + 120px)
+      +rmin($wide)
+        width: calc((100% / 5) + 100px)
+    &-3
+      z-index: 4
+      padding-top: 10px
+      padding-bottom: 10px
+      +rmin($mobile-s)
+        width: calc((100% / 5) + 30px)
+      +rmin($mobile)
+        width: calc((100% / 5) + 40px)
+      +rmin($tablet)
+        width: calc((100% / 5) + 80px)
+      +rmin($desktop)
+        width: calc((100% / 5) + 60px)
+      +rmin($wide)
+        width: calc((100% / 5) + 50px)
+    &-4
+      z-index: 3
+      padding-top: 20px
+      padding-bottom: 20px
+      filter: url(#svg-blur-0)
+      +rmin($mobile-s)
+        width: calc((100% / 5) - 50px)
+      +rmin($mobile)
+        width: calc((100% / 5) - 80px)
+      +rmin($tablet)
+        width: calc((100% / 5) - 120px)
+      +rmin($desktop)
+        width: calc((100% / 5) - 120px)
+      +rmin($wide)
+        width: calc((100% / 5) - 100px)
