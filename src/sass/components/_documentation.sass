@@ -26,22 +26,17 @@
         width: calc(100% / 4)
 
       &:hover
-        a
-          text-decoration: underline
-          +transition(text-decoration)
         i
           opacity: 0.75
           +transition(opacity)
         p
+          color: $colorIrisBlue
           text-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
-          +transition(text-shadow)
+          +transition(text-shadow, color)
 
 
     &-btn
       display: flex
-
-      a
-        +transition(text-decoration)
 
       div
         width: 32px
@@ -55,7 +50,7 @@
       p
         font-size: 14px
         color: $colorNero
-        +transition(text-shadow)
+        +transition(text-shadow, color)
 
 
   &__button

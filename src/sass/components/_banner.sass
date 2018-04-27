@@ -138,6 +138,11 @@
         +rmin($desktop)
           font-size: 69px
 
+      .banner__slider--car &,
+      .banner__slider--pantry &
+        font-size: 20px
+        font-weight: normal
+
     &-info
       display: none
       margin-top: 8px
@@ -146,6 +151,9 @@
       .banner__slider--quarter &,
       .banner__slider--flat &
         display: block
+      .banner__slider--car &,
+      .banner__slider--pantry &
+        display: none !important
       .slick-center &,
       .slick-active &
         display: block
@@ -192,7 +200,6 @@
         width: 470px !important
 
   &__swap
-
     &-content
       color: $colorWhite
       text-align: center
@@ -270,10 +277,16 @@
       padding-left: 25px
       padding-right: 25px
       border-radius: 2em
+      border: 1px solid transparent
       background-color: $colorGold
       color: $colorBlack
       font-size: 15px
       font-weight: 500
+      +transition(background-color, border-color)
+      &:hover
+        border-color: $colorGold
+        background-color: $colorWhite
+        +transition(background-color, border-color)
 
     .slick
       &-dots
@@ -305,6 +318,10 @@
             background-color: rgba($colorWhite, 0.5)
             border-top: 1px solid transparent
             +transition(background-color, border-top)
+            &:hover
+              background-color: $colorWhite
+              border-top: 1px solid $colorWhite
+              +transition(background-color, border-top)
 
           &.slick-active
             span

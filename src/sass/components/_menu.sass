@@ -24,21 +24,31 @@
 
 
   &__item
-    //margin-right: 30px
     white-space: nowrap
     +rmin($tablet)
-      margin-right: 15px
-    +rmin($desktop)
-      margin-right: 30px
+      margin-right: 5px
 
     .tab &
       +r($mobile-max)
         margin-right: 0
 
   &__link
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 30px
+    padding-left: 15px
+    padding-right: 15px
+    background-color: transparent
+    border-radius: 2em
     color: $colorWhite
-    //font-size: 12px
     font-weight: 500
+    +transition(background-color, color)
+    &:hover
+      background-color: $colorWhite
+      color: $colorNero
+      +transition(background-color, color)
+      
     +rmin($tablet)
       font-size: 11px
     +rmin($desktop)

@@ -6,6 +6,7 @@
     "Генплан",
     "Описание объекта",
     "Что рядом",
+    "Фото и видео",
     "Где купить"
   ];
   var submenuFlatArr = [
@@ -13,6 +14,7 @@
     "Выбрать квартиру",
     "Описание объекта",
     "Что рядом",
+    "Фото и видео",
     "Где купить"
   ];
   var submenuHouseArr = [
@@ -22,11 +24,32 @@
     "Где купить",
     "ДРУГИЕ ДОМА"
   ];
+  var submenuCarArr = [
+    "ДРУГИЕ ОБЪЕКТЫ",
+    "Выбрать машиноместо",
+    "Где купить"
+  ];
+  var submenuPantryArr = [
+    "ДРУГИЕ ОБЪЕКТЫ",
+    "Выбрать кладовую",
+    "Где купить"
+  ];
+  var submenuRealtyArr = [
+    "Выбрать помещение",
+    "Описание объекта",
+    "Что рядом",
+    "Фото и видео",
+    "Где купить"
+  ];
+  var submenuGalleryArr = [
+    "ПЕТРОВСКИЙ КВАРТАЛ"
+  ];
   var submenuHrefQurterArr = [
     "#",
     "#masterplan",
     "#about",
     "#nearby",
+    "#",
     "#buy"
   ];
   var submenuHrefFlarArr = [
@@ -34,6 +57,7 @@
     "#choose",
     "#about",
     "#nearby",
+    "#",
     "#buy"
   ];
   var submenuHrefHouseArr = [
@@ -41,6 +65,26 @@
     "#choose",
     "#about",
     "#buy",
+    "#"
+  ];
+  var submenuHrefCarArr = [
+    "#",
+    "#choose",
+    "#buy"
+  ];
+  var submenuHrefPantryArr = [
+    "#",
+    "#choose",
+    "#buy"
+  ];
+  var submenuHrefRealtyArr = [
+    "#choose",
+    "#about",
+    "#nearby",
+    "#",
+    "#buy"
+  ];
+  var submenuHrefGalleryArr = [
     "#"
   ];
 //- ==========
@@ -79,4 +123,28 @@ mixin submenuLink(hrefArr, count, arr)
         -for(var i = 0, len = submenuHouseArr.length; i < len; i++)
           li.submenu__item
             +submenuLink(submenuHrefHouseArr, i, submenuHouseArr)
+
+    else if(bodyClass === "car")
+      ul.submenu__list.submenu__list--car
+        -for(var i = 0, len = submenuCarArr.length; i < len; i++)
+          li.submenu__item
+            +submenuLink(submenuHrefCarArr, i, submenuCarArr)
+
+    else if(bodyClass === "pantry")
+      ul.submenu__list.submenu__list--pantry
+        -for(var i = 0, len = submenuPantryArr.length; i < len; i++)
+          li.submenu__item
+            +submenuLink(submenuHrefPantryArr, i, submenuPantryArr)
+
+    else if(bodyClass === "realty")
+      ul.submenu__list.submenu__list--realty
+        -for(var i = 0, len = submenuRealtyArr.length; i < len; i++)
+          li.submenu__item
+            +submenuLink(submenuHrefRealtyArr, i, submenuRealtyArr)
+
+    else if(bodyClass === "media")
+      ul.submenu__list.submenu__list--gallery
+        -for(var i = 0, len = submenuGalleryArr.length; i < len; i++)
+          li.submenu__item
+            +submenuLink(submenuHrefGalleryArr, i, submenuGalleryArr)
 

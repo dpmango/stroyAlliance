@@ -20,14 +20,22 @@
     display: flex
     min-height: 210px
     background-color: $colorWhite
+    +transition(box-shadow)
     +rmin($mobile-s)
       width: calc(100% - 30px)
       margin-bottom: 30px
       box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.15)
+      &:hover
+        box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.05)
+        +transition(box-shadow)
+
     +rmin($desktop)
       width: calc(50% - 37.5px)
       margin-bottom: 45px
       box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.15)
+      &:hover
+        box-shadow: 0 7px 17px 0 rgba(0, 0, 0, 0.05)
+        +transition(box-shadow)
 
     &:first-child,
     &:nth-child(3)
@@ -178,6 +186,10 @@
             background-color: rgba($colorVeryLightGrey, 0.5)
             border-top: 1px solid transparent
             +transition(background-color, border-top)
+            &:hover
+              background-color: $colorWhite
+              border-top: 1px solid $colorWhite
+              +transition(background-color, border-top)
 
           &.slick-active
             span

@@ -80,6 +80,45 @@
           justify-content: flex-start
           width: auto
 
+    .submenu__list--car &,
+    .submenu__list--pantry &,
+    .submenu__list--gallery &
+      &:first-child,
+        .submenu__btn
+          display: flex
+          align-items: center
+          justify-content: center
+          height: 45px
+          line-height: 45px
+          white-space: nowrap
+          +rmin($mobile-s)
+            width: 145px
+            font-size: 11px
+          +rmin($mobile)
+            width: 160px
+            font-size: 13px
+          +rmin($desktop)
+            width: 180px
+            font-size: 14px
+          +rmin($wide)
+            width: 200px
+            font-size: 15px
+
+      &:first-child
+        +rmin($mobile-s)
+          order: 0
+          width: 50%
+        +rmin($tablet)
+          order: 0
+          width: auto
+
+        .submenu__btn
+          &:before
+            content: ""
+            display: inline-block
+            margin-right: 10px
+            @include sprite(submenuArrow)
+
     .submenu__list--house &
       &:first-child,
       &:last-child
@@ -160,6 +199,11 @@
     display: block
     color: $colorWhite
     font-weight: 500
+    +transition(text-shadow)
+    &:hover
+      text-shadow: 0 0 20px rgba($colorWhite, 0.75)
+      +transition(text-shadow)
+
     +rmin($mobile-s)
       font-size: 12px
     +rmin($mobile)

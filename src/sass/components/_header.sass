@@ -40,6 +40,7 @@
         width: 300px
 
       img
+        cursor: pointer
         margin-top: 6px
         +rmin($mobile-s)
           height: 30px
@@ -69,6 +70,11 @@
     top: -5px
     color: $colorWhite
     font-weight: 500
+    +transition(text-shadow)
+    &:hover
+      text-shadow: 0 0 20px rgba($colorWhite, 0.75)
+      +transition(text-shadow)
+
     +rmin($mobile-s)
       top: 0
       font-size: 12px

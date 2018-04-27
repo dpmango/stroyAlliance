@@ -1,0 +1,31 @@
+// BANNER :: START
+
+
+//- VARIABLE
+//- ==========
+-
+  var sliderLocationArr = [
+    "ЖК Петровский квартал",
+    "ЖК Петровский квартал",
+    "ЖК Петровский квартал",
+    "ЖК Петровский квартал"
+  ];
+//- ==========
+//- MIXIN
+//- ==========
+
+//- ==========
+
+
+.banner.banner--inner
+  .banner__gradient
+
+  +carouselBlurBg("galleryBlur", "carousel-galleryBlur-js", "gallery")
+
+  .container.container--slider
+    +sliderInnerLocation("gallery", "slider-gallery-js", sliderLocationArr)
+
+  include ../macros/_submenu
+
+
+// BANNER :: END

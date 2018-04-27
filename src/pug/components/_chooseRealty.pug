@@ -1,0 +1,164 @@
+// CHOOSE :: START
+
+
+//- VARIABLE
+//- ==========
+-
+  var tableHeadSale = [
+    "Тип сделки", "Площадь", "Стоимость", "Цена за м²"
+  ];
+  var tableHeadRent = [
+    "Тип сделки", "Площадь", "Стоимость в мес.", "Цена за м² в мес."
+  ];
+  var tableDealSale = [
+    "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа", "Продажа"
+  ];
+  var tableDealRent = [
+    "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда", "Аренда"
+  ];
+  var tableArea = [
+    "67.5 м2", "88.5 м2", "84.62 м2", "67.5 м2", "88.5 м2", "84.62 м2", "88.5 м2", "84.62 м2", "67.5 м2", "88.5 м2", "84.62 м2", "88.5 м2", "67.5 м2", "88.5 м2", "84.62 м2", "67.5 м2", "88.5 м2", "84.62 м2", "88.5 м2", "84.62 м2", "67.5 м2", "88.5 м2", "84.62 м2", "88.5 м2"
+  ];
+  var tableCost = [
+    "3 712 500₽", "4 600 000₽", "4 650 000₽", "3 712 500₽", "4 600 000₽", "4 650 000₽", "3 712 500₽", "4 600 000₽", "4 600 000₽", "4 650 000₽", "3 712 500₽", "4 600 000₽", "3 712 500₽", "4 600 000₽", "4 650 000₽", "3 712 500₽", "4 600 000₽", "4 650 000₽", "3 712 500₽", "4 600 000₽", "4 600 000₽", "4 650 000₽", "3 712 500₽", "4 600 000₽"
+  ];
+  var tablePrice = [
+    "55 000₽", "52 000₽", "52 000₽", "55 000₽", "52 000₽", "52 000₽", "38 000₽", "52 000₽", "52 000₽", "52 000₽", "52 000₽", "52 000₽", "55 000₽", "52 000₽", "52 000₽", "55 000₽", "52 000₽", "52 000₽", "38 000₽", "52 000₽", "52 000₽", "52 000₽", "52 000₽", "52 000₽"
+  ];
+  var tableTypeSale = [
+    "str",
+    "str",
+    "str",
+    "str"
+  ];
+  var tableTypeRent = [
+    "str",
+    "str",
+    "str",
+    "str"
+  ];
+  var selectSection = [
+    "Любая", "A", "Б", "В", "Г", "Д"
+  ];
+  var selectHouseNumber = [
+    "1", "2", "3", "4", "5", "6", "7", "8", "9"
+  ];
+
+//- ==========
+//- MIXIN
+//- ==========
+
+//- ==========
+
+
+#choose.choose.choose--realty
+  .container
+
+    h3.main__title!= "Выбрать помещение"
+
+    .choose__row
+      .choose__row-left
+
+        .choose__field.choose__field-radioWrap
+          p!= "Продажа"
+          +checkboxBtn("checkbox--irisBlue", "")
+          p!= "Аренда"
+
+
+        .choose__field-selectWrap
+          .choose__field.choose__field-select.choose__field-selectHouse
+            p.choose__field-title!= "Дом"
+            .choose__field-wrap
+              +select(selectHouseNumber)
+
+          .choose__field.choose__field-select.choose__field-selectSection
+            p.choose__field-title!= "Секция"
+            .choose__field-wrap
+              +select(selectSection)
+
+        .choose__field.choose__field-table.choose__field-table--sale.is-active(table-sale-js)
+          .table(table-js)
+            .table__thead(thead-js)
+              .table__tr(thead-tr-js)
+                -for(var i = 0, len = tableHeadSale.length; i < len; i++)
+                  .table__th(th-js data-id!= i data-type!= tableTypeSale[i])
+                    != tableHeadSale[i]
+                    i.icon.icon-arrow
+
+            .table__tbody(tbody-js)
+              -for(var i = 0, len = tableDealSale.length; i < len; i++)
+                .table__tr(tbody-tr-js)
+                  .table__td(td-js)!= tableDealSale[i]
+                  .table__td(td-js)!= tableArea[i]
+                  .table__td(td-js)!= tableCost[i]
+                  .table__td(td-js)!= tablePrice[i]
+
+        .choose__field.choose__field-table.choose__field-table--rent(table-rent-js)
+          .table(table-js)
+            .table__thead(thead-js)
+              .table__tr(thead-tr-js)
+                -for(var i = 0, len = tableHeadRent.length; i < len; i++)
+                  .table__th(th-js data-id!= i data-type!= tableTypeRent[i])
+                    != tableHeadRent[i]
+                    i.icon.icon-arrow
+
+            .table__tbody(tbody-js)
+              -for(var i = 0, len = tableDealRent.length; i < len; i++)
+                .table__tr(tbody-tr-js)
+                  .table__td(td-js)!= tableDealRent[i]
+                  .table__td(td-js)!= tableArea[i]
+                  .table__td(td-js)!= tableCost[i]
+                  .table__td(td-js)!= tablePrice[i]
+
+
+      .choose__row-right
+        .choose__field.choose__field-plan
+          img(
+            src="./img/img-plan__choose.png"
+            srcset="./img/img-plan__choose@2x.png 2x"
+          )
+
+        .choose__field.choose__field-price
+          .choose__field-left
+            p!= "Стоимость"
+            p!= "3 720 500₽"
+          .choose__field-right
+            p!= "Цена за м2"
+            p!= "55 000₽"
+
+        .choose__field.choose__field-description
+          .choose__field-left
+            p!= "Тип сделки:"
+            p!= "продажа"
+          .choose__field-middle
+            .choose__field-wrap
+              span!= "Секция:"
+              span!= "Г"
+            .choose__field-wrap
+              span!= "Этаж:"
+              span!= "11"
+          .choose__field-right
+            .choose__field-wrap
+              span!= "Общая площадь:"
+              span!= "67.5"
+            .choose__field-wrap
+              span!= "Срок сдачи:"
+              span!= "Сдан"
+
+        .choose__field.choose__field-contacts
+          p!= "Связаться с застройщиком"
+          a(href="tel:+74872525043" class="" title="")!= "+7 (4872) 52-50-43"
+
+        .choose__field.choose__field-form
+          form(choose-appartment-js)
+            .form__field
+              input(type="name" name="name" class="form__input choose__form-input" placeholder="Ваше имя")
+
+            .form__field.form__field--half
+              .form__field-left
+                input(type="tel" name="phone" class="form__input choose__form-input")
+              .form__field-right
+                button(type="submit" class="form__button choose__form-btn")!= "ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"
+
+
+// CHOOSE :: END

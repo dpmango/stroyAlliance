@@ -28,6 +28,11 @@
     font:
       size: 12px
       weight: 500
+    +transition(box-shadow)
+    &:hover
+      box-shadow: 0 0 40px 0 rgba($colorWhite, 0.3)
+      +transition(box-shadow)
+
 
     .tab &
       +r($mobile-max)
@@ -37,6 +42,9 @@
     .dropdown__button-name
       padding-left: 10px
       padding-right: 10px
+
+    &.is-hide
+      opacity: 0
 
 
   &__menu

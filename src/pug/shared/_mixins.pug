@@ -109,12 +109,9 @@ mixin sliderInnerLocation(className, jsName, arrLocation)
 //- ========================================
 mixin select(arr)
   .select
-    .select__wrap
-      span.select__value
-      select(name="select")
-        -for (var i = 0, len = arr.length; i < len; i++)
-          option!= arr[i]
-      i.select__icon.icon-arrow
+    select(name="select")
+      -for (var i = 0, len = arr.length; i < len; i++)
+        option!= arr[i]
 
 
 //- RADIO

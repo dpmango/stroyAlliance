@@ -4,7 +4,8 @@
   padding-top: 30px
   padding-bottom: 30px
 
-  .house &
+  .house &,
+  .realty &
     padding-top: 72px
     padding-bottom: 50px
 
@@ -70,6 +71,27 @@
         flex-direction: row
         align-items: center
 
+      &Wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        padding-top: 30px
+        padding-bottom: 15px
+
+        > p
+          text-transform: uppercase
+          font-size: 20px
+          font-weight: bold
+          &:first-child
+            margin-right: 15px
+          &:last-child
+            margin-left: 15px
+
+        .checkbox__icon
+          margin-right: 0
+        .checkbox label
+          margin-bottom: 0
+
       .choose__field-title
         +rmin($mobile-s)
           width: 100%
@@ -107,6 +129,13 @@
 
     &-table
       position: relative
+
+      &--sale,
+      &--rent
+        display: none
+
+        &.is-active
+          display: block
 
       &:after
         content: ""
@@ -171,6 +200,10 @@
             font-size: 14px
           +rmin($wide)
             font-size: 16px
+
+          .choose--car &,
+          .choose--realty &
+            width: calc(100% / 4)
 
         &__th
           padding-left: 10px
@@ -303,7 +336,25 @@
         font-size: 20px
 
       a
+        position: relative
         font-weight: bold
+        &:after
+          pointer-events: none
+          opacity: 0
+          content: ''
+          position: absolute
+          left: 0
+          bottom: 0
+          width: 100%
+          height: 2px
+          background: $colorBlack
+          transform: translateY(5px)
+          +transition(transform, opacity)
+        &:hover
+          &:after
+            opacity: 1
+            transform: translateY(0px)
+
         +rmin($mobile-s)
           font-size: 25px
         +rmin($mobile)
