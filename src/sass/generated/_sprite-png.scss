@@ -1,101 +1,146 @@
 $sprite: (
 	arrow: (
-		offset-x: 0px,
-		offset-y: -78px,
+		offset-x: -90px,
+		offset-y: -70px,
 		width: 16px,
 		height: 9px,
-		total-width: 90px,
-		total-height: 87px,
+		total-width: 174px,
+		total-height: 138px,
 		image: '../img/sprite.png'
 	),
 	corner: (
-		offset-x: -54px,
-		offset-y: -55px,
+		offset-x: -116px,
+		offset-y: -70px,
 		width: 11px,
 		height: 7px,
-		total-width: 90px,
-		total-height: 87px,
+		total-width: 174px,
+		total-height: 138px,
 		image: '../img/sprite.png'
 	),
 	doc: (
-		offset-x: 0px,
-		offset-y: 0px,
+		offset-x: -33px,
+		offset-y: -70px,
 		width: 22px,
 		height: 28px,
-		total-width: 90px,
-		total-height: 87px,
+		total-width: 174px,
+		total-height: 138px,
 		image: '../img/sprite.png'
 	),
 	done: (
-		offset-x: -54px,
-		offset-y: 0px,
+		offset-x: -65px,
+		offset-y: -70px,
 		width: 15px,
 		height: 15px,
-		total-width: 90px,
-		total-height: 87px,
+		total-width: 174px,
+		total-height: 138px,
 		image: '../img/sprite.png'
 	),
 	marker--hover: (
-		offset-x: -79px,
-		offset-y: -47px,
+		offset-x: 0px,
+		offset-y: -125px,
 		width: 10px,
 		height: 13px,
-		total-width: 90px,
-		total-height: 87px,
+		total-width: 174px,
+		total-height: 138px,
 		image: '../img/sprite.png'
 	),
 	marker-active: (
-		offset-x: -32px,
-		offset-y: -40px,
+		offset-x: -162px,
+		offset-y: -94px,
 		width: 11px,
 		height: 14px,
-		total-width: 90px,
-		total-height: 87px,
+		total-width: 174px,
+		total-height: 138px,
 		image: '../img/sprite.png'
 	),
 	marker-black: (
-		offset-x: -79px,
-		offset-y: 0px,
+		offset-x: -162px,
+		offset-y: -70px,
 		width: 11px,
 		height: 14px,
-		total-width: 90px,
-		total-height: 87px,
+		total-width: 174px,
+		total-height: 138px,
 		image: '../img/sprite.png'
 	),
 	marker: (
-		offset-x: -79px,
-		offset-y: -24px,
+		offset-x: -20px,
+		offset-y: -125px,
 		width: 10px,
 		height: 13px,
-		total-width: 90px,
-		total-height: 87px,
+		total-width: 174px,
+		total-height: 138px,
 		image: '../img/sprite.png'
 	),
-	next: (
-		offset-x: -32px,
+	next-slider-gallery: (
+		offset-x: 0px,
+		offset-y: 0px,
+		width: 60px,
+		height: 60px,
+		total-width: 174px,
+		total-height: 138px,
+		image: '../img/sprite.png'
+	),
+	next-swap-gallery: (
+		offset-x: -140px,
 		offset-y: 0px,
 		width: 12px,
 		height: 30px,
-		total-width: 90px,
-		total-height: 87px,
+		total-width: 174px,
+		total-height: 138px,
+		image: '../img/sprite.png'
+	),
+	next: (
+		offset-x: -162px,
+		offset-y: 0px,
+		width: 12px,
+		height: 30px,
+		total-width: 174px,
+		total-height: 138px,
+		image: '../img/sprite.png'
+	),
+	prev-slider-gallery: (
+		offset-x: -70px,
+		offset-y: 0px,
+		width: 60px,
+		height: 60px,
+		total-width: 174px,
+		total-height: 138px,
+		image: '../img/sprite.png'
+	),
+	prev-swap-gallery: (
+		offset-x: -140px,
+		offset-y: -80px,
+		width: 12px,
+		height: 30px,
+		total-width: 174px,
+		total-height: 138px,
 		image: '../img/sprite.png'
 	),
 	prev: (
-		offset-x: 0px,
-		offset-y: -38px,
+		offset-x: -140px,
+		offset-y: -40px,
 		width: 12px,
 		height: 30px,
-		total-width: 90px,
-		total-height: 87px,
+		total-width: 174px,
+		total-height: 138px,
 		image: '../img/sprite.png'
 	),
 	submenuArrow: (
-		offset-x: -54px,
-		offset-y: -25px,
+		offset-x: -162px,
+		offset-y: -40px,
 		width: 9px,
 		height: 20px,
-		total-width: 90px,
-		total-height: 87px,
+		total-width: 174px,
+		total-height: 138px,
+		image: '../img/sprite.png'
+	),
+	table-arrow: (
+		offset-x: 0px,
+		offset-y: -70px,
+		width: 23px,
+		height: 45px,
+		total-width: 174px,
+		total-height: 138px,
 		image: '../img/sprite.png'
 	),
 );
@@ -178,12 +223,27 @@ $sprite: (
 	.icon-marker {
 		@include sprite(marker)
 	}
+	.icon-next-slider-gallery {
+		@include sprite(next-slider-gallery)
+	}
+	.icon-next-swap-gallery {
+		@include sprite(next-swap-gallery)
+	}
 	.icon-next {
 		@include sprite(next)
+	}
+	.icon-prev-slider-gallery {
+		@include sprite(prev-slider-gallery)
+	}
+	.icon-prev-swap-gallery {
+		@include sprite(prev-swap-gallery)
 	}
 	.icon-prev {
 		@include sprite(prev)
 	}
 	.icon-submenuArrow {
 		@include sprite(submenuArrow)
+	}
+	.icon-table-arrow {
+		@include sprite(table-arrow)
 	}

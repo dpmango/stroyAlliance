@@ -20,12 +20,16 @@
   &__list
     display: flex
     align-items: center
-    justify-content: space-between
     min-height: 105px
     +rmin($mobile-s)
       flex-wrap: wrap
+      justify-content: space-between
     +rmin($tablet)
       flex-wrap: nowrap
+      justify-content: space-around
+
+    .media &
+      justify-content: flex-start
 
 
   &__item
@@ -53,6 +57,7 @@
           line-height: 45px
           border: 2px solid $colorGold
           border-radius: 2em
+          text-transform: uppercase
           +transition(background-color, color)
           +rmin($mobile-s)
             width: 145px
@@ -91,6 +96,7 @@
           height: 45px
           line-height: 45px
           white-space: nowrap
+          text-transform: uppercase
           +rmin($mobile-s)
             width: 145px
             font-size: 11px
@@ -128,6 +134,7 @@
           justify-content: center
           height: 45px
           line-height: 45px
+          text-transform: uppercase
           +rmin($mobile-s)
             width: 145px
             font-size: 11px
@@ -205,9 +212,9 @@
       +transition(text-shadow)
 
     +rmin($mobile-s)
-      font-size: 12px
+      font-size: 10px
     +rmin($mobile)
-      font-size: 14px
+      font-size: 16px
     +rmin($desktop)
       font-size: 18px
     +rmin($wide)

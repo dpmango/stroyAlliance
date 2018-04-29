@@ -28,14 +28,19 @@
         width: 55%
       +rmin($wide)
         width: 100%
-        max-width: (1170px / 2)
+        max-width: 700px
+        padding-right: 50px
     &-right
       +rmin($tablet)
       +rmin($desktop)
         width: 45%
       +rmin($wide)
-        width: calc(100% - (1170px / 2))
+        width: calc(100% - (700px))
 
+    &-filter
+      +rmin($tablet)
+        padding-right: 50px
+        padding-left: 10px
 
   &__field
     margin-bottom: 15px
@@ -64,6 +69,7 @@
       +rmin($mobile)
 
     &-radio
+      margin-bottom: 17px
       +rmin($mobile-s)
         flex-direction: column
         align-items: flex-start
@@ -107,6 +113,8 @@
         display: flex
         align-items: center
         justify-content: space-between
+        padding-right: 30px
+        padding-left: 5px
         +rmin($mobile-s)
           width: 100%
         +rmin($mobile)
@@ -117,10 +125,11 @@
         cursor: pointer
         width: 45px
         height: 45px
+        padding: 0
         border-radius: 100%
         border: none
         background-color: $colorSolitude
-        font-size: 16px
+        font-size: 20px
 
         &.is-active
           color: $colorWhite
@@ -154,6 +163,11 @@
         display: flex
         flex-direction: column
 
+        &__thead,
+        &__tbody
+          +rmin($tablet)
+            padding-right: 50px
+
         &__tbody
           position: relative
           max-height: 550px
@@ -162,42 +176,68 @@
           padding-bottom: 60px
 
           .table__tr
+            z-index: 1
+            position: relative
+            border-radius: 2em
             +transition(background-color, border-radius, color)
+            &:after
+              opacity: 0
+              content: ""
+              position: absolute
+              top: 0
+              right: 0
+              @include sprite(table-arrow)
+              +transition(opacity, right)
 
             &:hover
-              border-radius: 2em
               background-color: $colorSolitude
-              +transition(background-color, border-radius, color)
+              +transition(background-color, color)
 
             &.is-active
-              border-radius: 2em
+              border-top-right-radius: 0
+              border-bottom-right-radius: 0
               color: $colorWhite
               background-color: $colorIrisBlue
+              +transition(background-color, border-radius, color)
+
+              &:after
+                opacity: 1
+                right: -20px
+                +transition(opacity, right)
+
 
             &.is-hide
               display: none
 
 
         &__tr
-            cursor: pointer
-            display: flex
-            position: relative
-            height: 45px
-            align-items: center
+          cursor: pointer
+          display: flex
+          position: relative
+          height: 45px
+          align-items: center
 
         &__th,
         &__td
           display: flex
           align-items: center
           justify-content: center
-          width: calc(100% / 5)
           height: 100%
           white-space: nowrap
           text-align: center
           +rmin($mobile-s)
+            width: calc(100% / 5)
             font-size: 10px
           +rmin($mobile)
             font-size: 14px
+            &:nth-child(1)
+              width: 70px
+            &:nth-child(2)
+              width: 110px
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5)
+              width: calc((100% - (70px + 110px)) / 3)
           +rmin($wide)
             font-size: 16px
 
@@ -206,8 +246,6 @@
             width: calc(100% / 4)
 
         &__th
-          padding-left: 10px
-          padding-right: 10px
           font-weight: bold
 
           &.is-active
@@ -220,14 +258,15 @@
               opacity: 1
 
           .icon
-            opacity: 0
-            margin-left: 5px
-            +transition(transform, opacity)
+            +rmin($mobile)
+              margin-left: 5px
+              +transition(transform, opacity)
 
 
         &__td
-          padding-left: 10px
-          padding-right: 26px
+          &.is-sort
+            background-color: $colorSolitude
+
 
     &-title
       margin-right: 15px
@@ -237,7 +276,7 @@
         font-size: 20px
 
     &-plan
-      margin-bottom: 30px
+      margin-bottom: 27px
 
       img
         display: block
@@ -249,6 +288,7 @@
       display: flex
       margin-left: auto
       margin-right: auto
+      margin-bottom: 20px
       +rmin($mobile-s)
         flex-direction: column
         max-width: 470px
@@ -263,7 +303,6 @@
           text-align: center
         +rmin($mobile)
           width: 50%
-          padding-left: 50px
           text-align: left
 
         p
@@ -276,6 +315,14 @@
             +rmin($mobile)
               font-size: 30px
 
+      .choose__field-left
+        +rmin($mobile)
+          padding-left: 50px
+
+      .choose__field-right
+        +rmin($mobile)
+          padding-left: 33px
+
     &-description
       display: flex
       align-items: center
@@ -285,7 +332,7 @@
       margin-right: auto
       border-radius: 5px
       padding: 30px 15px
-      margin-bottom: 45px
+      margin-bottom: 37px
       background-color: $colorSolitude
       +rmin($mobile-s)
         flex-direction: column
@@ -328,7 +375,7 @@
             font-weight: bold
 
     &-contacts
-      margin-bottom: 30px
+      margin-bottom: 24px
       text-align: center
 
       p
@@ -366,9 +413,14 @@
       margin-right: auto
 
       .form__field
-        margin-bottom: 15px
+        position: relative
+        margin-bottom: 20px
 
         .error
+          position: absolute
+          left: 0
+          bottom: -15px
+          margin-bottom: 0
           padding-left: 20px
           color: #c7202e
           font-size: 12px
@@ -382,11 +434,10 @@
             flex-direction: row
 
           .form__field-left
-            width: calc(100% - (260px))
             +rmin($mobile-s)
               width: 100%
             +rmin($mobile)
-              width: calc(100% - (260px))
+              width: calc(100% - (270px))
               padding-right: 15px
           .form__field-right
             +rmin($mobile-s)
@@ -394,6 +445,10 @@
               padding-top: 15px
               text-align: center
             +rmin($mobile)
-              width: 260px
+              width: 270px
               padding-top: 0
               text-align: left
+
+            button.form__button
+              max-width: 270px
+              text-transform: uppercase

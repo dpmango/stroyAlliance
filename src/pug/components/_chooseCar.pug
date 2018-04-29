@@ -50,16 +50,17 @@
     .choose__row
       .choose__row-left
 
-        .choose__field-selectWrap
-          .choose__field.choose__field-select.choose__field-selectHouse
-            p.choose__field-title!= "Дом"
-            .choose__field-wrap
-              +select(selectHouseNumber)
+        .choose__row-filter
+          .choose__field-selectWrap
+            .choose__field.choose__field-select.choose__field-selectHouse
+              p.choose__field-title!= "Дом"
+              .choose__field-wrap
+                +select(selectHouseNumber)
 
-          .choose__field.choose__field-select.choose__field-selectSection
-            p.choose__field-title!= "Секция"
-            .choose__field-wrap
-              +select(selectSection)
+            .choose__field.choose__field-select.choose__field-selectSection
+              p.choose__field-title!= "Секция"
+              .choose__field-wrap
+                +select(selectSection)
 
         .choose__field.choose__field-table
           .table(table-js)
@@ -126,7 +127,7 @@
               .form__field-left
                 input(type="tel" name="phone" class="form__input choose__form-input")
               .form__field-right
-                button(type="submit" class="form__button choose__form-btn")!= "ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"
+                button(type="submit" class="form__button choose__form-btn")!= "получить консультацию"
 
 
 // CHOOSE :: END

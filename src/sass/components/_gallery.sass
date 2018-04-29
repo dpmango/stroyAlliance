@@ -15,6 +15,97 @@
         margin-bottom: 5px
         font-size: 30px
         font-weight: bold
-      &:last-child
+      &:nth-child(2)
         margin-bottom: 45px
         font-size: 14px
+
+  &__slider,
+  &__swap
+    position: relative
+
+  &__slider
+    margin-bottom: 20px
+    &-wrap
+      padding: 10px 100px 40px
+      +rmin($mobile-s)
+        padding-left: 0
+        padding-right: 0
+      +rmin($mobile)
+        padding-left: 100px
+        padding-right: 100px
+    &-img
+      display: block
+      max-width: 100%
+      margin-left: auto
+      margin-right: auto
+      box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.15)
+    .slick
+      &-btn
+        &.slick-prev
+          +rmin($mobile-s)
+            display: none !important
+          +rmin($mobile)
+            display: block !important
+            left: 0 !important
+          +rmin($wide)
+            left: 30px !important
+        &.slick-next
+          +rmin($mobile-s)
+            display: none !important
+          +rmin($mobile)
+            display: block !important
+            right: 0 !important
+          +rmin($wide)
+            right: 30px !important
+
+
+  &__swap
+    display: flex
+    align-items: center
+    padding: 30px 100px
+    margin-bottom: 60px
+    border-radius: 15px
+    background-color: $colorSolitude
+    +rmin($mobile-s)
+      padding-left: 40px
+      padding-right: 40px
+    +rmin($mobile)
+      padding-left: 100px
+      padding-right: 100px
+
+    &-wrap
+      margin-left: 15px
+      margin-right: 15px
+    .slick
+      &-btn
+        &.slick-prev
+          +rmin($mobile-s)
+            left: 15px !important
+          +rmin($wide)
+            left: 30px !important
+        &.slick-next
+          +rmin($mobile-s)
+            right: 15px !important
+          +rmin($wide)
+            right: 30px !important
+
+
+  .slick
+    &-btn
+      cursor: pointer
+      z-index: 1
+      position: absolute
+      top: 0
+      height: 100%
+      background-color: transparent
+      border: none
+      +transition(opacity)
+
+      &.slick-prev
+        left: 30px
+      &.slick-next
+        right: 30px
+
+      &:hover
+        opacity: 0.85
+        +transition(opacity)

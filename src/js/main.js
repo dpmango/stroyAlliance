@@ -292,17 +292,17 @@ $(document).ready(function(){
 
       $(this).toggleClass('is-active');
 
-      // if($(this).hasClass("is-active")) {
-      //   if(tableSale) {
-      //     tableSale.removeClass("is-active");
-      //     tableRent.addClass("is-active");
-      //   }
-      // } else {
-      //   if(tableSale) {
-      //     tableSale.addClass("is-active");
-      //     tableRent.removeClass("is-active");
-      //   }
-      // }
+      if($(this).is(".realty-js.is-active")) {
+        if(tableSale) {
+          tableSale.removeClass("is-active");
+          tableRent.addClass("is-active");
+        }
+      } else if ($(this).is(".realty-js")) {
+        if(tableSale) {
+          tableSale.addClass("is-active");
+          tableRent.removeClass("is-active");
+        }
+      }
 
       if(inputCheckbox.prop('checked') === true){
         inputCheckbox.prop('checked', false).change();
@@ -435,18 +435,28 @@ $(document).ready(function(){
     var elem = $(e.target);
 
     if(elem.closest("[th-js]")) {
-      var tbody = elem.closest("[table-js]").find("[tbody-js]"),
+      let tbody = elem.closest("[table-js]").find("[tbody-js]"),
         tbodyTr = elem.closest("[table-js]").find("[tbody-tr-js]");
 
-      var sortIdx = parseInt(elem.attr("data-id")),
-        sortType = elem.attr("data-type");
+      const sortIdx = parseInt(elem.closest("[th-js]").attr("data-id")),
+        sortType = elem.closest("[th-js]").attr("data-type");
 
-      elem.toggleClass("is-active");
+      elem.closest("[th-js]").toggleClass("is-active");
+
+      let tbodyTh = elem.closest("[table-js]").find("[tbody-tr-js]");
+
+      tbodyTh.each(function(idx, val) {
+        let elemEq = $(val).find("[td-js]").eq(sortIdx),
+          elemNotEq = $(val).find("[td-js]").not(":eq(" + sortIdx + ")");
+
+        elemNotEq.removeClass("is-sort");
+        elemEq.toggleClass("is-sort");
+      });
 
       function sortTable(sortNum1, sortNum2, numberSortVal, boolVal) {
-        var sortVal = tbodyTr.sort(function(a, b) {
+        const sortVal = tbodyTr.sort(function(a, b) {
 
-          var firstVal = $(a).find('[td-js]').eq(sortIdx).text(),
+          let firstVal = $(a).find('[td-js]').eq(sortIdx).text(),
             secondVal = $(b).find('[td-js]').eq(sortIdx).text();
 
           if(sortType === "int") {
@@ -614,10 +624,17 @@ $(document).ready(function(){
       [swap-earth-js],
       [swap-parking-js]
     `;
+    const sliderGallery0 = `[slider-0-js]`;
+    const sliderGallery1 = `[slider-1-js]`;
+    const sliderGallery2 = `[slider-2-js]`;
+    const swapGallery0 = `[swap-0-js]`;
+    const swapGallery1 = `[swap-1-js]`;
+    const swapGallery2 = `[swap-2-js]`;
 
     const asNavForCarousel = `${sliderLocationName} , ${swapInfoName}`;
     const asNavForSlider = `${carouselBgName} , ${swapInfoName}`;
     const asNavForSwap = `${carouselBgName} , ${sliderLocationName}`;
+
     const asNavForCarouselInner = `${sliderInnerLocationName}`;
     const asNavForSliderInner = `${carouselInnerBgName}`;
 
@@ -629,6 +646,26 @@ $(document).ready(function(){
     const sliderNextBtn = `
       <button type='button' class='slick-btn slick-next'>
         <i class='icon icon-next'></i>
+      </button>
+    `;
+    const sliderGalleryPrevBtn = `
+      <button type='button' class='slick-btn slick-prev'>
+        <i class='icon icon-prev-slider-gallery'></i>
+      </button>
+    `;
+    const sliderGalleryNextBtn = `
+      <button type='button' class='slick-btn slick-next'>
+        <i class='icon icon-next-slider-gallery'></i>
+      </button>
+    `;
+    const swapGalleryPrevBtn = `
+      <button type='button' class='slick-btn slick-prev'>
+        <i class='icon icon-prev-swap-gallery'></i>
+      </button>
+    `;
+    const swapGalleryNextBtn = `
+      <button type='button' class='slick-btn slick-next'>
+        <i class='icon icon-next-swap-gallery'></i>
       </button>
     `;
     // ===============
@@ -694,17 +731,78 @@ $(document).ready(function(){
         return '<span></span>';
       },
     };
+    const sliderGalleryOption = (asNavForName) => {
+      return {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        asNavFor: asNavForName,
+        prevArrow: sliderGalleryPrevBtn,
+        nextArrow: sliderGalleryNextBtn
+      }
+    };
+    const swapGalleryOption = (asNavForName) => {
+      return {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: asNavForName,
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        variableWidth: true,
+        prevArrow: swapGalleryPrevBtn,
+        nextArrow: swapGalleryNextBtn
+      }
+    };
+
     // ===============
     // SLICK INIT
     // ===============
     $(carouselBgName).not('.slick-initialized').slick(mainCarouselOption(asNavForCarousel));
-    $(sliderLocationName).not('.slick-initialized').slick(mainSliderOption(true, true, asNavForSlider));
+    $(sliderLocationName)
+      .not('.slick-initialized')
+      .on('init.slick', function(event, slick) {
+        const slickActive = $('.slick-active');
+
+        slickActive.prev().addClass('slick-prev');
+        slickActive.next().addClass('slick-next');
+      })
+      .slick(mainSliderOption(true, true, asNavForSlider))
+      .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        $('.slick-slide').removeClass('slick-prev slick-next');
+        $('.banner__slider .slick-list').removeClass("fadeIn").addClass("animated fadeOut");
+      })
+      .on('afterChange', function(event, slick, currentSlide, nextSlide) {
+        const slickActive = $('.slick-active');
+
+        slickActive.prev().addClass('slick-prev');
+        slickActive.next().addClass('slick-next');
+
+        $('.banner__slider .slick-list').removeClass("fadeOut").addClass("fadeIn");
+      })
+      .on('click', '.slick-slide', function (e) {
+        e.stopPropagation();
+
+        const slickSlider = $('.slick-slider'),
+          index = $(this).data("slick-index");
+
+        if (slickSlider.slick('slickCurrentSlide') !== index) {
+          slickSlider.slick('slickGoTo', index);
+        }
+      });
     $(swapInfoName).not('.slick-initialized').slick(swapInfoOption);
 
     $(carouselInnerBgName).not('.slick-initialized').slick(mainCarouselOption(asNavForCarouselInner));
     $(sliderInnerLocationName).not('.slick-initialized').slick(mainSliderOption(false, false, asNavForSliderInner));
 
     $('[info-slide-js]').not('.slick-initialized').slick(sliderInfoOption);
+
+    $(sliderGallery0).not('.slick-initialized').slick(sliderGalleryOption(swapGallery0));
+    $(sliderGallery1).not('.slick-initialized').slick(sliderGalleryOption(swapGallery1));
+    $(sliderGallery2).not('.slick-initialized').slick(sliderGalleryOption(swapGallery2));
+    $(swapGallery0).not('.slick-initialized').slick(swapGalleryOption(sliderGallery0));
+    $(swapGallery1).not('.slick-initialized').slick(swapGalleryOption(sliderGallery1));
+    $(swapGallery2).not('.slick-initialized').slick(swapGalleryOption(sliderGallery2));
     // ===============
   }
 

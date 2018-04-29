@@ -25,14 +25,14 @@ mixin swapInfoCommercial()
             .banner__swap-wrap--left
               p!= "Продажа"
               p
-                span!= "от 5 500 000₽"
-                span!= "до 23 500 000₽"
+                span!= (i % 2 === 0) ? "от 5 500 000₽" : "от 3 500 000₽"
+                span!= (i % 2 === 0) ? "до 23 500 000₽" : "до 19 000 000₽"
             .banner__swap-wrap--right
               p!= "Аренда"
               p
-                span!= "от 1000₽ за м2"
-                span!= "до 10 000₽ за м2"
-          a(href="#" class="banner__swap-btn" title="")!= "ПОДРОБНЕЕ"
+                span!= (i % 2 === 0) ? "от 1000₽ за м2" : "от 2500₽ за м2"
+                span!= (i % 2 === 0) ? "до 10 000₽ за м2" : "до 13 500₽ за м2"
+          a(href="#" class="banner__swap-btn" title="")!= "подробнее"
 //- ==========
 
 

@@ -22,9 +22,9 @@ mixin swapInfoParking()
         )
           p.banner__swap-title!= "Паркинг"
           .banner__swap-wrap
-            p!= "от <span>1 500 000₽</span>"
-            p!= "от <span>4 000 000₽</span>"
-          a(href="#" class="banner__swap-btn" title="")!= "ПОДРОБНЕЕ"
+            p!= (i % 2 === 0) ? "от <span>1 500 000₽</span>" : "от <span>950 000₽</span>"
+            p!= (i % 2 === 0) ? "от <span>4 000 000₽</span>" : "от <span>7 550 000₽</span>"
+          a(href="#" class="banner__swap-btn" title="")!= "подробнее"
 //- ==========
 
 

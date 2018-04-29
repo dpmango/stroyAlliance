@@ -22,9 +22,9 @@ mixin swapInfoEarth()
         )
           p.banner__swap-title!= "Земельный участок"
           .banner__swap-wrap
-            p!= "от <span>500м<sup>2</sup></span>"
-            p!= "от <span>20Га</span>"
-          a(href="#" class="banner__swap-btn" title="")!= "ПОДРОБНЕЕ"
+            p!= (i % 2 === 0) ? "от <span>500м<sup>2</sup></span>" : "от <span>300м<sup>2</sup></span>"
+            p!= (i % 2 === 0) ? "от <span>20Га</span>" : "от <span>10Га</span>"
+          a(href="#" class="banner__swap-btn" title="")!= "подробнее"
 //- ==========
 
 
