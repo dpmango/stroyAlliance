@@ -685,6 +685,7 @@ $(document).ready(function(){
     };
     const mainSliderOption = (centerModeBool, variableWidthBool, asNavForName) => {
       return {
+        draggable: false,
         dots: false,
         prevArrow: sliderPrevBtn,
         nextArrow: sliderNextBtn,
@@ -771,6 +772,7 @@ $(document).ready(function(){
       .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
         $('.slick-slide').removeClass('slick-prev slick-next');
         $('.banner__slider .slick-list').removeClass("fadeIn").addClass("animated fadeOut");
+        // debugger;
       })
       .on('afterChange', function(event, slick, currentSlide, nextSlide) {
         const slickActive = $('.slick-active');

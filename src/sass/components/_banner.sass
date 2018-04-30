@@ -103,14 +103,15 @@
       font-weight: bold
       text-transform: uppercase
       +rmin($mobile-s)
-        display: table
+        display: inline-block
       +rmin($desktop)
         display: none
 
       .slick-center.slick-current &
-        display: table
+        display: inline-block
         animation-delay: 0.3s
         animation-name: slideInDown
+        animation-fill-mode: backwards
 
     &-name
       text-shadow: 0 9px 90px rgba(0, 0, 0, 0.9)
@@ -199,7 +200,7 @@
         padding: 0 !important
         margin: 0 50px
 
-        &.is-hide
+        &.fadeOut
           opacity: 0
 
 
@@ -308,7 +309,7 @@
         font-weight: bold
 
     &-btn
-      display: table
+      display: inline-block
       height: 45px
       line-height: 45px
       margin-top: 40px
