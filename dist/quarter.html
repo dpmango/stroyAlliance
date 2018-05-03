@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- MADE WITH LOVE BY <> KHMELEVSKOY & ASSOCIATES </> www.khmelevskoy.co-->
+    <meta charset="utf-8">
+    <title>Quarter</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <!-- remove for production-->
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" media="all" href="css/app.css"><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body class="quarter">
+    <!-- place where pjax bindings happen's-->
+    <div id="barba-wrapper">
+      <!-- HEADER :: START-->
+      <header class="header">
+        <div class="container">
+          <div class="header__wrapper">
+            <div class="header__container">
+              <div class="header__row header__row-0"><img class="header_logo" src="./img/img-logo__header.png" srcset="./img/img-logo__header@2x.png 2x" alt="" title=""></div>
+              <div class="header__row header__row-1">
+                <ul class="menu">
+                  <li class="menu__item"><a class="menu__link" href="#" title="">Инвесторам</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#" title="">Ипотека</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#" title="">Контакты</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#" title="">О компании</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__container">
+              <div class="header__row header__row-2">
+                <div class="dropdown"><a class="dropdown__button" href="#" title="" dropdown-choose><i class="icon-marker"></i><span class="dropdown__button-name">Тула</span><i class="icon-corner"></i></a>
+                  <div class="dropdown__menu animated"><a class="dropdown__menu-button is-active" href="#" title="" dropdown-btn><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name>Тула</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name>Архангельск</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name>Белгород</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="header__row header__row-3"><a class="header__phone" href="tel:4872702524" title="">(4872) 70-25-24</a>
+                <div class="header__hamburger">
+                  <div class="hamburger hamburger--squeeze" js-hamburger-open>
+                    <div class="hamburger-box">
+                      <div class="hamburger-inner"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab__header">
+              <div class="container">
+                <div class="tab__header-wrap">
+                  <div class="tab__header--left"><img class="header_logo header_logo--tab" src="./img/img-logo__tab.png" srcset="./img/img-logo__tab@2x.png 2x" alt="" title=""/></div>
+                  <div class="tab__header--right">
+                    <div class="dropdown"><a class="dropdown__button" href="#" title="" dropdown-choose="dropdown-choose"><i class="icon-marker"></i><span class="dropdown__button-name">Тула</span><i class="icon-corner"></i></a>
+                      <div class="dropdown__menu animated"><a class="dropdown__menu-button is-active" href="#" title="" dropdown-btn="dropdown-btn"><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name="dropdown-name">Тула</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn="dropdown-btn"><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name="dropdown-name">Архангельск</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn="dropdown-btn"><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name="dropdown-name">Белгород</span></a>
+                      </div>
+                    </div>
+                    <div class="header__hamburger">
+                      <div class="hamburger hamburger--squeeze is-active" js-hamburger-close="js-hamburger-close">
+                        <div class="hamburger-box">
+                          <div class="hamburger-inner"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="tab__list">
+              <li class="tab__item is-active tab__item-0" data-tab="apartment" tab-js="tab-js"><a class="tab__link tab__link--emerald" href="homepage.html" title="">Квартиры</a></li>
+              <li class="tab__item tab__item-1" data-tab="commercial" tab-js="tab-js"><a class="tab__link tab__link--gold" href="commercial.html" title="">Коммерческая недвижимость</a></li>
+              <li class="tab__item tab__item-2" data-tab="storerooms" tab-js="tab-js"><a class="tab__link tab__link--blizzardBlue" href="storerooms.html" title="">Кладовые</a></li>
+              <li class="tab__item tab__item-3" data-tab="earth" tab-js="tab-js"><a class="tab__link tab__link--lightningYellow" href="earth.html" title="">Земля</a></li>
+              <li class="tab__item tab__item-4" data-tab="carParking" tab-js="tab-js"><a class="tab__link tab__link--deepCerise" href="parking.html" title="">Машиноместа</a></li>
+            </ul>
+            <div class="tab__footer"><a class="header__phone header__phone--tab" href="tel:4872702524" title="">(4872) 70-25-24</a>
+              <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="#" title="">Инвесторам</a></li>
+                <li class="menu__item"><a class="menu__link" href="#" title="">Ипотека</a></li>
+                <li class="menu__item"><a class="menu__link" href="#" title="">Контакты</a></li>
+                <li class="menu__item"><a class="menu__link" href="#" title="">О компании</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER :: END-->
+      <!-- what should be changed with every pjax-->
+      <div class="page">
+        <div class="page__content">
+          <!-- BANNER :: START-->
+          <div class="banner banner--inner">
+            <div class="banner__gradient"></div>
+            <div class="banner__carousel banner__carousel--quarterBlur">
+              <div data-js="carousel-quarterBlur-js">
+                <div class="banner__carousel-wrap">
+                  <div class="banner__carousel--blur">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__quarter.jpg');"></div>
+                  </div>
+                  <div class="banner__carousel--normal">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__quarter.jpg');"></div>
+                  </div>
+                </div>
+                <div class="banner__carousel-wrap">
+                  <div class="banner__carousel--blur">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__quarter.jpg');"></div>
+                  </div>
+                  <div class="banner__carousel--normal">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__quarter.jpg');"></div>
+                  </div>
+                </div>
+                <div class="banner__carousel-wrap">
+                  <div class="banner__carousel--blur">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__quarter.jpg');"></div>
+                  </div>
+                  <div class="banner__carousel--normal">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__quarter.jpg');"></div>
+                  </div>
+                </div>
+                <div class="banner__carousel-wrap">
+                  <div class="banner__carousel--blur">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__quarter.jpg');"></div>
+                  </div>
+                  <div class="banner__carousel--normal">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__quarter.jpg');"></div>
+                  </div>
+                </div>
+                <div class="banner__carousel-wrap">
+                  <div class="banner__carousel--blur">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__quarter.jpg');"></div>
+                  </div>
+                  <div class="banner__carousel--normal">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__quarter.jpg');"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container container--slider">
+              <div class="banner__slider banner__slider--quarter">
+                <div data-js="slider-quarter-js">
+                  <div class="slider__banner-content">
+                    <p class="banner__slider-name">ЖК Петровский квартал</p>
+                    <p class="banner__slider-info">г. Тула, ул. Фрунзе, д. 20</p>
+                  </div>
+                  <div class="slider__banner-content">
+                    <p class="banner__slider-name">ЖК Петровский квартал</p>
+                    <p class="banner__slider-info">г. Тула, ул. Фрунзе, д. 20</p>
+                  </div>
+                  <div class="slider__banner-content">
+                    <p class="banner__slider-name">ЖК Петровский квартал</p>
+                    <p class="banner__slider-info">г. Тула, ул. Фрунзе, д. 20</p>
+                  </div>
+                  <div class="slider__banner-content">
+                    <p class="banner__slider-name">ЖК Петровский квартал</p>
+                    <p class="banner__slider-info">г. Тула, ул. Фрунзе, д. 20</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="submenu">
+              <svg id="svg-filter">
+                <filter id="svg-blur">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="24"></feGaussianBlur>
+                </filter>
+              </svg>
+              <div class="container">
+                <ul class="submenu__list submenu__list--quarter">
+                  <li class="submenu__item"><a class="submenu__btn" href="#" title="" data-js="">Другие объекты</a>
+                  </li>
+                  <li class="submenu__item"><a class="submenu__btn" href="#masterplan" title="" data-js="submenu-js">Генплан</a>
+                  </li>
+                  <li class="submenu__item"><a class="submenu__btn" href="#about" title="" data-js="submenu-js">Описание объекта</a>
+                  </li>
+                  <li class="submenu__item"><a class="submenu__btn" href="#nearby" title="" data-js="submenu-js">Что рядом</a>
+                  </li>
+                  <li class="submenu__item"><a class="submenu__btn" href="#" title="" data-js="submenu-js">Фото и видео</a>
+                  </li>
+                  <li class="submenu__item"><a class="submenu__btn" href="#buy" title="" data-js="submenu-js">Где купить</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- BANNER :: END-->
+          <!-- INFO :: START-->
+          <div class="info">
+            <div class="container">
+              <div class="info__row" info-slide-js>
+                <div class="info__wrap">
+                  <div class="info__block info__block-0" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Готовые квартиры с отделкой</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right" style="background-image: url('./img/img-0__info.png');"></div>
+                  </div>
+                  <div class="info__block info__block-1" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Ипотека без первоначального взноса</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right"><span>0</span><span>%</span></div>
+                  </div>
+                  <div class="info__block info__block-2" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Начало строительства</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right"><img src="./img/img-2__info.png" srcset="./img/img-2__info@2x.png 2x"></div>
+                  </div>
+                  <div class="info__block info__block-3" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Старт</br>продаж</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right" style="background-image: url('./img/img-3__info.png');"></div>
+                  </div>
+                </div>
+                <div class="info__wrap">
+                  <div class="info__block info__block-0" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Готовые квартиры с отделкой</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right" style="background-image: url('./img/img-0__info.png');"></div>
+                  </div>
+                  <div class="info__block info__block-1" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Ипотека без первоначального взноса</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right"><span>0</span><span>%</span></div>
+                  </div>
+                  <div class="info__block info__block-2" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Начало строительства</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right"><img src="./img/img-2__info.png" srcset="./img/img-2__info@2x.png 2x"></div>
+                  </div>
+                  <div class="info__block info__block-3" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Старт</br>продаж</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right" style="background-image: url('./img/img-3__info.png');"></div>
+                  </div>
+                </div>
+                <div class="info__wrap">
+                  <div class="info__block info__block-0" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Готовые квартиры с отделкой</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right" style="background-image: url('./img/img-0__info.png');"></div>
+                  </div>
+                  <div class="info__block info__block-1" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Ипотека без первоначального взноса</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right"><span>0</span><span>%</span></div>
+                  </div>
+                  <div class="info__block info__block-2" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Начало строительства</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right"><img src="./img/img-2__info.png" srcset="./img/img-2__info@2x.png 2x"></div>
+                  </div>
+                  <div class="info__block info__block-3" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Старт</br>продаж</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right" style="background-image: url('./img/img-3__info.png');"></div>
+                  </div>
+                </div>
+                <div class="info__wrap">
+                  <div class="info__block info__block-0" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Готовые квартиры с отделкой</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right" style="background-image: url('./img/img-0__info.png');"></div>
+                  </div>
+                  <div class="info__block info__block-1" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Ипотека без первоначального взноса</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right"><span>0</span><span>%</span></div>
+                  </div>
+                  <div class="info__block info__block-2" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Начало строительства</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right"><img src="./img/img-2__info.png" srcset="./img/img-2__info@2x.png 2x"></div>
+                  </div>
+                  <div class="info__block info__block-3" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Старт</br>продаж</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right" style="background-image: url('./img/img-3__info.png');"></div>
+                  </div>
+                </div>
+                <div class="info__wrap">
+                  <div class="info__block info__block-0" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Готовые квартиры с отделкой</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right" style="background-image: url('./img/img-0__info.png');"></div>
+                  </div>
+                  <div class="info__block info__block-1" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Ипотека без первоначального взноса</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right"><span>0</span><span>%</span></div>
+                  </div>
+                  <div class="info__block info__block-2" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Начало строительства</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right"><img src="./img/img-2__info.png" srcset="./img/img-2__info@2x.png 2x"></div>
+                  </div>
+                  <div class="info__block info__block-3" data-mfp-src="#callback" js-popup>
+                    <div class="info__block-left">
+                      <p>Старт</br>продаж</p><span>акция продлится до 15.07.18г</span>
+                    </div>
+                    <div class="info__block-right" style="background-image: url('./img/img-3__info.png');"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- INFO :: END-->
+          <!-- MASTERPLAN :: START-->
+          <div class="masterplan" id="masterplan">
+            <h3 class="main__title">Генплан</h3>
+            <p class="masterplan__subtitle">Нажмите на дом для выбора квартиры</p>
+            <div class="masterplan__map"><img src="./img/img-bg__masterplan.jpg" srcset="">
+              <svg masterplan-js xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1500 720">
+                <g id="Layer_2" data-name="Layer 2"></g>
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="915 603 1001 526 1029 539 1026 576 945 653 915 640 915 603"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1051 581 1072 560 1205 630 1196 671 1182 688 1045 615 1051 581"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="542 472 618 422 651 441 654 498 579 552 547 534 542 472"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="473 462 466 403 610 320 640 337 642 391 502 480 473 462"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="428 416 501 375 501 367 557 333 554 282 529 268 460 304 460 312 396 346 401 400 428 416"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="448 226 423 236 419 236 408 241 408 245 381 257 374 254 346 266 342 264 330 270 330 274 302 287 295 284 264 296 260 294 248 300 248 305 216 320 211 317 176 330 173 328 158 335 160 339 126 355 144 410 163 422 246 385 252 390 329 352 334 356 407 317 413 322 479 286 472 239 448 226"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="274 203 340 175 362 187 370 236 303 266 283 252 274 203"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="211 229 232 244 245 294 89 364 71 351 52 295 211 229"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="188 156 202 209 219 219 285 191 274 145 253 130 188 156"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="9 307 160 244 146 195 126 180 0 223 0 300 9 307"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1280 650 1297 629 1306 591 1051 470 1029 487 1027 523 1280 650"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1084 480 1088 447 1157 388 1182 399 1176 437 1115 493 1084 480"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1182 529 1189 489 1250 430 1283 444 1275 476 1214 543 1182 529"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1275 571 1285 536 1344 468 1378 483 1368 517 1311 587 1275 571"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1162 371 1179 357 1422 457 1411 488 1398 505 1374 496.6 1378 483 1344 468 1336.13 477.07 1280.57 453.73 1283 444 1250 430 1242.53 437.23 1180.11 410.96 1182 399 1157 388 1162 371"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="992 483 1126 368 1131 339 1103 328 969 431 966 470 992 483"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="821 417 821 387 842 373 944 423 942 457 925 470 821 417"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="961 318 964 287 980 276 1079 318 1075 349 1060.23 360.87 961 318"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="793 355 793 387 815 397 821 390.67 821 388 842 373 845.35 374.64 953 300 955 268 936 259 793 355"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="795 248 817 257 817 263 803 272 803 301 821 310 885 270 885 242 810 208 795 218 795 248"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="720 225 686 246 663 237 663 210 708 186 753 186 799 204 799 216 795 218 795 235.67 782 243 735 225 720 225"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="673 286 727 314 775 283 799 296 799 324 731 369 654 330 654 300 673 286"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="645 328 569 288 569 259 640 221 657 230 659 260 644 270 660 283 660 295.58 654 300 654 321.67 645 328"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="554 148 510 169 492 160 492 132 554 103 614 129 614 136 608 141 608 160 598 164 597 158 576 148 554 148"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="622 177 609 184 609 213 626 220 675 197 675 155 621 131 609 141 609 172 622 177"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="487 178 466 189 475 195 475 205 463 210 464 230 457.17 230.97 399 203 396 175 469 143 487 152 487 178"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="529 221 578 196 601 206 602 232 531.96 269.66 463.98 234.66 464 210 487 199 529 221"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="506 183 507.48 209.73 529 221 599 183 597 158 576 148 506 183"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="599 89 599 116 706 159 747 159 786 136 786 111 771 103 753 105 725 117 622 80 599 89"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="842 159 837 160 837 169 852 174 852 184 852 203 840 210 786 188 780 173 780 148 826 124 842 128 842 159"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="874 159 902 141 923 150 923 178 902 191 874 179 874 159"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="869 175 852 184 852 214 925 246 1008 189 1008 164 983 154 920 196 869 175"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1017 253 1016 282 1107 323 1122 313 1126 281 1035 244 1017 253"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1062 174 1084 182 1081 212 997 269 974 261 974 231 1062 174"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1108 223 1135 203 1157 210 1154 238 1126 262 1106 255 1108 223"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1145 294 1223 231 1249 241 1245 266 1166 335 1143 327 1145 294"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1306 259 1330 269 1328 293 1283 339 1250 326 1252 304 1306 259"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1338 360 1346 333 1389 290 1422 301 1416 323 1374 372 1338 360"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1225 316 1210 328 1203 358 1438 455 1453 437 1462 408 1225 316"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1308 250 1320 241 1400 269 1397 284 1389 290 1382 297 1330 279 1330 269 1306 259 1308 250"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1330 235 1338 228 1398 249 1398 257 1391.43 266 1327.65 243.68 1330 235"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1347 228 1351 215 1359 207 1400 222 1398 233 1390 242 1347 228"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1143 192 1152 185 1275 226 1275 241 1263 254 1247.62 249.61 1249 241 1223 231 1215.26 237.25 1156.5 214.68 1157 210 1138.71 204.18 1143 192"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1008 146 1020 137 1131 177 1131 194 1119 203 1083.1 191 1084 182 1062 174 1050.43 181.49 1008 164 1008 146"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1095 156 1104 149 1190 178 1190 189 1181.8 194.93 1095 164.03 1095 156"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1155 149 1155 163 1207 180 1216 172 1216 158 1164 143 1155 149"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1190 143 1199 136 1233 147 1233 157 1224 166 1216 164.67 1216 158 1190 149 1190 143"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1196 191 1207 183 1297 213 1297 224 1288 234 1275 231 1275 226 1196 199.67 1196 191"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1222 174 1230 166 1320 195 1320 205 1309 216 1219 185 1222 174"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1239 159 1249 151 1338 180 1338 192 1328 203 1320 200 1320 195 1236.92 168.23 1239 159"></polygon>
+                  <polygon data-obj="{&quot;className&quot;:&quot;done&quot;, &quot;title&quot;:&quot;Дом 11.2&quot;, &quot;text&quot;:&quot;Все квартиры проданы&quot;, &quot;price&quot;:&quot;от - &lt;span&gt;1 360 400₽&lt;/span&gt;&quot;, &quot;info&quot;:&quot;Дом сдан&quot;}" points="1251 137 1261 132 1349 157 1347 170 1338 177 1249 151 1251 137"></polygon>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <!-- MASTERPLAN :: END-->
+          <!-- ABOUT :: START-->
+          <div class="about" id="about">
+            <div class="container">
+              <h3 class="main__title">Петровский Квартал</h3>
+              <div class="about__row">
+                <div class="about__left"><img src="./img/img-logo-quarter__about.png" srcset="./img/img-logo-quarter__about@2x.png 2x"></div>
+                <div class="about__right">
+                  <p>Микрорайон «Петровский квартал» соединил в себе городской комфорт и прелесть загородной жизни. Живописная природа, удачная география и близость к центру города, комфортное жилье и доступные цены — возможно, именно о таком месте для жизни вы мечтаете? Петровский квартал строится на площади в 16 гектаров в районе посёлков Мясново и Петровский. В радиусе нескольких десятков километров нет металлургических и химических предприятий. Площадка для строительства выбиралась с учетом розы ветров: благодаря ей здесь всегда благоприятная экологическая обстановка. Микрорайон стоит на берегу пруда, в окружении полей, рощ и частного сектора. Идеально место для молодых семей, особенно с детьми, а также для всех, кто хочет спокойствия, тишины и свежего воздуха.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ABOUT :: END-->
+          <!-- DESCRIPTION :: START-->
+          <div class="description" id="description">
+            <div class="description__block description__block-0 description__block--reverse">
+              <div class="description__block-image"><img src="./img/img-0__description.jpg" srcset="./img/img-0__description@2x.jpg 2x" objectFit-js></div>
+              <div class="container">
+                <div class="description__block-wrap">
+                  <div class="description__block-info">
+                    <p>Свой пляж</p>
+                    <p>Единственные в Туле новостройки с собственным благоустроенным пляжем. Каждый день вы можете наслаждаться всеми прелестями пляжного отдыха и для этого не надо лететь на море. Достаточно выйти из своей квартиры в шлепанцах и сухих плавках, а вечером вернуться загорелым и уже с мокрыми плавками. Речной песок, чистая вода, благоустроенная зона отдыха, пляжный волейбол и множество других развлечений в двух шагах от вашей квартиры. Все это Вам дает Петровский квартал.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="description__block description__block-1 description__block--normal">
+              <div class="description__block-image"><img src="./img/img-1__description.jpg" srcset="./img/img-1__description@2x.jpg 2x" objectFit-js></div>
+              <div class="container">
+                <div class="description__block-wrap">
+                  <div class="description__block-info">
+                    <p>Прогулки в парке</p>
+                    <p>Живописная зелень парка открывает массу возможностей для спокойных прогулок и активного отдыха на свежем воздухе. Территория парка станет единым пространством для отдыха, разделенным на функциональные зоны: современные детские игровые и спортивные площадки, скверы с беседками и объектами ландшафтного дизайна.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="description__block description__block-2 description__block--reverse">
+              <div class="description__block-image"><img src="./img/img-2__description.jpg" srcset="./img/img-2__description@2x.jpg 2x" objectFit-js></div>
+              <div class="container">
+                <div class="description__block-wrap">
+                  <div class="description__block-info">
+                    <p>Детский сад с бассейном</p>
+                    <p>Ваш ребенок, начиная с малых лет будет развиваться здоровым и счастливым в Петровском Квартале! А Вы будете спокойны и за его безопасность, и за его здоровье. Уже сейчас силами застройщика активно строится собственный детский сад с бассейном на 110 малышей в Петровском Квартале. Первые дети смогут его посетить уже в 2018 году.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- DESCRIPTION :: END-->
+          <!-- NEARBY :: START-->
+          <div class="nearby" id="nearby">
+            <h3 class="main__title">Что рядом</h3>
+            <div class="nearby__row">
+              <div class="nearby__block">
+                <p class="nearby__block-title">Инфраструктура вокруг</p>
+                <div class="checkbox checkbox--irisBlue is-active">
+                  <input type="checkbox" name="checkbox" id="inputCheckbox"/>
+                  <label for="inputCheckbox">
+                    <div class="checkbox__icon"><span></span></div>
+                    <div class="checkbox__name">
+                      <p>Поликлиники</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="checkbox checkbox--deepCerise">
+                  <input type="checkbox" name="checkbox" id="inputCheckbox"/>
+                  <label for="inputCheckbox">
+                    <div class="checkbox__icon"><span></span></div>
+                    <div class="checkbox__name">
+                      <p>Детские сады</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="checkbox checkbox--darkTangerine is-active">
+                  <input type="checkbox" name="checkbox" id="inputCheckbox"/>
+                  <label for="inputCheckbox">
+                    <div class="checkbox__icon"><span></span></div>
+                    <div class="checkbox__name">
+                      <p>Школы</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="checkbox checkbox--fern">
+                  <input type="checkbox" name="checkbox" id="inputCheckbox"/>
+                  <label for="inputCheckbox">
+                    <div class="checkbox__icon"><span></span></div>
+                    <div class="checkbox__name">
+                      <p>Аптеки</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="checkbox checkbox--violetBlue is-active">
+                  <input type="checkbox" name="checkbox" id="inputCheckbox"/>
+                  <label for="inputCheckbox">
+                    <div class="checkbox__icon"><span></span></div>
+                    <div class="checkbox__name">
+                      <p>Супермаркеты</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="nearby__maps" id="map-nearby"></div>
+            </div>
+            <div class="container">
+              <p class="nearby__text">Микрорайон расположен в Привокзальном районе Тулы, вблизи поселков Мясново и Петровский. Въезд в Петровский квартал осуществляется со стороны Одоевского шоссе, в будущем планируется строительство дороги и подъездных путей от ул. Чмутова.Петровский квартал имеет хорошее дорожное и транспортное сообщение со всеми районами города. До центра города или до Центрального парка на автомобиле можно доехать всего за 10 минут, на общественном транспорте — за 15–20. У въезда в район уже установлен остановочный павильон: здесь будут находиться конечные двух автобусных маршрутов.</p>
+            </div>
+          </div>
+          <!-- NEARBY :: END-->
+          <!-- PROGRESS :: START-->
+          <div class="progress">
+            <h3 class="main__title">Ход строительства</h3>
+            <svg id="svg-filter">
+              <filter id="svg-blur-0">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="8"></feGaussianBlur>
+              </filter>
+            </svg>
+            <div class="progress__row">
+              <div class="progress__block progress__block-0">
+                <div style="background-image: url('./img/img-bg-1__progress.png');"></div>
+              </div>
+              <div class="progress__block progress__block-1">
+                <div style="background-image: url('./img/img-bg-1__progress.png');"></div>
+                <p>Ноябрь 2017г.</p>
+              </div>
+              <div class="progress__block progress__block-2">
+                <div style="background-image: url('./img/img-bg-2__progress.png');"></div>
+                <p>Декабрь 2017г.</p>
+              </div>
+              <div class="progress__block progress__block-3">
+                <div style="background-image: url('./img/img-bg-3__progress.png');"></div>
+                <p>Январь 2018г.</p>
+              </div>
+              <div class="progress__block progress__block-4">
+                <div style="background-image: url('./img/img-bg-1__progress.png');"></div>
+              </div>
+            </div>
+          </div>
+          <!-- PROGRESS :: END-->
+          <!-- BUY :: START-->
+          <div class="buy" id="buy">
+            <h3 class="main__title">Где купить?</h3>
+            <div class="buy__row">
+              <div class="buy__block">
+                <p class="buy__block-title">Офисы продаж:</p><a class="buy__block-location" href="#" title="" location-js>
+                  <div class="icon-wrap"><i class="icon icon-marker-black"></i></div>Тула, ул. Тургеневская 7а (вход с улицы)</a><a class="buy__block-location is-active" href="#" title="" location-js>
+                  <div class="icon-wrap"><i class="icon icon-marker-black"></i></div>Тула, мкрн Петровский квартал,</br>ул. К. Паустовского, д. 8, оф. 3</a>
+                <p class="buy__block-title">Телефон отдела продаж:</p><a class="buy__block-phone" href="tel:+74872521034" title="">+7 (4872) 52-10-34</a>
+                <p class="buy__block-title">e-mail:</p><a class="buy__block-email" href="mailto:pk@petrkvartal.ru" title="">pk@petrkvartal.ru</a>
+              </div>
+              <div class="buy__maps" id="map-buy"></div>
+            </div>
+          </div>
+          <!-- BUY :: END-->
+          <!-- QUESTION :: START-->
+          <div class="question">
+            <div class="container">
+              <h3 class="main__title">Остались вопросы?</h3>
+              <form class="question__form" question-form-js>
+                <div class="form__field">
+                  <input class="form__input question__form-input" type="name" name="name" placeholder="Ваше имя">
+                </div>
+                <div class="form__field">
+                  <input class="form__input question__form-input" type="tel" name="phone">
+                </div>
+                <div class="form__field">
+                  <textarea class="form__message question__form-message" name="message" placeholder="Сообщение"></textarea>
+                </div>
+                <button class="form__button question__form-btn" type="submit">получить консультацию</button>
+              </form>
+            </div>
+          </div>
+          <!-- QUESTION :: END-->
+          <!-- DOCUMENTATION :: START-->
+          <div class="documentation">
+            <div class="container">
+              <h3 class="main__title">Документация</h3>
+              <div class="documentation__row">
+                <ul class="documentation__list">
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Проектная декларация - 8 этап</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Проектная декларация - 11/2 этап</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Изменения в проектную декларацию от 21.02.2017</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Проектная декларация - 11/2 этап</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Проектная декларация - 11/2 этап</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Изменения в проектную декларацию от 21.02.2017</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Проектная декларация - 8 этап</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Проектная декларация - 11/2 этап</p></a></li>
+                </ul><a class="documentation__button" href="#" title="">все документы</a>
+              </div>
+            </div>
+          </div>
+          <!-- DOCUMENTATION :: END-->
+        </div>
+        <!-- FOOTER :: START-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__wrapper">
+              <div class="footer__row footer__row-0"><img class="footer__logo" src="./img/img-logo__footer.png" srcset="./img/img-logo__footer@2x.png 2x" alt="" title="">
+                <div class="footer__row-wrap">
+                  <p>Группа компаний Стройальянс</p>
+                  <p>Все права на публикуемые на сайте материалы</br>принадлежат группе компаний «Стройальянс»</p>
+                  <p>© 2002 - 2017</p>
+                </div>
+              </div>
+              <div class="footer__row footer__row-1">
+                        <h2>Недвижимость</h2><a href="#" title="">Квартиры</a><a href="#" title="">Коммерческая недвижимость</a><a href="#" title="">Земля</a><a href="#" title="">Кладовые</a><a href="#" title="">Машиноместа</a>
+              </div>
+              <div class="footer__row footer__row-2">
+                        <h2>Компания</h2><a href="#" title="">Инвесторам</a><a href="#" title="">Ипотека</a><a href="#" title="">Контакты</a><a href="#" title="">О компании</a>
+              </div>
+              <div class="footer__row footer__row-3"><a href="tel:4872702524" title="">(4872) 70-25-24</a>
+                <div class="footer__row-wrap">
+                  <h2>Социальные сети</h2>
+                  <div class="social"><a class="social__link" href="#" title="">
+                      <svg class="ico ico-vk">
+                        <use xlink:href="img/sprite.svg#ico-vk"></use>
+                      </svg></a><a class="social__link" href="#" title="">
+                      <svg class="ico ico-fb">
+                        <use xlink:href="img/sprite.svg#ico-fb"></use>
+                      </svg></a><a class="social__link" href="#" title="">
+                      <svg class="ico ico-in">
+                        <use xlink:href="img/sprite.svg#ico-in"></use>
+                      </svg></a><a class="social__link" href="#" title="">
+                      <svg class="ico ico-yt">
+                        <use xlink:href="img/sprite.svg#ico-yt"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- FOOTER :: END-->
+        <!-- MODAL :: START-->
+        <div class="modal mfp-hide animated" id="callback">
+          <div class="modal__body">
+            <div class="modal__left">
+              <p class="modal__title">Готовые квартиры с отделкой</p>
+              <p class="modal__subtitle">акция продлится до 15.07.18г</p>
+              <p class="modal__text">Предложены квартиры двух видов: с базовой отделкой и с новым форматом отделки, который включает оклейку стен обоями на флизелиновой основе под покраску, напольное покрытие из ламината с фактурой дерева.</p>
+              <form modal-form-js>
+                <div class="form__field">
+                  <input class="form__input modal__form-input" type="name" name="name" placeholder="Ваше имя">
+                </div>
+                <div class="form__field">
+                  <input class="form__input modal__form-input" type="tel" name="phone">
+                </div>
+                <button class="form__button modal__form-btn" type="submit">заказать звонок</button>
+              </form>
+            </div>
+            <div class="modal__right"><img src="./img/img-bg__modal.png" title=""></div>
+          </div>
+        </div>
+        <!-- MODAL :: END-->
+      </div>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIbEk7W2kX53Upp7c0rROppSIDGjFyPew"></script>
+      <script src="js/vendor.js"></script>
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>

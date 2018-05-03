@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- MADE WITH LOVE BY <> KHMELEVSKOY & ASSOCIATES </> www.khmelevskoy.co-->
+    <meta charset="utf-8">
+    <title>Car</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <!-- remove for production-->
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" media="all" href="css/app.css"><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body class="car">
+    <!-- place where pjax bindings happen's-->
+    <div id="barba-wrapper">
+      <!-- HEADER :: START-->
+      <header class="header">
+        <div class="container">
+          <div class="header__wrapper">
+            <div class="header__container">
+              <div class="header__row header__row-0"><img class="header_logo" src="./img/img-logo__header.png" srcset="./img/img-logo__header@2x.png 2x" alt="" title=""></div>
+              <div class="header__row header__row-1">
+                <ul class="menu">
+                  <li class="menu__item"><a class="menu__link" href="#" title="">Инвесторам</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#" title="">Ипотека</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#" title="">Контакты</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#" title="">О компании</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__container">
+              <div class="header__row header__row-2">
+                <div class="dropdown"><a class="dropdown__button" href="#" title="" dropdown-choose><i class="icon-marker"></i><span class="dropdown__button-name">Тула</span><i class="icon-corner"></i></a>
+                  <div class="dropdown__menu animated"><a class="dropdown__menu-button is-active" href="#" title="" dropdown-btn><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name>Тула</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name>Архангельск</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name>Белгород</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="header__row header__row-3"><a class="header__phone" href="tel:4872702524" title="">(4872) 70-25-24</a>
+                <div class="header__hamburger">
+                  <div class="hamburger hamburger--squeeze" js-hamburger-open>
+                    <div class="hamburger-box">
+                      <div class="hamburger-inner"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab">
+            <div class="tab__header">
+              <div class="container">
+                <div class="tab__header-wrap">
+                  <div class="tab__header--left"><img class="header_logo header_logo--tab" src="./img/img-logo__tab.png" srcset="./img/img-logo__tab@2x.png 2x" alt="" title=""/></div>
+                  <div class="tab__header--right">
+                    <div class="dropdown"><a class="dropdown__button" href="#" title="" dropdown-choose="dropdown-choose"><i class="icon-marker"></i><span class="dropdown__button-name">Тула</span><i class="icon-corner"></i></a>
+                      <div class="dropdown__menu animated"><a class="dropdown__menu-button is-active" href="#" title="" dropdown-btn="dropdown-btn"><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name="dropdown-name">Тула</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn="dropdown-btn"><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name="dropdown-name">Архангельск</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn="dropdown-btn"><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name="dropdown-name">Белгород</span></a>
+                      </div>
+                    </div>
+                    <div class="header__hamburger">
+                      <div class="hamburger hamburger--squeeze is-active" js-hamburger-close="js-hamburger-close">
+                        <div class="hamburger-box">
+                          <div class="hamburger-inner"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="tab__list">
+              <li class="tab__item tab__item-0" data-tab="apartment" tab-js="tab-js"><a class="tab__link tab__link--emerald" href="homepage.html" title="">Квартиры</a></li>
+              <li class="tab__item tab__item-1" data-tab="commercial" tab-js="tab-js"><a class="tab__link tab__link--gold" href="commercial.html" title="">Коммерческая недвижимость</a></li>
+              <li class="tab__item tab__item-2" data-tab="storerooms" tab-js="tab-js"><a class="tab__link tab__link--blizzardBlue" href="storerooms.html" title="">Кладовые</a></li>
+              <li class="tab__item tab__item-3" data-tab="earth" tab-js="tab-js"><a class="tab__link tab__link--lightningYellow" href="earth.html" title="">Земля</a></li>
+              <li class="tab__item is-active tab__item-4" data-tab="carParking" tab-js="tab-js"><a class="tab__link tab__link--deepCerise" href="parking.html" title="">Машиноместа</a></li>
+            </ul>
+            <div class="tab__footer"><a class="header__phone header__phone--tab" href="tel:4872702524" title="">(4872) 70-25-24</a>
+              <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="#" title="">Инвесторам</a></li>
+                <li class="menu__item"><a class="menu__link" href="#" title="">Ипотека</a></li>
+                <li class="menu__item"><a class="menu__link" href="#" title="">Контакты</a></li>
+                <li class="menu__item"><a class="menu__link" href="#" title="">О компании</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER :: END-->
+      <!-- what should be changed with every pjax-->
+      <div class="page">
+        <div class="page__content">
+          <!-- BANNER :: START-->
+          <div class="banner banner--inner">
+            <div class="banner__gradient"></div>
+            <div class="banner__carousel banner__carousel--carBlur">
+              <div data-js="carousel-carBlue-js">
+                <div class="banner__carousel-wrap">
+                  <div class="banner__carousel--blur">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__carParking.jpg');"></div>
+                  </div>
+                  <div class="banner__carousel--normal">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__carParking.jpg');"></div>
+                  </div>
+                </div>
+                <div class="banner__carousel-wrap">
+                  <div class="banner__carousel--blur">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__carParking.jpg');"></div>
+                  </div>
+                  <div class="banner__carousel--normal">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__carParking.jpg');"></div>
+                  </div>
+                </div>
+                <div class="banner__carousel-wrap">
+                  <div class="banner__carousel--blur">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__carParking.jpg');"></div>
+                  </div>
+                  <div class="banner__carousel--normal">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__carParking.jpg');"></div>
+                  </div>
+                </div>
+                <div class="banner__carousel-wrap">
+                  <div class="banner__carousel--blur">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__carParking.jpg');"></div>
+                  </div>
+                  <div class="banner__carousel--normal">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__carParking.jpg');"></div>
+                  </div>
+                </div>
+                <div class="banner__carousel-wrap">
+                  <div class="banner__carousel--blur">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__carParking.jpg');"></div>
+                  </div>
+                  <div class="banner__carousel--normal">
+                    <div class="banner__carousel-image" style="background-image: url('./img/img-bg__carParking.jpg');"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container container--slider">
+              <div class="banner__slider banner__slider--car">
+                <div data-js="slider-car-js">
+                  <div class="slider__banner-content">
+                    <p class="banner__slider-name">Удобный паркинг с круглосуточной охраной позволит Вам всегда быстро выехать в город без заторов во дворе, обезопасит Ваш автомобиль от угона и повреждения и продлит срок его эксплуатации</p>
+                    <p class="banner__slider-info">г. Тула, ул. Фрунзе, д. 20</p>
+                  </div>
+                  <div class="slider__banner-content">
+                    <p class="banner__slider-name">Удобный паркинг с круглосуточной охраной позволит Вам всегда быстро выехать в город без заторов во дворе, обезопасит Ваш автомобиль от угона и повреждения и продлит срок его эксплуатации</p>
+                    <p class="banner__slider-info">г. Тула, ул. Фрунзе, д. 20</p>
+                  </div>
+                  <div class="slider__banner-content">
+                    <p class="banner__slider-name">Удобный паркинг с круглосуточной охраной позволит Вам всегда быстро выехать в город без заторов во дворе, обезопасит Ваш автомобиль от угона и повреждения и продлит срок его эксплуатации</p>
+                    <p class="banner__slider-info">г. Тула, ул. Фрунзе, д. 20</p>
+                  </div>
+                  <div class="slider__banner-content">
+                    <p class="banner__slider-name">Удобный паркинг с круглосуточной охраной позволит Вам всегда быстро выехать в город без заторов во дворе, обезопасит Ваш автомобиль от угона и повреждения и продлит срок его эксплуатации</p>
+                    <p class="banner__slider-info">г. Тула, ул. Фрунзе, д. 20</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="submenu">
+              <svg id="svg-filter">
+                <filter id="svg-blur">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="24"></feGaussianBlur>
+                </filter>
+              </svg>
+              <div class="container">
+                <ul class="submenu__list submenu__list--car">
+                  <li class="submenu__item"><a class="submenu__btn" href="#" title="" data-js="">Другие объекты</a>
+                  </li>
+                  <li class="submenu__item"><a class="submenu__btn" href="#choose" title="" data-js="submenu-js">Выбрать машиноместо</a>
+                  </li>
+                  <li class="submenu__item"><a class="submenu__btn" href="#buy" title="" data-js="submenu-js">Где купить</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- BANNER :: END-->
+          <!-- ABOUT :: START-->
+          <div class="about about--car" id="about"><img src="./img/img-bgAbout__car.jpg" objectFit-js>
+            <div class="container">
+              <h2>ЖК на ул. Макаренко</h2>
+              <p>ЖК на Макаренко в Туле представляет собой два высотных (17 этажей) дома с двухуровневым подземным паркингом на 114 машино-мест. В жилом комплексе — 288 квартир, в том числе роскошные трехкомнатные апартаменты.</p><a href="#" title="">подробнее о проекте</a>
+            </div>
+          </div>
+          <!-- ABOUT :: END-->
+          <!-- CHOOSE :: START-->
+          <div class="choose choose--car" id="choose">
+            <div class="container">
+              <h3 class="main__title">Выбрать машиноместо</h3>
+              <div class="choose__row">
+                <div class="choose__row-left">
+                  <div class="choose__row-filter">
+                    <div class="choose__field-selectWrap">
+                      <div class="choose__field choose__field-select choose__field-selectHouse">
+                        <p class="choose__field-title">Дом</p>
+                        <div class="choose__field-wrap">
+                          <div class="select">
+                            <select name="select">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                              <option>9</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="choose__field choose__field-select choose__field-selectSection">
+                        <p class="choose__field-title">Секция</p>
+                        <div class="choose__field-wrap">
+                          <div class="select">
+                            <select name="select">
+                              <option>Любая</option>
+                              <option>A</option>
+                              <option>Б</option>
+                              <option>В</option>
+                              <option>Г</option>
+                              <option>Д</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="choose__field choose__field-table">
+                    <div class="table" table-js>
+                      <div class="table__thead" thead-js>
+                        <div class="table__tr" thead-tr-js>
+                          <div class="table__th" th-js data-id="0" data-type="int">№<i class="icon icon-arrow"></i>
+                          </div>
+                          <div class="table__th" th-js data-id="1" data-type="str">Площадь<i class="icon icon-arrow"></i>
+                          </div>
+                          <div class="table__th" th-js data-id="2" data-type="str">Стоимость<i class="icon icon-arrow"></i>
+                          </div>
+                          <div class="table__th" th-js data-id="3" data-type="str">Цена за м²<i class="icon icon-arrow"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="table__tbody" tbody-js>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>1</div>
+                          <div class="table__td" td-js>67.5 м2</div>
+                          <div class="table__td" td-js>3 712 500₽</div>
+                          <div class="table__td" td-js>55 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>2</div>
+                          <div class="table__td" td-js>88.5 м2</div>
+                          <div class="table__td" td-js>4 600 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>5</div>
+                          <div class="table__td" td-js>84.62 м2</div>
+                          <div class="table__td" td-js>4 650 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>16</div>
+                          <div class="table__td" td-js>67.5 м2</div>
+                          <div class="table__td" td-js>3 712 500₽</div>
+                          <div class="table__td" td-js>55 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>23</div>
+                          <div class="table__td" td-js>88.5 м2</div>
+                          <div class="table__td" td-js>4 600 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>34</div>
+                          <div class="table__td" td-js>84.62 м2</div>
+                          <div class="table__td" td-js>4 650 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>38</div>
+                          <div class="table__td" td-js>88.5 м2</div>
+                          <div class="table__td" td-js>3 712 500₽</div>
+                          <div class="table__td" td-js>38 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>40</div>
+                          <div class="table__td" td-js>84.62 м2</div>
+                          <div class="table__td" td-js>4 600 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>43</div>
+                          <div class="table__td" td-js>67.5 м2</div>
+                          <div class="table__td" td-js>4 600 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>48</div>
+                          <div class="table__td" td-js>88.5 м2</div>
+                          <div class="table__td" td-js>4 650 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>52</div>
+                          <div class="table__td" td-js>84.62 м2</div>
+                          <div class="table__td" td-js>3 712 500₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>67</div>
+                          <div class="table__td" td-js>88.5 м2</div>
+                          <div class="table__td" td-js>4 600 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>1</div>
+                          <div class="table__td" td-js>67.5 м2</div>
+                          <div class="table__td" td-js>3 712 500₽</div>
+                          <div class="table__td" td-js>55 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>2</div>
+                          <div class="table__td" td-js>88.5 м2</div>
+                          <div class="table__td" td-js>4 600 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>5</div>
+                          <div class="table__td" td-js>84.62 м2</div>
+                          <div class="table__td" td-js>4 650 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>16</div>
+                          <div class="table__td" td-js>67.5 м2</div>
+                          <div class="table__td" td-js>3 712 500₽</div>
+                          <div class="table__td" td-js>55 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>23</div>
+                          <div class="table__td" td-js>88.5 м2</div>
+                          <div class="table__td" td-js>4 600 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>34</div>
+                          <div class="table__td" td-js>84.62 м2</div>
+                          <div class="table__td" td-js>4 650 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>38</div>
+                          <div class="table__td" td-js>88.5 м2</div>
+                          <div class="table__td" td-js>3 712 500₽</div>
+                          <div class="table__td" td-js>38 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>40</div>
+                          <div class="table__td" td-js>84.62 м2</div>
+                          <div class="table__td" td-js>4 600 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>43</div>
+                          <div class="table__td" td-js>67.5 м2</div>
+                          <div class="table__td" td-js>4 600 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>48</div>
+                          <div class="table__td" td-js>88.5 м2</div>
+                          <div class="table__td" td-js>4 650 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>52</div>
+                          <div class="table__td" td-js>84.62 м2</div>
+                          <div class="table__td" td-js>3 712 500₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                        <div class="table__tr" tbody-tr-js>
+                          <div class="table__td" td-js>67</div>
+                          <div class="table__td" td-js>88.5 м2</div>
+                          <div class="table__td" td-js>4 600 000₽</div>
+                          <div class="table__td" td-js>52 000₽</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choose__row-right">
+                  <div class="choose__field choose__field-plan"><img src="./img/img-planCar__choose.png" srcset="./img/img-planCar__choose@2x.png 2x"></div>
+                  <div class="choose__field choose__field-price">
+                    <div class="choose__field-left">
+                      <p>Стоимость</p>
+                      <p>3 720 500₽</p>
+                    </div>
+                    <div class="choose__field-right">
+                      <p>Цена за м2</p>
+                      <p>55 000₽</p>
+                    </div>
+                  </div>
+                  <div class="choose__field choose__field-description">
+                    <div class="choose__field-left">
+                      <p>Машиноместо</p>
+                      <p>№248</p>
+                    </div>
+                    <div class="choose__field-middle">
+                      <div class="choose__field-wrap"><span>Секция:</span><span>Г</span></div>
+                      <div class="choose__field-wrap"><span>Этаж:</span><span>11</span></div>
+                    </div>
+                    <div class="choose__field-right">
+                      <div class="choose__field-wrap"><span>Общая площадь:</span><span>67.5</span></div>
+                      <div class="choose__field-wrap"><span>Срок сдачи:</span><span>Сдан</span></div>
+                    </div>
+                  </div>
+                  <div class="choose__field choose__field-contacts">
+                    <p>Связаться с застройщиком</p><a href="tel:+74872525043" title="">+7 (4872) 52-50-43</a>
+                  </div>
+                  <div class="choose__field choose__field-form">
+                    <form choose-appartment-js>
+                      <div class="form__field">
+                        <input class="form__input choose__form-input" type="name" name="name" placeholder="Ваше имя">
+                      </div>
+                      <div class="form__field form__field--half">
+                        <div class="form__field-left">
+                          <input class="form__input choose__form-input" type="tel" name="phone">
+                        </div>
+                        <div class="form__field-right">
+                          <button class="form__button choose__form-btn" type="submit">получить консультацию</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CHOOSE :: END-->
+          <!-- BUY :: START-->
+          <div class="buy" id="buy">
+            <h3 class="main__title">Где купить?</h3>
+            <div class="buy__row">
+              <div class="buy__block">
+                <p class="buy__block-title">Офисы продаж:</p><a class="buy__block-location" href="#" title="" location-js>
+                  <div class="icon-wrap"><i class="icon icon-marker-black"></i></div>Тула, ул. Тургеневская 7а (вход с улицы)</a><a class="buy__block-location is-active" href="#" title="" location-js>
+                  <div class="icon-wrap"><i class="icon icon-marker-black"></i></div>Тула, мкрн Петровский квартал,</br>ул. К. Паустовского, д. 8, оф. 3</a>
+                <p class="buy__block-title">Телефон отдела продаж:</p><a class="buy__block-phone" href="tel:+74872521034" title="">+7 (4872) 52-10-34</a>
+                <p class="buy__block-title">e-mail:</p><a class="buy__block-email" href="mailto:pk@petrkvartal.ru" title="">pk@petrkvartal.ru</a>
+              </div>
+              <div class="buy__maps" id="map-buy"></div>
+            </div>
+          </div>
+          <!-- BUY :: END-->
+          <!-- QUESTION :: START-->
+          <div class="question">
+            <div class="container">
+              <h3 class="main__title">Остались вопросы?</h3>
+              <form class="question__form" question-form-js>
+                <div class="form__field">
+                  <input class="form__input question__form-input" type="name" name="name" placeholder="Ваше имя">
+                </div>
+                <div class="form__field">
+                  <input class="form__input question__form-input" type="tel" name="phone">
+                </div>
+                <div class="form__field">
+                  <textarea class="form__message question__form-message" name="message" placeholder="Сообщение"></textarea>
+                </div>
+                <button class="form__button question__form-btn" type="submit">получить консультацию</button>
+              </form>
+            </div>
+          </div>
+          <!-- QUESTION :: END-->
+          <!-- DOCUMENTATION :: START-->
+          <div class="documentation">
+            <div class="container">
+              <h3 class="main__title">Документация</h3>
+              <div class="documentation__row">
+                <ul class="documentation__list">
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Проектная декларация - 8 этап</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Проектная декларация - 11/2 этап</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Изменения в проектную декларацию от 21.02.2017</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Проектная декларация - 11/2 этап</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Проектная декларация - 11/2 этап</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Изменения в проектную декларацию от 21.02.2017</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Проектная декларация - 8 этап</p></a></li>
+                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                      <div><i class="icon-doc"></i></div>
+                      <p>Проектная декларация - 11/2 этап</p></a></li>
+                </ul><a class="documentation__button" href="#" title="">все документы</a>
+              </div>
+            </div>
+          </div>
+          <!-- DOCUMENTATION :: END-->
+        </div>
+        <!-- FOOTER :: START-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__wrapper">
+              <div class="footer__row footer__row-0"><img class="footer__logo" src="./img/img-logo__footer.png" srcset="./img/img-logo__footer@2x.png 2x" alt="" title="">
+                <div class="footer__row-wrap">
+                  <p>Группа компаний Стройальянс</p>
+                  <p>Все права на публикуемые на сайте материалы</br>принадлежат группе компаний «Стройальянс»</p>
+                  <p>© 2002 - 2017</p>
+                </div>
+              </div>
+              <div class="footer__row footer__row-1">
+                        <h2>Недвижимость</h2><a href="#" title="">Квартиры</a><a href="#" title="">Коммерческая недвижимость</a><a href="#" title="">Земля</a><a href="#" title="">Кладовые</a><a href="#" title="">Машиноместа</a>
+              </div>
+              <div class="footer__row footer__row-2">
+                        <h2>Компания</h2><a href="#" title="">Инвесторам</a><a href="#" title="">Ипотека</a><a href="#" title="">Контакты</a><a href="#" title="">О компании</a>
+              </div>
+              <div class="footer__row footer__row-3"><a href="tel:4872702524" title="">(4872) 70-25-24</a>
+                <div class="footer__row-wrap">
+                  <h2>Социальные сети</h2>
+                  <div class="social"><a class="social__link" href="#" title="">
+                      <svg class="ico ico-vk">
+                        <use xlink:href="img/sprite.svg#ico-vk"></use>
+                      </svg></a><a class="social__link" href="#" title="">
+                      <svg class="ico ico-fb">
+                        <use xlink:href="img/sprite.svg#ico-fb"></use>
+                      </svg></a><a class="social__link" href="#" title="">
+                      <svg class="ico ico-in">
+                        <use xlink:href="img/sprite.svg#ico-in"></use>
+                      </svg></a><a class="social__link" href="#" title="">
+                      <svg class="ico ico-yt">
+                        <use xlink:href="img/sprite.svg#ico-yt"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- FOOTER :: END-->
+      </div>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIbEk7W2kX53Upp7c0rROppSIDGjFyPew"></script>
+      <script src="js/vendor.js"></script>
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>
