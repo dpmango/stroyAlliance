@@ -516,6 +516,130 @@ $(document).ready(function () {
   // ====================
 
 
+  // PRELOADER
+  // ====================
+  /**
+   * @description
+   */
+  function cleanPreloaderClass() {
+    $("body").addClass("no-preloader").removeClass("preloader");
+    $("body, html").removeClass("is-hideScroll");
+    $("#barba-wrapper").addClass("fadeIn");
+  }
+
+  /**
+   * @description
+   */
+  function preloader() {
+    if (typeof Storage !== "undefined") {
+
+      if (_window.width() > "767") {
+        if (!localStorage.isFirstLoadComplete) {
+          $("body").addClass("preloader");
+
+          setTimeout(function () {
+            $("#barba-wrapper").addClass("fadeIn");
+            $("#loader").fadeOut(500);
+            cleanPreloaderClass();
+          }, 11000);
+
+          localStorage.setItem("isFirstLoadComplete", "true");
+        } else {
+          cleanPreloaderClass();
+        }
+      } else {
+        cleanPreloaderClass();
+      }
+    } else {
+      // No Web Storage support..
+    }
+  }
+  preloader();
+  // ====================
+
+
+  //
+  // ====================
+  /**
+   * @name changeImageSVG
+   * @function
+   * @description
+   */
+  var changeImageSVG = function changeImageSVG() {
+    document.querySelectorAll('img.svg').forEach(function (element) {
+      var imgID = element.getAttribute('id'),
+          imgClass = element.getAttribute('class'),
+          imgURL = element.getAttribute('src');
+
+      var xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var svg = xhr.responseXML.getElementsByTagName('svg')[0];
+
+          if (imgID != null) {
+            svg.setAttribute('id', imgID);
+          }
+
+          if (imgClass != null) {
+            svg.setAttribute('class', imgClass + ' replaced-svg');
+          }
+
+          svg.removeAttribute('xmlns:a');
+
+          if (!svg.hasAttribute('viewBox') && svg.hasAttribute('height') && svg.hasAttribute('width')) {
+            svg.setAttribute('viewBox', '0 0 ' + svg.getAttribute('height') + ' ' + svg.getAttribute('width'));
+          }
+          element.parentElement.replaceChild(svg, element);
+        }
+      };
+
+      xhr.open('GET', imgURL, true);
+      xhr.send(null);
+    });
+  };
+  changeImageSVG();
+  // ====================
+
+
+  //
+  // ====================
+  function initTeleport() {
+    $('[js-teleport]').each(function (i, val) {
+      var self = $(val);
+      var objHtml = $(val).html();
+      var target = $('[data-teleport-target=' + $(val).data('teleport-to') + ']');
+      var conditionMedia = $(val).data('teleport-condition').substring(1);
+      var conditionPosition = $(val).data('teleport-condition').substring(0, 1);
+
+      if (target && objHtml && conditionPosition) {
+        var teleport = function teleport() {
+          var condition = void 0;
+
+          if (conditionPosition === "<") {
+            condition = _window.width() < conditionMedia;
+          } else if (conditionPosition === ">") {
+            condition = _window.width() > conditionMedia;
+          }
+
+          if (condition) {
+            target.html(objHtml);
+            self.html('');
+          } else {
+            self.html(objHtml);
+            target.html("");
+          }
+        };
+
+        teleport();
+        _window.on('resize', debounce(teleport, 100));
+      }
+    });
+  }
+  initTeleport();
+  // ====================
+
+
   // HAMBURGER TOGGLER
   // _document.on('click', '[js-hamburger]', function(){
   //   $(this).toggleClass('is-active');
@@ -699,7 +823,6 @@ $(document).ready(function () {
     }).slick(mainSliderOption(true, true, asNavForSlider)).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
       $('.slick-slide').removeClass('slick-prev slick-next');
       $('.banner__slider .slick-list').removeClass("fadeIn").addClass("animated fadeOut");
-      // debugger;
     }).on('afterChange', function (event, slick, currentSlide, nextSlide) {
       var slickActive = $('.slick-active');
 
@@ -815,7 +938,7 @@ $(document).ready(function () {
       var elWatcher = scrollMonitor.create($(el));
 
       var delay;
-      if ($(window).width() < 768) {
+      if (_window.width() < 768) {
         delay = 0;
       } else {
         delay = $(el).data('animation-delay');
@@ -835,14 +958,14 @@ $(document).ready(function () {
       }, 100, {
         'leading': true
       }));
-      elWatcher.exitViewport(throttle(function () {
-        $(el).removeClass(animationClass);
-        $(el).css({
-          'animation-name': 'none',
-          'animation-delay': 0,
-          'visibility': 'hidden'
-        });
-      }, 100));
+      // elWatcher.exitViewport(throttle(function() {
+      //   $(el).removeClass(animationClass);
+      //   $(el).css({
+      //     'animation-name': 'none',
+      //     'animation-delay': 0,
+      //     'visibility': 'hidden'
+      //   });
+      // }, 100));
     });
   }
 

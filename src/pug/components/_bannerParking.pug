@@ -33,10 +33,10 @@ mixin swapInfoParking()
 
   +carouselBg("parking", "carousel-parking-js", "carParking")
 
-  .container.container--slider
+  .container.container--slider.wow.wowFadeLeft(data-animation-delay="0.4s")
     +sliderLocation("parking", "slider-parking-js", sliderLocationArr)
 
-  .container.container--swap
+  .container.container--swap.wow.wowFadeRight(data-animation-delay="0.6s")
     +swapInfoParking()
 
   include ../macros/_mouse

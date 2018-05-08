@@ -13,26 +13,25 @@
 
 .progress
 
-  h3.main__title!= "Ход строительства"
+  h3.main__title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Ход строительства"
 
   svg(id="svg-filter")
     filter(id="svg-blur-0")
       feGaussianBlur(in="SourceGraphic" stdDeviation="8")
 
   .progress__row
-    .progress__block.progress__block-0
+    .progress__block.progress__block-0.wow.wowFadeLeft(data-animation-delay="0.5s")
       div(style="background-image: url('./img/img-bg-1__progress.png');")
-
-    .progress__block.progress__block-1
+    .progress__block.progress__block-1.wow.wowFadeLeft(data-animation-delay="0.4s")
       div(style="background-image: url('./img/img-bg-1__progress.png');")
       p!= "Ноябрь 2017г."
-    .progress__block.progress__block-2
+    .progress__block.progress__block-2.wow.wowFadeUp(data-animation-delay="0.3s")
       div(style="background-image: url('./img/img-bg-2__progress.png');")
       p!= "Декабрь 2017г."
-    .progress__block.progress__block-3
+    .progress__block.progress__block-3.wow.wowFadeRight(data-animation-delay="0.4s")
       div(style="background-image: url('./img/img-bg-3__progress.png');")
       p!= "Январь 2018г."
-    .progress__block.progress__block-4
+    .progress__block.progress__block-4.wow.wowFadeRight(data-animation-delay="0.5s")
       div(style="background-image: url('./img/img-bg-1__progress.png');")
 
 

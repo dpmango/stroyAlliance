@@ -109,42 +109,42 @@ mixin submenuLink(hrefArr, count, arr)
     if(bodyClass === "flat")
       ul.submenu__list.submenu__list--flat
         -for(var i = 0, len = submenuFlatArr.length; i < len; i++)
-          li.submenu__item
+          li.submenu__item.wow.wowFadeUp(data-animation-delay!= (0.6 + parseFloat(0.1 * i)).toFixed(1) + "s")
             +submenuLink(submenuHrefFlarArr, i, submenuFlatArr)
 
     else if(bodyClass === "quarter")
       ul.submenu__list.submenu__list--quarter
         -for(var i = 0, len = submenuQuarterArr.length; i < len; i++)
-          li.submenu__item
+          li.submenu__item.wow.wowFadeUp(data-animation-delay!= (0.6 + parseFloat(0.1 * i)).toFixed(1) + "s")
             +submenuLink(submenuHrefQurterArr, i, submenuQuarterArr)
 
     else if(bodyClass === "house")
       ul.submenu__list.submenu__list--house
         -for(var i = 0, len = submenuHouseArr.length; i < len; i++)
-          li.submenu__item
+          li.submenu__item.wow.wowFadeUp(data-animation-delay!= (0.6 + parseFloat(0.1 * i)).toFixed(1) + "s")
             +submenuLink(submenuHrefHouseArr, i, submenuHouseArr)
 
     else if(bodyClass === "car")
       ul.submenu__list.submenu__list--car
         -for(var i = 0, len = submenuCarArr.length; i < len; i++)
-          li.submenu__item
+          li.submenu__item.wow.wowFadeUp(data-animation-delay!= (0.6 + parseFloat(0.1 * i)).toFixed(1) + "s")
             +submenuLink(submenuHrefCarArr, i, submenuCarArr)
 
     else if(bodyClass === "pantry")
       ul.submenu__list.submenu__list--pantry
         -for(var i = 0, len = submenuPantryArr.length; i < len; i++)
-          li.submenu__item
+          li.submenu__item.wow.wowFadeUp(data-animation-delay!= (0.6 + parseFloat(0.1 * i)).toFixed(1) + "s")
             +submenuLink(submenuHrefPantryArr, i, submenuPantryArr)
 
     else if(bodyClass === "realty")
       ul.submenu__list.submenu__list--realty
         -for(var i = 0, len = submenuRealtyArr.length; i < len; i++)
-          li.submenu__item
+          li.submenu__item.wow.wowFadeUp(data-animation-delay!= (0.6 + parseFloat(0.1 * i)).toFixed(1) + "s")
             +submenuLink(submenuHrefRealtyArr, i, submenuRealtyArr)
 
     else if(bodyClass === "media")
       ul.submenu__list.submenu__list--gallery
         -for(var i = 0, len = submenuGalleryArr.length; i < len; i++)
-          li.submenu__item
+          li.submenu__item.wow.wowFadeUp(data-animation-delay!= (0.6 + parseFloat(0.1 * i)).toFixed(1) + "s")
             +submenuLink(submenuHrefGalleryArr, i, submenuGalleryArr)
 

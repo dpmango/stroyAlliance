@@ -33,10 +33,10 @@ mixin swapInfoApartment()
 
   +carouselBg("apartment", "carousel-apartment-js", "apartment")
 
-  .container.container--slider
+  .container.container--slider.wow.wowFadeLeft(data-animation-delay="0.4s")
     +sliderLocation("apartment", "slider-apartment-js", sliderLocationArr)
 
-  .container.container--swap
+  .container.container--swap.wow.wowFadeRight(data-animation-delay="0.6s")
     +swapInfoApartment()
 
   include ../macros/_mouse

@@ -14,9 +14,9 @@
 .question
   .container
 
-    h3.main__title!= "Остались вопросы?"
+    h3.main__title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Остались вопросы?"
 
-    form(class="question__form" question-form-js)
+    form.wow.wowFadeUp(class="question__form" question-form-js data-animation-delay="0.4s")
 
       .form__field
         input(type="name" name="name" class="form__input question__form-input" placeholder="Ваше имя")

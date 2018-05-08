@@ -26,9 +26,33 @@
   &__item
     white-space: nowrap
 
+    &:nth-child(1)
+      .no-preloader &
+        animation-delay: 0.8s
+      .preloader &
+        animation-delay: 9.3s
+    &:nth-child(2)
+      .no-preloader &
+        animation-delay: 0.9s
+      .preloader &
+        animation-delay: 9.4s
+    &:nth-child(3)
+      .no-preloader &
+        animation-delay: 1.0s
+      .preloader &
+        animation-delay: 9.5s
+    &:nth-child(4)
+      .no-preloader &
+        animation-delay: 1.1s
+      .preloader &
+        animation-delay: 9.6s
+
     .tab &
       +r($mobile-max)
         margin-right: 0
+
+        animation-name: wowFade
+        visibility: visible
 
   &__link
     display: flex
@@ -51,6 +75,10 @@
       font-size: 11px
     +rmin($desktop)
       font-size: 12px
+
+    .preloader &
+      color: $colorBlack
+      +transition(color)
 
     .tab &
       +r($mobile-max)

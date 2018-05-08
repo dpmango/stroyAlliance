@@ -6,14 +6,32 @@
   top: 0
   left: 0
   width: 100%
-  padding-top: 15px
+
+  .preloader &
+    z-index: 1001
+    position: fixed
+
+
+  &--cover
+    z-index: 10
+    position: relative
+    padding-top: 15px
+    padding-bottom: 25px
+    +transition(background-color)
+
+    .no-preloader &
+      animation-delay: 0.5s
+    .preloader &
+      animation-delay: 9s
+      background-color: $colorWhite
+      +transition(background-color)
 
 
   &__wrapper
     display: flex
     align-items: center
     justify-content: space-between
-    margin-bottom: 25px
+
 
 
   &__container
@@ -33,24 +51,50 @@
         width: auto
         padding-left: 0
         padding-right: 30px
+
+        animation-name: wowFade
+        visibility: visible
       +rmin($desktop)
         padding-right: 30px
         padding-left: 20px
       +rmin($wide)
         width: 285px
 
-      img
+      .no-preloader &
+        animation-delay: 0.7s
+      .preloader &
+        animation-delay: 9.2s
+
+
+
+      svg
         cursor: pointer
         margin-top: 6px
         +rmin($mobile-s)
+          width: 90px
           height: 30px
           margin-top: 0
         +rmin($desktop)
+          width: 179px
           height: auto
           margin-top: 6px
 
+        .g-path-text-top,
+        .g-path-text-bottom
+          path
+            +transition(fill)
+            .preloader &
+              fill: #000 !important
+              +transition(fill)
+
     &-1
       padding-top: 5px
+
+    &-2
+      .no-preloader &
+        animation-delay: 1.2s
+      .preloader &
+        animation-delay: 9.7s
 
 
     &-3
@@ -67,13 +111,18 @@
       +rmin($desktop)
         width: 180px
 
+      .no-preloader &
+        animation-delay: 1.3s
+      .preloader &
+        animation-delay: 9.8s
+
 
   &__phone
     position: relative
     top: -5px
     color: $colorWhite
     font-weight: 500
-    +transition(text-shadow)
+    +transition(text-shadow, color)
     &:hover
       text-shadow: 0 0 20px rgba($colorWhite, 0.75)
       +transition(text-shadow)
@@ -88,6 +137,10 @@
       font-size: 16px
     +rmin($desktop)
       font-size: 20px
+
+    .preloader &
+      color: $colorBlack
+      +transition(color)
 
     &--tab
       +r($mobile-max)

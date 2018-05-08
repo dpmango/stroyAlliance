@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="is-hideScroll" lang="en">
   <head>
     <!-- MADE WITH LOVE BY <> KHMELEVSKOY & ASSOCIATES </> www.khmelevskoy.co-->
     <meta charset="utf-8">
@@ -14,52 +14,100 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
-  <body class="realty">
+  <body class="is-hideScroll realty">
+    <div class="loader" id="loader">
+      <div class="loader--container">
+        <div class="animated loader--gradient loader--gradient-0"></div>
+        <div class="animated loader--gradient loader--gradient-1"></div>
+        <div class="animated loader--gradient loader--gradient-2"></div>
+        <div class="animated loader--gradient loader--gradient-3"></div>
+        <div class="animated loader--gradient loader--gradient-4"></div>
+        <div class="animated loader--gradient loader--gradient-5"></div>
+        <div class="animated loader--gradient loader--gradient-6"></div>
+        <div class="animated loader--gradient loader--gradient-7"></div>
+        <div class="animated loader--gradient loader--gradient-8"></div>
+        <div class="animated loader--gradient loader--gradient-9"></div>
+        <div class="animated loader--gradient loader--gradient-10"></div>
+        <div class="loader--title-wrap">
+          <p class="animated textInRight loader--title loader--title-0">Квартиры</p>
+          <p class="animated textInRight loader--title loader--title-1">Застройщик</p>
+          <p class="animated textInRight loader--title loader--title-2">Коммерческая недвижимость</p>
+          <p class="animated textInRight loader--title loader--title-3">Инвестиции</p>
+          <p class="animated textInRight loader--title loader--title-4">Генподрядчик</p>
+          <p class="animated textInRight loader--title loader--title-5">Машиноместа</p>
+          <p class="animated textInRight loader--title loader--title-6">Земля</p>
+          <p class="animated textInRight loader--title loader--title-7">Проектирование</p>
+          <p class="animated textInRight loader--title loader--title-8">Таунхаусы</p>
+          <p class="animated textInRight loader--title loader--title-9">Новостройки</p>
+        </div>
+        <div class="loader--block-wrap">
+          <div class="animated loader--block loader--block-0"></div>
+          <div class="animated loader--block loader--block-1"></div>
+          <div class="animated loader--block loader--block-2"></div>
+          <div class="animated loader--block loader--block-3"></div>
+          <div class="animated loader--block loader--block-4"></div>
+          <div class="animated loader--block loader--block-5"></div>
+          <div class="animated loader--block loader--block-6"></div>
+          <div class="animated loader--block loader--block-7"></div>
+          <div class="animated loader--block loader--block-8"></div>
+          <div class="animated loader--block loader--block-9"></div>
+        </div>
+        <div class="loader--text-wrap animated">
+          <p>стройальянс</p>
+          <p>группа компаний</p>
+        </div>
+      </div>
+    </div>
     <!-- place where pjax bindings happen's-->
-    <div id="barba-wrapper">
+    <div class="animated" id="barba-wrapper">
       <!-- HEADER :: START-->
       <header class="header">
-        <div class="container">
-          <div class="header__wrapper">
-            <div class="header__container">
-              <div class="header__row header__row-0"><img class="header_logo" src="./img/img-logo__header.png" srcset="./img/img-logo__header@2x.png 2x" alt="" title=""></div>
-              <div class="header__row header__row-1">
-                <ul class="menu">
-                  <li class="menu__item"><a class="menu__link" href="#" title="">Инвесторам</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#" title="">Ипотека</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#" title="">Контакты</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#" title="">О компании</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="header__container">
-              <div class="header__row header__row-2">
-                <div class="dropdown"><a class="dropdown__button" href="#" title="" dropdown-choose><i class="icon-marker"></i><span class="dropdown__button-name">Тула</span><i class="icon-corner"></i></a>
-                  <div class="dropdown__menu animated"><a class="dropdown__menu-button is-active" href="#" title="" dropdown-btn><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name>Тула</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name>Архангельск</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name>Белгород</span></a>
+        <div class="header--cover wow wowFadeDown">
+          <div class="container">
+            <div class="header__wrapper">
+              <div class="header__container">
+                <div class="header__row header__row-0 wow wowFadeDown"><img class="header_logo svg" src="./img/logotype.svg" alt="" title=""></div>
+                <div class="header__row header__row-1">
+                  <div class="menu--cover" js-teleport data-teleport-to="mobile-menu" data-teleport-condition="&lt;768">
+                    <ul class="menu">
+                      <li class="menu__item wow wowFadeDown"><a class="menu__link" href="#" title="">Инвесторам</a></li>
+                      <li class="menu__item wow wowFadeDown"><a class="menu__link" href="#" title="">Ипотека</a></li>
+                      <li class="menu__item wow wowFadeDown"><a class="menu__link" href="#" title="">Контакты</a></li>
+                      <li class="menu__item wow wowFadeDown"><a class="menu__link" href="#" title="">О компании</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
-              <div class="header__row header__row-3"><a class="header__phone" href="tel:4872702524" title="">(4872) 70-25-24</a>
-                <div class="header__hamburger">
-                  <div class="hamburger hamburger--squeeze" js-hamburger-open>
-                    <div class="hamburger-box">
-                      <div class="hamburger-inner"></div>
+              <div class="header__container">
+                <div class="header__row header__row-2 wow wowFadeDown">
+                  <div class="dropdown--cover" js-teleport data-teleport-to="mobile-dropdown" data-teleport-condition="&lt;768">
+                    <div class="dropdown"><a class="dropdown__button" href="#" title="" dropdown-choose><i class="icon-marker"></i><span class="dropdown__button-name">Тула</span><i class="icon-corner"></i></a>
+                      <div class="dropdown__menu animated"><a class="dropdown__menu-button is-active" href="#" title="" dropdown-btn><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name>Тула</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name>Архангельск</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name>Белгород</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header__row header__row-3 wow wowFadeDown"><a class="header__phone" href="tel:4872702524" title="">(4872) 70-25-24</a>
+                  <div class="header__hamburger">
+                    <div class="hamburger hamburger--squeeze" js-hamburger-open>
+                      <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="tab">
+        </div>
+        <div class="container">
+          <div class="tab wow wowFadeUp" data-animation-delay="0.2s">
             <div class="tab__header">
               <div class="container">
                 <div class="tab__header-wrap">
                   <div class="tab__header--left"><img class="header_logo header_logo--tab" src="./img/img-logo__tab.png" srcset="./img/img-logo__tab@2x.png 2x" alt="" title=""/></div>
                   <div class="tab__header--right">
-                    <div class="dropdown"><a class="dropdown__button" href="#" title="" dropdown-choose="dropdown-choose"><i class="icon-marker"></i><span class="dropdown__button-name">Тула</span><i class="icon-corner"></i></a>
-                      <div class="dropdown__menu animated"><a class="dropdown__menu-button is-active" href="#" title="" dropdown-btn="dropdown-btn"><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name="dropdown-name">Тула</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn="dropdown-btn"><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name="dropdown-name">Архангельск</span></a><a class="dropdown__menu-button" href="#" title="" dropdown-btn="dropdown-btn"><span class="icon-wrap"><i class="icon-marker"></i><i class="icon-marker--hover"></i></span><span dropdown-name="dropdown-name">Белгород</span></a>
-                      </div>
-                    </div>
+                    <div class="tab__header--right-cover" data-teleport-target="mobile-dropdown"></div>
                     <div class="header__hamburger">
                       <div class="hamburger hamburger--squeeze is-active" js-hamburger-close="js-hamburger-close">
                         <div class="hamburger-box">
@@ -79,12 +127,7 @@
               <li class="tab__item tab__item-4" data-tab="carParking" tab-js="tab-js"><a class="tab__link tab__link--deepCerise" href="parking.html" title="">Машиноместа</a></li>
             </ul>
             <div class="tab__footer"><a class="header__phone header__phone--tab" href="tel:4872702524" title="">(4872) 70-25-24</a>
-              <ul class="menu">
-                <li class="menu__item"><a class="menu__link" href="#" title="">Инвесторам</a></li>
-                <li class="menu__item"><a class="menu__link" href="#" title="">Ипотека</a></li>
-                <li class="menu__item"><a class="menu__link" href="#" title="">Контакты</a></li>
-                <li class="menu__item"><a class="menu__link" href="#" title="">О компании</a></li>
-              </ul>
+              <div class="tab__footer-cover" data-teleport-target="mobile-menu"></div>
             </div>
           </div>
         </div>
@@ -140,7 +183,7 @@
                 </div>
               </div>
             </div>
-            <div class="container container--slider">
+            <div class="container container--slider wow wowFadeLeft" data-animation-delay="0.4s">
               <div class="banner__slider banner__slider--realty">
                 <div data-js="slider-realty-js">
                   <div class="slider__banner-content">
@@ -170,15 +213,15 @@
               </svg>
               <div class="container">
                 <ul class="submenu__list submenu__list--realty">
-                  <li class="submenu__item"><a class="submenu__btn" href="#choose" title="" data-js="">Выбрать помещение</a>
+                  <li class="submenu__item wow wowFadeUp" data-animation-delay="0.6s"><a class="submenu__btn" href="#choose" title="" data-js="">Выбрать помещение</a>
                   </li>
-                  <li class="submenu__item"><a class="submenu__btn" href="#about" title="" data-js="submenu-js">Описание объекта</a>
+                  <li class="submenu__item wow wowFadeUp" data-animation-delay="0.7s"><a class="submenu__btn" href="#about" title="" data-js="submenu-js">Описание объекта</a>
                   </li>
-                  <li class="submenu__item"><a class="submenu__btn" href="#nearby" title="" data-js="submenu-js">Что рядом</a>
+                  <li class="submenu__item wow wowFadeUp" data-animation-delay="0.8s"><a class="submenu__btn" href="#nearby" title="" data-js="submenu-js">Что рядом</a>
                   </li>
-                  <li class="submenu__item"><a class="submenu__btn" href="#" title="" data-js="submenu-js">Фото и видео</a>
+                  <li class="submenu__item wow wowFadeUp" data-animation-delay="0.9s"><a class="submenu__btn" href="#" title="" data-js="submenu-js">Фото и видео</a>
                   </li>
-                  <li class="submenu__item"><a class="submenu__btn" href="#buy" title="" data-js="submenu-js">Где купить</a>
+                  <li class="submenu__item wow wowFadeUp" data-animation-delay="1.0s"><a class="submenu__btn" href="#buy" title="" data-js="submenu-js">Где купить</a>
                   </li>
                 </ul>
               </div>
@@ -188,9 +231,9 @@
           <!-- CHOOSE :: START-->
           <div class="choose choose--realty" id="choose">
             <div class="container">
-              <h3 class="main__title">Выбрать помещение</h3>
+              <h3 class="main__title wow wowFadeUp" data-animation-delay="0.3s">Выбрать помещение</h3>
               <div class="choose__row">
-                <div class="choose__row-left">
+                <div class="choose__row-left wow wowFadeLeft" data-animation-delay="0.3s">
                   <div class="choose__row-filter">
                     <div class="choose__field choose__field-radioWrap">
                       <p>Продажа</p>
@@ -566,7 +609,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="choose__row-right">
+                <div class="choose__row-right wow wowFadeRight" data-animation-delay="0.3s">
                   <div class="choose__field choose__field-plan"><img src="./img/img-plan__choose.png" srcset="./img/img-plan__choose@2x.png 2x"></div>
                   <div class="choose__field choose__field-price">
                     <div class="choose__field-left">
@@ -618,10 +661,10 @@
           <!-- ABOUT :: START-->
           <div class="about about--realty" id="about">
             <div class="container">
-              <h3 class="main__title">ЖК НА ул. Макаренко</h3>
+              <h3 class="main__title wow wowFadeUp" data-animation-delay="0.3s">ЖК НА ул. Макаренко</h3>
               <div class="about__row">
-                <div class="about__left"><img src="./img/img-logo-flat__about.png" srcset="./img/img-logo-flat__about@2x.png 2x"></div>
-                <div class="about__right">
+                <div class="about__left wow wowFadeLeft" data-animation-delay="0.4s"><img src="./img/img-logo-flat__about.png" srcset="./img/img-logo-flat__about@2x.png 2x"></div>
+                <div class="about__right wow wowFadeRight" data-animation-delay="0.4s">
                   <p>ЖК на Макаренко в Туле представляет собой два высотных (17 этажей) дома с двухуровневым подземным паркингом на 114 машино-мест. В жилом комплексе — 288 квартир, в том числе роскошные трехкомнатные апартаменты.Новостройки отличаются высоким качеством строительства. Стены — трехслойные, энергоэффективные, внешняя отделка кирпичом органично вписывается в окружающую застройку. В квартирах нет несущих стен, а количество несущих колонн минимально, что позволяет распланировать пространство под свой вкус и потребности семьи. В квартирах установлены евроокна с тройным стеклопакетом, современные приборы учета, подведены высокоскоростной интернет и цифровое ТВ. Отопление ЖК на ул. Макаренко осуществляется от собственной крышной котельной. В коммерческих помещениях на первых этажах жилого комплекса расположатся частный детский сад, аптека, магазин.</p>
                 </div>
               </div>
@@ -631,10 +674,10 @@
           <!-- DESCRIPTION :: START-->
           <div class="description" id="description">
             <div class="description__block description__block-0 description__block--reverse">
-              <div class="description__block-image"><img src="./img/img-0__description.jpg" srcset="./img/img-0__description@2x.jpg 2x" objectFit-js></div>
+              <div class="description__block-image wow wowFadeRight" data-animation-delay="0.5s"><img src="./img/img-0__description.jpg" srcset="./img/img-0__description@2x.jpg 2x" objectFit-js></div>
               <div class="container">
                 <div class="description__block-wrap">
-                  <div class="description__block-info">
+                  <div class="description__block-info wow wowFadeLeft" data-animation-delay="0.5s">
                     <p>Свой пляж</p>
                     <p>Единственные в Туле новостройки с собственным благоустроенным пляжем. Каждый день вы можете наслаждаться всеми прелестями пляжного отдыха и для этого не надо лететь на море. Достаточно выйти из своей квартиры в шлепанцах и сухих плавках, а вечером вернуться загорелым и уже с мокрыми плавками. Речной песок, чистая вода, благоустроенная зона отдыха, пляжный волейбол и множество других развлечений в двух шагах от вашей квартиры. Все это Вам дает Петровский квартал.</p>
                   </div>
@@ -642,10 +685,10 @@
               </div>
             </div>
             <div class="description__block description__block-1 description__block--normal">
-              <div class="description__block-image"><img src="./img/img-1__description.jpg" srcset="./img/img-1__description@2x.jpg 2x" objectFit-js></div>
+              <div class="description__block-image wow wowFadeLeft" data-animation-delay="0.5s"><img src="./img/img-1__description.jpg" srcset="./img/img-1__description@2x.jpg 2x" objectFit-js></div>
               <div class="container">
                 <div class="description__block-wrap">
-                  <div class="description__block-info">
+                  <div class="description__block-info wow wowFadeRight" data-animation-delay="0.5s">
                     <p>Прогулки в парке</p>
                     <p>Живописная зелень парка открывает массу возможностей для спокойных прогулок и активного отдыха на свежем воздухе. Территория парка станет единым пространством для отдыха, разделенным на функциональные зоны: современные детские игровые и спортивные площадки, скверы с беседками и объектами ландшафтного дизайна.</p>
                   </div>
@@ -653,10 +696,10 @@
               </div>
             </div>
             <div class="description__block description__block-2 description__block--reverse">
-              <div class="description__block-image"><img src="./img/img-2__description.jpg" srcset="./img/img-2__description@2x.jpg 2x" objectFit-js></div>
+              <div class="description__block-image wow wowFadeRight" data-animation-delay="0.5s"><img src="./img/img-2__description.jpg" srcset="./img/img-2__description@2x.jpg 2x" objectFit-js></div>
               <div class="container">
                 <div class="description__block-wrap">
-                  <div class="description__block-info">
+                  <div class="description__block-info wow wowFadeLeft" data-animation-delay="0.5s">
                     <p>Детский сад с бассейном</p>
                     <p>Ваш ребенок, начиная с малых лет будет развиваться здоровым и счастливым в Петровском Квартале! А Вы будете спокойны и за его безопасность, и за его здоровье. Уже сейчас силами застройщика активно строится собственный детский сад с бассейном на 110 малышей в Петровском Квартале. Первые дети смогут его посетить уже в 2018 году.</p>
                   </div>
@@ -667,9 +710,9 @@
           <!-- DESCRIPTION :: END-->
           <!-- NEARBY :: START-->
           <div class="nearby" id="nearby">
-            <h3 class="main__title">Что рядом</h3>
+            <h3 class="main__title wow wowFadeUp" data-animation-delay="0.3s">Что рядом</h3>
             <div class="nearby__row">
-              <div class="nearby__block">
+              <div class="nearby__block wow wowFadeLeft" data-animation-delay="0.4s">
                 <p class="nearby__block-title">Инфраструктура вокруг</p>
                 <div class="checkbox checkbox--irisBlue is-active">
                   <input type="checkbox" name="checkbox" id="inputCheckbox"/>
@@ -726,7 +769,7 @@
           <!-- NEARBY :: END-->
           <!-- BUY :: START-->
           <div class="buy" id="buy">
-            <h3 class="main__title">Где купить?</h3>
+            <h3 class="main__title wow wowFadeUp" data-animation-delay="0.3s">Где купить?</h3>
             <div class="buy__row">
               <div class="buy__block">
                 <p class="buy__block-title">Офисы продаж:</p><a class="buy__block-location" href="#" title="" location-js>
@@ -742,8 +785,8 @@
           <!-- QUESTION :: START-->
           <div class="question">
             <div class="container">
-              <h3 class="main__title">Остались вопросы?</h3>
-              <form class="question__form" question-form-js>
+              <h3 class="main__title wow wowFadeUp" data-animation-delay="0.3s">Остались вопросы?</h3>
+              <form class="wow wowFadeUp question__form" question-form-js data-animation-delay="0.4s">
                 <div class="form__field">
                   <input class="form__input question__form-input" type="name" name="name" placeholder="Ваше имя">
                 </div>
@@ -761,31 +804,31 @@
           <!-- DOCUMENTATION :: START-->
           <div class="documentation">
             <div class="container">
-              <h3 class="main__title">Документация</h3>
+              <h3 class="main__title wow wowFadeUp" data-animation-delay="0.3s">Документация</h3>
               <div class="documentation__row">
                 <ul class="documentation__list">
-                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                  <li class="documentation__list-item wow wowFadeUp" data-animation-delay="0.3s"><a class="documentation__list-btn" href="#" title="">
                       <div><i class="icon-doc"></i></div>
                       <p>Проектная декларация - 8 этап</p></a></li>
-                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                  <li class="documentation__list-item wow wowFadeUp" data-animation-delay="0.4s"><a class="documentation__list-btn" href="#" title="">
                       <div><i class="icon-doc"></i></div>
                       <p>Проектная декларация - 11/2 этап</p></a></li>
-                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                  <li class="documentation__list-item wow wowFadeUp" data-animation-delay="0.5s"><a class="documentation__list-btn" href="#" title="">
                       <div><i class="icon-doc"></i></div>
                       <p>Изменения в проектную декларацию от 21.02.2017</p></a></li>
-                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                  <li class="documentation__list-item wow wowFadeUp" data-animation-delay="0.6s"><a class="documentation__list-btn" href="#" title="">
                       <div><i class="icon-doc"></i></div>
                       <p>Проектная декларация - 11/2 этап</p></a></li>
-                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                  <li class="documentation__list-item wow wowFadeUp" data-animation-delay="0.7s"><a class="documentation__list-btn" href="#" title="">
                       <div><i class="icon-doc"></i></div>
                       <p>Проектная декларация - 11/2 этап</p></a></li>
-                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                  <li class="documentation__list-item wow wowFadeUp" data-animation-delay="0.8s"><a class="documentation__list-btn" href="#" title="">
                       <div><i class="icon-doc"></i></div>
                       <p>Изменения в проектную декларацию от 21.02.2017</p></a></li>
-                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                  <li class="documentation__list-item wow wowFadeUp" data-animation-delay="0.9s"><a class="documentation__list-btn" href="#" title="">
                       <div><i class="icon-doc"></i></div>
                       <p>Проектная декларация - 8 этап</p></a></li>
-                  <li class="documentation__list-item"><a class="documentation__list-btn" href="#" title="">
+                  <li class="documentation__list-item wow wowFadeUp" data-animation-delay="1.0s"><a class="documentation__list-btn" href="#" title="">
                       <div><i class="icon-doc"></i></div>
                       <p>Проектная декларация - 11/2 этап</p></a></li>
                 </ul><a class="documentation__button" href="#" title="">все документы</a>
@@ -797,7 +840,7 @@
         <!-- FOOTER :: START-->
         <footer class="footer">
           <div class="container">
-            <div class="footer__wrapper">
+            <div class="footer__wrapper wow wowFadeUp" data-animation-delay="0.3s">
               <div class="footer__row footer__row-0"><img class="footer__logo" src="./img/img-logo__footer.png" srcset="./img/img-logo__footer@2x.png 2x" alt="" title="">
                 <div class="footer__row-wrap">
                   <p>Группа компаний Стройальянс</p>

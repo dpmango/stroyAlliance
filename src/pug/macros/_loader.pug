@@ -1,0 +1,32 @@
+-
+  var titleArr = [
+    "Квартиры",
+    "Застройщик",
+    "Коммерческая недвижимость",
+    "Инвестиции",
+    "Генподрядчик",
+    "Машиноместа",
+    "Земля",
+    "Проектирование",
+    "Таунхаусы",
+    "Новостройки"
+  ];
+
+#loader.loader
+  .loader--container
+    -for(var i = 0, len = titleArr.length; i < len; i++)
+      .animated.loader--gradient(class="loader--gradient-" + i)
+
+    .animated.loader--gradient(class="loader--gradient-10")
+
+    .loader--title-wrap
+      -for(var i = 0, len = titleArr.length; i < len; i++)
+        p.animated.textInRight.loader--title(class!="loader--title-" + i)!= titleArr[i]
+
+    .loader--block-wrap
+      -for(var i = 0, len = titleArr.length; i < len; i++)
+        .animated.loader--block(class="loader--block-" + i)
+
+    .loader--text-wrap.animated
+      p!= "стройальянс"
+      p!= "группа компаний"

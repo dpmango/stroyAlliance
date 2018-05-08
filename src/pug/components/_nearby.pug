@@ -13,11 +13,11 @@
 
 #nearby.nearby
 
-  h3.main__title!= "Что рядом"
+  h3.main__title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Что рядом"
 
   .nearby__row
 
-    .nearby__block
+    .nearby__block.wow.wowFadeLeft(data-animation-delay="0.4s")
       p.nearby__block-title!= "Инфраструктура вокруг"
 
       +checkboxBtn("checkbox--irisBlue is-active", "Поликлиники")

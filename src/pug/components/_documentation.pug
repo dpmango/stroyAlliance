@@ -24,12 +24,12 @@
 .documentation
   .container
 
-    h3.main__title!= "Документация"
+    h3.main__title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Документация"
 
     .documentation__row
       ul.documentation__list
         -for(var i = 0, len = documentationNameArr.length; i < len; i++)
-          li.documentation__list-item
+          li.documentation__list-item.wow.wowFadeUp(data-animation-delay!= (0.3 + parseFloat(0.1 * i)).toFixed(1) + "s")
             a(
               href="#"
               class="documentation__list-btn"

@@ -1,0 +1,402 @@
+// LOADER
+// ===============
+.loader {
+  z-index: 100;
+  overflow: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #fff;
+
+  font-family: "TT Norms", Arila, sans-serif;
+  line-height: 1.2;
+  transition: opacity 0.3s ease-in-out,  visibility 0.3s ease-in-out;
+  @media screen and (max-width: 767px) {
+    display: none !important;
+  }
+
+  .no-preloader & {
+    display: none;
+  }
+  .preloader & {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out,  visibility 0.3s ease-in-out;
+  }
+
+
+  // GRADIENT
+  // ===============
+  // ===============
+  &--gradient {
+    z-index: 0;
+    opacity: 0;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    animation-duration: 0.9s !important;
+    animation-fill-mode: backwards !important;
+    animation-timing-function: ease-in-out;
+    animation-name: fadeIn;
+
+    @each $className, $color, $delay in
+        (0, #0571b9, 0),
+        (1, #f490ad, 0.9),
+        (2, #14a8df, 1.8),
+        (3, #f89c21, 2.7),
+        (4, #c7202e, 3.6),
+        (5, #addfea, 4.5),
+        (6, #ffcb08, 5.4),
+        (7, #ed1165, 6.3),
+        (8, #6cc065, 7.2),
+        (9, #ab499b, 8.1),
+    {
+      &-#{$className} {
+        animation-delay: #{$delay}s;
+
+        background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba($color, 0.25) 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba($color, 0.25) 100%);
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba($color, 0.25) 100%);
+      }
+    }
+
+    &-10 {
+      animation-delay: 8.1s;
+      animation-fill-mode: forwards !important;
+
+      background-color: rgba(#F3F3F3, 0.55);
+    }
+  }
+
+
+  // TITLE
+  // ===============
+  // ===============
+  &--title {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 60px;
+    font-weight: 100;
+
+    text-align: center;
+    @media screen and (max-width: 991px) {
+      font-size: 30px;
+    }
+    @media screen and (max-width: 1199px) {
+      font-size: 45px;
+    }
+
+    &-wrap {
+      z-index: 1;
+      position: relative;
+
+      height: 100px;
+
+      margin-top: 115px;
+      margin-bottom: 100px;
+      @media screen and (max-width: 991px) {
+        height: 50px;
+
+        margin-top: 80px;
+        margin-bottom: 50px;
+      }
+    }
+
+    @each $className, $delay, $colorName in
+        (0, 0,    #0571b9),
+        (1, 0.9,  #f490ad),
+        (2, 1.8,  #14a8df),
+        (3, 2.7,  #f89c21),
+        (4, 3.6,  #c7202e),
+        (5, 4.5,  #addfea),
+        (6, 5.4,  #ffcb08),
+        (7, 6.3,  #ed1165),
+        (8, 7.2,  #6cc065),
+        (9, 8.1,  #ab499b)
+    {
+      &-#{$className} {
+        color: $colorName;
+        animation-delay: #{$delay}s;
+      }
+    }
+  }
+
+
+  // BLOCK
+  // ===============
+  // ===============
+  &--block {
+
+    position: absolute;
+
+    width: 110px;
+    height: 110px;
+    @media screen and (max-width: 991px) {
+      transform: scale(0.8);
+    }
+
+    &-wrap {
+      z-index: 1;
+      position: relative;
+
+      width: 330px;
+      height: 440px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      animation-delay: 9.1s;
+      animation-duration: 0.2s !important;
+      animation-name: scale;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(1,1,1,1);
+      @media screen and (max-width: 991px) {
+        transform: scale(0.8);
+      }
+    }
+
+    @each $className, $color, $l, $r, $t, $b, $delay in
+        (0, #0571b9, 0,     auto, auto,   0,      0),
+        (1, #f490ad, auto,  0,    auto,   110px,  0.9),
+        (2, #14a8df, 110px, auto, 0,      auto,   1.8),
+        (3, #f89c21, 0,     auto, 110px,  auto,   2.7),
+        (4, #c7202e, 110px, auto, auto,   110px,  3.6),
+        (5, #addfea, 0,     auto, 0,      auto,   4.5),
+        (6, #ffcb08, auto,  0,    110px,  auto,   5.4),
+        (7, #ed1165, 0,     auto, auto,   110px,  6.3),
+        (8, #6cc065, auto,  0,    0,      auto,   7.2),
+        (9, #ab499b, auto,  0,    auto,   0,      8.1)
+    {
+      &-#{$className} {
+        left: $l;
+        right: $r;
+        top: $t;
+        bottom: $b;
+
+        background-color: $color;
+        box-shadow: 0 0 100px 10px rgba($color, 0.35);
+
+        animation-delay: #{$delay}s;
+      }
+    }
+
+    &-5,
+    &-8 {
+      width: 0;
+      height: 0;
+
+      background-color: transparent;
+      box-shadow: none
+    }
+    &-5 {
+      border-bottom: 110px solid #addfea;
+      border-left: 110px solid transparent;
+    }
+    &-8 {
+      border-bottom: 110px solid #6cc065;
+      border-right: 110px solid transparent;
+    }
+  }
+
+
+  // TEXT
+  // ===============
+  // ===============
+  &--text-wrap {
+    opacity: 0;
+    z-index: 1;
+
+    position: relative;
+
+    text-align: center;
+
+    animation-delay: 9.1s;
+    animation-duration: 0.25s !important;
+    animation-name: textInUp;
+    animation-fill-mode: forwards;
+
+    p {
+      &:nth-child(1) {
+        margin-bottom: 10px;
+
+        color: #444444;
+        font-size: 70px;
+        font-weight: bold;
+      }
+      &:nth-child(2) {
+        color: #cccccc;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+// ANIMATED
+// ===============
+// ===============
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+
+// FADEIN
+// ===============
+// ===============
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+// TEXTINRIGHT
+// ===============
+// ===============
+@keyframes textInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  50% {
+    transform: translate3d(-100px, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.textInRight {
+  animation-name: textInRight;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0, 0.9, 0, 0.9);
+}
+
+
+// SCALE
+// ===============
+// ===============
+@keyframes scale {
+  from {
+    top: 0;
+    transform: scale(1);
+  }
+  to {
+    top: -80px;
+    transform: scale(0.65);
+  }
+}
+
+
+// TEXTINUP
+// ===============
+// ===============
+@keyframes textInUp {
+  from {
+    top: 0;
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    top: -150px;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+// KEYFRAMESFUNCTION
+// ===============
+// ===============
+@mixin keyframesFunction($keyframesName, $initX, $initY, $step, $directionX, $directionY) {
+  @keyframes #{$keyframesName} {
+    from {
+      transform-origin: center;
+      transform: translate3d(#{$directionX}$initX, #{$directionY}$initY, 0);
+      visibility: visible;
+    }
+
+    @for $i from 1 through 9 {
+      #{$i * 10%} {
+
+        $x: 0;
+        $y: 0;
+
+        @if ($initX != 0) {
+          $x: #{$initX - ($i * $step)}
+        }
+        @if ($initY != 0) {
+          $y: #{$initY - ($i * $step)}
+        }
+
+        @if($i != 9) {
+          transform: translate3d(#{$directionX}$x, #{$directionY}$y, 0);
+        } @else {
+          transform: translate3d(#{$directionX}$x, #{$directionY}$y, 0) rotate(-200deg);
+        }
+      }
+    }
+
+    to {
+      transform-origin: center;
+      transform: translate3d(0, 0, 0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+}
+
+@include keyframesFunction(slideInRotateBlock0, 1000px, 1000px, 100,  "-",  "");
+@include keyframesFunction(slideInRotateBlock1, 1000px, 1000px, 100,  "",   "");
+@include keyframesFunction(slideInRotateBlock2, 1000px, 0,      0,    "",   "");
+@include keyframesFunction(slideInRotateBlock3, 1000px, 1000px, 100,  "-",  "-");
+@include keyframesFunction(slideInRotateBlock4, 0,      1000px, 100,  "",   "");
+@include keyframesFunction(slideInRotateBlock5, 1000px, 1000px, 50,   "-",  "-");
+@include keyframesFunction(slideInRotateBlock6, 1000px, 0,      100,  "",   "");
+@include keyframesFunction(slideInRotateBlock7, 1000px, 1000px, 100,  "-",  "-");
+@include keyframesFunction(slideInRotateBlock8, 1000px, 1000px, 100,  "",   "-");
+@include keyframesFunction(slideInRotateBlock9, 1000px, 1000px, 100,  "",   "");
+
+
+.loader--block {
+  opacity: 0;
+  animation-duration: 0.15s;
+
+  &-0 { animation-name: slideInRotateBlock0; }
+  &-1 { animation-name: slideInRotateBlock1; }
+  &-2 { animation-name: slideInRotateBlock2; }
+  &-3 { animation-name: slideInRotateBlock3; }
+  &-4 { animation-name: slideInRotateBlock4; }
+  &-5 { animation-name: slideInRotateBlock5; }
+  &-6 { animation-name: slideInRotateBlock6; }
+  &-7 { animation-name: slideInRotateBlock7; }
+  &-8 { animation-name: slideInRotateBlock8; }
+  &-9 { animation-name: slideInRotateBlock9; }
+}

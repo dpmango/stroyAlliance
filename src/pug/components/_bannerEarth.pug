@@ -33,10 +33,10 @@ mixin swapInfoEarth()
 
   +carouselBg("earth", "carousel-earth-js", "earth")
 
-  .container.container--slider
+  .container.container--slider.wow.wowFadeLeft(data-animation-delay="0.4s")
     +sliderLocation("earth", "slider-earth-js", sliderLocationArr)
 
-  .container.container--swap
+  .container.container--swap.wow.wowFadeRight(data-animation-delay="0.6s")
     +swapInfoEarth()
 
   include ../macros/_mouse

@@ -91,6 +91,16 @@ body, html
 //    padding-left: 15px
 //    padding-right: 15px
 
+
+#barba-wrapper
+  opacity: 0
+  +transition(opacity)
+
+  .preloader &
+    opacity: 1
+    animation-fill-mode: backwards
+    +transition(opacity)
+
 // REMOVE FOR PRODUCTION !
 .dev-bp-debug
   background: black

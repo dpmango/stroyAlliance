@@ -2,13 +2,17 @@ include _mixins
 include _variable
 
 doctype html
-html(lang="en")
+html.is-hideScroll(lang="en")
   head
     include _head
 
-  body(class=bodyClass)
+  body.is-hideScroll(class=bodyClass)
+
+    block loader
+      include ../macros/_loader
+
     // place where pjax bindings happen's
-    #barba-wrapper
+    #barba-wrapper.animated
       block header
         include ../components/_header
     

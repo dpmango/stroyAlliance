@@ -33,10 +33,10 @@ mixin swapInfoStorerooms()
 
   +carouselBg("storerooms", "carousel-storerooms-js", "storerooms")
 
-  .container.container--slider
+  .container.container--slider.wow.wowFadeLeft(data-animation-delay="0.4s")
     +sliderLocation("storerooms", "slider-storerooms-js", sliderLocationArr)
 
-  .container.container--swap
+  .container.container--swap.wow.wowFadeRight(data-animation-delay="0.6s")
     +swapInfoStorerooms()
 
   include ../macros/_mouse

@@ -3,7 +3,7 @@
 ////////////
 function initTeleport(){
   $('[js-teleport]').each(function (i, val) {
-    var self = $(val)
+    var self = $(val);
     var objHtml = $(val).html();
     var target = $('[data-teleport-target=' + $(val).data('teleport-to') + ']');
     var conditionMedia = $(val).data('teleport-condition').substring(1);
@@ -21,18 +21,16 @@ function initTeleport(){
         }
 
         if (condition) {
-          target.html(objHtml)
+          target.html(objHtml);
           self.html('')
         } else {
-          self.html(objHtml)
+          self.html(objHtml);
           target.html("")
         }
       }
 
       teleport();
       _window.on('resize', debounce(teleport, 100));
-
-
     }
   })
 }

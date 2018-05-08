@@ -54,10 +54,10 @@
 #choose.choose.choose--realty
   .container
 
-    h3.main__title!= "Выбрать помещение"
+    h3.main__title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Выбрать помещение"
 
     .choose__row
-      .choose__row-left
+      .choose__row-left.wow.wowFadeLeft(data-animation-delay="0.3s")
 
         .choose__row-filter
           .choose__field.choose__field-radioWrap
@@ -112,7 +112,8 @@
                   .table__td(td-js)!= tablePrice[i]
 
 
-      .choose__row-right
+
+      .choose__row-right.wow.wowFadeRight(data-animation-delay="0.3s")
         .choose__field.choose__field-plan
           img(
             src="./img/img-plan__choose.png"

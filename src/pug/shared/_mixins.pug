@@ -12,7 +12,7 @@ mixin icon(name, modClass)
 //- TAB
 //- ========================================
 mixin tabComponent(countForActive)
-  .tab
+  .tab.wow.wowFadeUp(data-animation-delay="0.2s")
     .tab__header
       .container
         .tab__header-wrap
@@ -24,9 +24,8 @@ mixin tabComponent(countForActive)
               title=""
             )
 
-
           .tab__header--right
-            include ../macros/_dropdown
+            .tab__header--right-cover(data-teleport-target="mobile-dropdown")
 
             .header__hamburger
               .hamburger.hamburger--squeeze.is-active(js-hamburger-close)
@@ -49,7 +48,7 @@ mixin tabComponent(countForActive)
     .tab__footer
       a(href="tel:4872702524" class="header__phone header__phone--tab" title="")!= "(4872) 70-25-24"
 
-      include ../macros/_menu
+      .tab__footer-cover(data-teleport-target="mobile-menu")
 
 //- BANNER BG CAROUSEL
 //- ========================================

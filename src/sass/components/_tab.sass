@@ -4,6 +4,7 @@
   display: none
   +r($mobile-max)
     overflow-y: auto
+    z-index: 1000
     position: fixed
     top: 0
     left: 0
@@ -14,9 +15,14 @@
   +rmin($tablet)
     display: block
 
+  .preloader &
+    display: none
+
   &.is-show
     +r($mobile-max)
       display: block
+      animation-name: wowFade
+      visibility: visible
 
   &__header
     +rmin($mobile-s)
