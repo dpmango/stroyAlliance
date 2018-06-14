@@ -1,0 +1,93 @@
+// PROJECT :: START
+
+-
+  var projectResidentialArr = [
+    {
+      title: "ЖК Петровский квартал",
+      info: "Жилая недвижимость 2018г.",
+      image: "./img/img-project-0.png",
+      imageRetina: "./img/img-project-0@2x.png 2x"
+    },
+    {
+      title: "ЖК Гринхаус",
+      info: "Жилая недвижимость 2015г.",
+      image: "./img/img-project-1.png",
+      imageRetina: "./img/img-project-1@2x.png 2x"
+    },
+    {
+      title: "ЖК на ул. Макаренко",
+      info: "Жилая недвижимость 2017г.",
+      image: "./img/img-project-2.png",
+      imageRetina: "./img/img-project-2@2x.png 2x"
+    },
+    {
+      title: "ЖК Luxury Village",
+      info: "Жилая недвижимость 2018г.",
+      image: "./img/img-project-3.png",
+      imageRetina: "./img/img-project-3@2x.png 2x"
+    },
+    {
+      title: "ЖК Петровский квартал",
+      info: "Жилая недвижимость 2018г.",
+      image: "./img/img-project-4.png",
+      imageRetina: "./img/img-project-4@2x.png 2x"
+    },
+    {
+      title: "ЖК Гринхаус",
+      info: "Жилая недвижимость 2015г.",
+      image: "./img/img-project-5.png",
+      imageRetina: "./img/img-project-5@2x.png 2x"
+    }
+  ];
+
+#project.project
+  .container
+
+    .project__row.project__row--checkbox
+
+      .project__checkbox.wow.wowFadeUp(data-animation-delay="0.35s")
+        p.project__checkbox-title!= "жилая недвижимость"
+        +checkboxBtn("checkbox--irisBlue project-js", "")
+        p.project__checkbox-title!= "коммерческая недвижимость"
+
+    .project__row.project__row--view
+
+      .project__col.animated.is-active(project-residential-js)
+        -for(var i = 0, len = projectResidentialArr.length; i < len; i++)
+          a.wow.wowFadeUp(
+            data-animation-delay!= (0.35 + parseFloat(0.1 * i)).toFixed(1) + "s"
+            href="#"
+            class="project__block"
+          )
+            .project__block-img
+              img(
+                src!= projectResidentialArr[i].image
+                srcset= projectResidentialArr[i].imageRetina
+                title=""
+                alt=""
+                objectFit-js
+              )
+            p.project__block-title!= projectResidentialArr[i].title
+              p.project__block-info!= projectResidentialArr[i].info
+
+      .project__col.animated(project-commercial-js)
+        -for(var j = 0, len = projectResidentialArr.length; j < len; j++)
+          a.wow.wowFadeUp(
+            data-animation-delay!= (0.35 + parseFloat(0.1 * i)).toFixed(1) + "s"
+            href="#"
+            class="project__block"
+          )
+            .project__block-img
+              img(
+                src!= projectResidentialArr[j].image
+                srcset= projectResidentialArr[j].imageRetina
+                title=""
+                alt=""
+                objectFit-js
+              )
+            p.project__block-title!= projectResidentialArr[j].title
+            p.project__block-info!= projectResidentialArr[j].info
+
+
+
+// PROJECT :: END

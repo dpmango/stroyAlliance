@@ -1,0 +1,215 @@
+.credit
+  &__row
+    &-0
+      display: flex
+      justify-content: space-between
+      padding-bottom: 45px
+      +r(767)
+        padding-bottom: 30px
+      +rmin(320)
+        flex-direction: column
+      +rmin(992)
+        flex-direction: row
+
+    &-1
+      padding-top: 45px
+      padding-bottom: 60px
+      +r(767)
+        padding-top: 30px
+        padding-bottom: 30px
+
+    &-left
+      padding-top: 15px
+      +rmin(320)
+        width: 100%
+        margin-bottom: 30px
+      +rmin(992)
+        width: 700px
+        margin-bottom: 0
+      +rmin(1200)
+        width: 600px
+
+    &-right
+      +rmin(320)
+        width: 100%
+      +rmin(992)
+        width: 400px
+      +rmin(1200)
+        width: 500px
+
+
+  &__title
+    padding-top: 75px
+    padding-bottom: 45px
+    font-weight: 800
+    text-align: center
+    +r(767)
+      padding-top: 35px
+      padding-bottom: 20px
+    +rmin(768)
+      font-size: 40px
+    +rmin(992)
+      font-size: 50px
+
+
+  &__calc
+    &-row
+      +rmin(576)
+        display: flex
+
+      &--top
+        margin-bottom: 45px
+
+        .credit__calc-col
+          &:last-child
+            .credit__calc-title
+              padding-bottom: 0
+
+        .form__field-group
+          display: flex
+          margin-top: 0
+
+          .form__field
+            &:nth-child(1)
+              +rmin(768)
+                width: 200px !important
+                padding-right: 30px
+
+            &:last-child
+              +rmin(768)
+                width: calc(100% - 200px) !important
+
+      &--middle
+        margin-bottom: 30px
+
+      &--bottom
+        .credit__calc-col
+          &:nth-child(1)
+            padding-right: 0
+          &:last-child
+            +rmin(768)
+              padding-left: 65px
+
+          .credit__calc-title
+            padding-bottom: 15px
+
+    &-col
+      +rmin(320)
+        width: 100%
+        margin-bottom: 30px
+      +rmin(576)
+        width: 50%
+        margin-bottom: 0
+      +rmin(320)
+        &:nth-child(1)
+          +r(767)
+            padding-right: 15px
+          +r(575)
+            padding: 0
+        &:last-child
+          +r(767)
+            padding-left: 15px
+          +r(575)
+            padding: 0
+
+      +rmin(768)
+        padding-right: 30px
+
+      .form__field
+        width: 100% !important
+
+    &-title,
+    &-subtitle
+      color: $colorDimGray
+
+    &-title
+      font-size: 20px
+      padding-bottom: 30px
+      +r(575)
+        padding-bottom: 15px
+
+    &-subtitle
+      padding-bottom: 14px
+      font-size: 14px
+
+    &-sum
+      font-weight: 800
+      +rmin(320)
+        font-size: 30px
+      +rmin(576)
+        font-size: 35px
+      +rmin(768)
+        font-size: 50px
+
+
+  &__consultation
+    width: 100%
+    border-radius: 13px
+    background-color: #fffcec
+    +rmin(320)
+      padding: 30px 15px
+    +rmin(768)
+      padding: 60px 70px
+    +rmin(992)
+      padding: 60px 50px
+    +rmin(1200)
+      padding: 60px 70px
+
+    &-title
+      margin-bottom: 30px
+      font-size: 30px
+      font-weight: bold
+      +r(767)
+        font-size: 25px
+
+    &-form
+      .form__field
+        width: 100% !important
+        margin-bottom: 15px
+      .form__button
+        text-transform: uppercase
+
+
+  &__bank
+    &-title
+      margin-bottom: 15px
+      text-align: center
+      font-size: 30px
+      font-weight: bold
+      +r(767)
+        margin-bottom: 30px
+        font-size: 25px
+
+    &-row
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      max-width: 1030px
+      padding-left: 30px
+      padding-right: 30px
+      margin-left: auto
+      margin-right: auto
+      +r(767)
+        flex-direction: column
+        justify-content: center
+        padding-left: 15px
+        padding-right: 15px
+
+    &-img
+      cursor: pointer
+      filter: grayscale(1)
+      display: block
+      max-width: 100%
+      height: auto
+      margin-left: 10px
+      margin-right: 10px
+      margin-bottom: 30px
+      +transition(filter)
+      +r(575)
+        height: 40px
+
+      &:hover
+        filter: grayscale(0)
+        +transition(filter)

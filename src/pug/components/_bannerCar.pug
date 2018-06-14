@@ -3,28 +3,25 @@
 
 //- VARIABLE
 //- ==========
--
-  var sliderLocationArr = [
-    "Удобный паркинг с круглосуточной охраной позволит Вам всегда быстро выехать в город без заторов во дворе, обезопасит Ваш автомобиль от угона и повреждения и продлит срок его эксплуатации",
-    "Удобный паркинг с круглосуточной охраной позволит Вам всегда быстро выехать в город без заторов во дворе, обезопасит Ваш автомобиль от угона и повреждения и продлит срок его эксплуатации",
-    "Удобный паркинг с круглосуточной охраной позволит Вам всегда быстро выехать в город без заторов во дворе, обезопасит Ваш автомобиль от угона и повреждения и продлит срок его эксплуатации",
-    "Удобный паркинг с круглосуточной охраной позволит Вам всегда быстро выехать в город без заторов во дворе, обезопасит Ваш автомобиль от угона и повреждения и продлит срок его эксплуатации"
-  ];
+
 //- ==========
 //- MIXIN
 //- ==========
 
 //- ==========
-
-
+  
+  
 .banner.banner--inner
   .banner__gradient
-
-  +carouselBlurBg("carBlur", "carousel-carBlue-js", "carParking")
-
-  .container.container--slider.wow.wowFadeLeft(data-animation-delay="0.4s")
-    +sliderInnerLocation("car", "slider-car-js", sliderLocationArr)
-
+  
+  .banner__carousel--blur.no-slider-blur
+    .no-slider-image.banner__carousel-image(style="background-image: url(./img/img-bg__carParking.jpg)")
+  .banner__carousel--normal
+    .no-slider-image(style="background-image: url(./img/img-bg__carParking.jpg)")
+  .container.container--slider.no-slider-text.wow.wowFadeLeft(data-animation-delay="0.4s")
+    | Удобный паркинг с круглосуточной охраной позволит Вам всегда быстро выехать в город без заторов во дворе, обезопасит Ваш автомобиль от угона и повреждения и продлит срок его эксплуатации
+  
+    
   include ../macros/_submenu
 
 

@@ -1,0 +1,194 @@
+.about__head-text
+  padding-bottom: 35px
+  font-weight: bold
+  text-align: center
+  color: rgb(80, 200, 125)
+  +rmin($mobile-s)
+    padding-top: 30px
+    font-size: 25px
+  +rmin($tablet)
+    font-size: 35px
+  +rmin($desktop)
+    padding-top: 45px
+    font-size: 42px
+  +rmin($wide)
+    padding-top: 60px
+    font-size: 50px
+
+  &.is-orange
+    color: rgb(246, 157, 33)
+
+  &.is-purple
+    color: rgb(170, 74, 157)
+
+  &.is-blue
+    color: rgb(85, 170, 200)
+
+.about__text
+  color: #888
+  line-height: 1.5
+  +rmin($mobile-s)
+    margin-bottom: 30px
+    font-size: 16px
+  +rmin($mobile)
+    font-size: 18px
+  +rmin($tablet)
+    font-size: 20px
+  +rmin($desktop)
+    margin-bottom: 45px
+  +rmin($wide)
+    margin-bottom: 60px
+
+.about__sub-text
+  font-weight: bold
+  line-height: 1
+  +rmin($mobile-s)
+    margin-bottom: 30px
+    font-size: 20px
+  +rmin($tablet)
+    margin-bottom: 45px
+    font-size: 25px
+  +rmin($wide)
+    font-size: 30px
+
+.about__list
+  display: flex
+  flex-wrap: wrap
+
+  &-left,
+  &-right
+    width: 50%
+    +r(767)
+      width: 100%
+
+    ul
+      li
+        position: relative
+        margin-bottom: 30px
+        font-size: 16px
+        font-weight: bold
+        padding-left: 30px
+
+        &:before
+          content: ""
+          position: absolute
+          top: 4px
+          left: 0
+          width: 10px
+          height: 10px
+          border-radius: 100%
+
+          .about__list--orange &
+            background-color: rgb(246, 157, 33)
+          .about__list--purple &
+            background-color: rgb(170, 74, 157)
+
+  &-left
+    padding-right: 15px
+    +r(767)
+      padding-right: 0
+  &-right
+    padding-left: 15px
+    +r(767)
+      padding-left: 0
+
+.about__wrap
+  display: flex
+  margin-bottom: 45px
+  +r(767)
+    flex-direction: column
+    margin-bottom: 15px
+
+  &:last-child
+    margin-bottom: 120px
+    +r(767)
+      margin-bottom: 60px
+
+  &-left,
+  &-right
+    width: 50%
+    +r(767)
+      width: 100%
+
+  &-left
+    padding-right: 15px
+    +r(767)
+      padding-right: 0
+  &-right
+    padding-left: 15px
+    +r(767)
+      padding-left: 0
+
+.about__block
+  cursor: pointer
+  position: relative
+  padding: 0 73px 0 50px
+  border-radius: 5px
+  background-color: transparent
+  margin-bottom: 30px
+  +transition(padding-top, padding-bottom)
+
+  &:before
+    content: ""
+    z-index: 0
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 0
+    background-color: transparent
+    +transition(height, background-color)
+
+  &.is-active
+    padding-top: 30px
+    padding-bottom: 30px
+    +transition(padding-top, padding-bottom)
+
+    &:before
+      height: 100%
+      background-color: #f7f7f7
+      +transition(height, background-color)
+
+    a
+      top: 0
+      transform: rotate(135deg)
+      +transition(top, transform)
+
+    .about__block-text
+      opacity: 1
+      visibility: visible
+      height: auto
+      +transition(opacity, visibility, height)
+
+
+  &-btn
+    z-index: 1
+    position: absolute
+    top: -3px
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 35px
+    height: 35px
+    border-radius: 100%
+    background-color: #f7f7f7
+    +transition(top, transform)
+
+  &-title
+    z-index: 1
+    position: relative
+    margin-bottom: 5px
+    font-size: 20px
+    font-weight: bold
+
+  &-text
+    z-index: 1
+    position: relative
+    opacity: 0
+    visibility: hidden
+    height: 0
+    font-size: 16px
+    line-height: 1.6
+    +transition(opacity, visibility, height)
+

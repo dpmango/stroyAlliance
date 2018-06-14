@@ -1,5 +1,15 @@
 // CHOOSE
 // ===============
+
+.choose--realty .icon-arrow
+  transform: scale(0.5)
+  flex-shrink: 0
+
+.choose--realty .choose__field-table .table__th
+  white-space: normal
+
+.choose__field-table .table__tr.is-active .table__td.is-sort
+
 .choose
   padding-top: 30px
   padding-bottom: 30px
@@ -193,12 +203,17 @@
               background-color: $colorSolitude
               +transition(background-color, color)
 
+            .table__td.is-sort
+              +transition(background-color, border-radius, color)
+
             &.is-active
               border-top-right-radius: 0
               border-bottom-right-radius: 0
               color: $colorWhite
               background-color: $colorIrisBlue
               +transition(background-color, border-radius, color)
+              .table__td.is-sort
+                background-color: $colorIrisBlue
 
               &:after
                 opacity: 1

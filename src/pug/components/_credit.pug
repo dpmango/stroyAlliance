@@ -1,0 +1,88 @@
+// CREDIT :: START
+
+-
+  var creditImageName = [
+    "./img/Banks/sberBank.png",
+    "./img/Banks/vtbBank.png",
+    "./img/Banks/gasProm.png",
+    "./img/Banks/fondIpoteka.png",
+    "./img/Banks/selkhosBank.png",
+    "./img/Banks/raifaisenBank.png",
+    "./img/Banks/industrialBank.png"
+  ];
+
+#credit.credit
+  .container
+
+    h1.credit__title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Расчёт ипотеки"
+
+    .credit__row.credit__row-0
+      .credit__row-left.wow.wowFadeUp(data-animation-delay="0.4s")
+        .credit__calc
+          form(class="credit__calc-form" action="" method="" autocomplete="off")
+            .credit__calc-row.credit__calc-row--top
+              .credit__calc-col.wow.wowFadeUp(data-animation-delay="0.4s")
+                p.credit__calc-title!= "Стоимость квартиры"
+
+                .form__field
+                  input(type="text" name="" class="form__input credit__calc-input" numberMask-js placeholder="2 000 000")
+
+              .credit__calc-col.wow.wowFadeUp(data-animation-delay="0.5s")
+                p.credit__calc-title!= "Первоначальный взнос"
+                p.credit__calc-subtitle!= "(сумма или процент)"
+
+                .form__field-group
+                  .form__field
+                    input(type="text" name="" class="form__input credit__calc-input" numberMask-js placeholder="1 000 000")
+                  .form__field
+                    input(type="text" name="" class="form__input credit__calc-input" percentMask-js placeholder="50%")
+
+            .credit__calc-row.credit__calc-row--middle
+              .credit__calc-col.wow.wowFadeUp(data-animation-delay="0.6s")
+                p.credit__calc-title!= "Процентная ставка"
+
+                .form__field
+                  input(type="text" name="" class="form__input credit__calc-input" percentMask-js placeholder="7.4%")
+
+              .credit__calc-col.wow.wowFadeUp(data-animation-delay="0.7s")
+                p.credit__calc-title!= "Срок кредита"
+
+                .form__field
+                  input(type="text" name="" class="form__input credit__calc-input" placeholder="10 лет")
+
+            .credit__calc-row.credit__calc-row--bottom
+              .credit__calc-col.wow.wowFadeUp(data-animation-delay="0.8s")
+                p.credit__calc-title!= "Общая сумма кредита"
+                p.credit__calc-sum(main-sum-js)!= "1 000 000₽"
+
+              .credit__calc-col.wow.wowFadeUp(data-animation-delay="0.9s")
+                p.credit__calc-title!= "Ежемесячный платёж"
+                p.credit__calc-sum(month-sum-js)!= "12 080₽"
+
+      .credit__row-right.wow.wowFadeUp(data-animation-delay="0.4s")
+        .credit__consultation
+          p.credit__consultation-title.wow.wowFadeUp(data-animation-delay="0.5s")!= "Получить консультацию по ипотеке"
+
+          form(class="credit__consultation-form" action="" method="" autocomplete="off")
+            .form__field.wow.wowFadeUp(data-animation-delay="0.6s")
+              input(type="name" name="name" class="form__input credit__consultation-input" placeholder="Ваше имя")
+            .form__field.wow.wowFadeUp(data-animation-delay="0.7s")
+              input(type="tel" name="phone" class="form__input credit__consultation-input")
+
+            button.wow.wowFadeUp(data-animation-delay="0.8s" type="submit" class="form__button credit__consultation-btn")!= "получить консультацию"
+
+
+
+    .credit__row.credit__row-1
+      .credit__bank
+        p.credit__bank-title.wow.wowFadeUp(data-animation-delay="0.3s")!= "Банки-партнеры"
+        .credit__bank-row
+          -for(var i = 0, len = creditImageName.length; i < len; i++)
+            img.credit__bank-img.wow.wowFadeUp(
+            data-animation-delay!= (0.4 + parseFloat(0.1 * i)).toFixed(1) + "s"
+              src!= creditImageName[i]
+              title=""
+              alt=""
+            )
+
+// CREDIT :: START

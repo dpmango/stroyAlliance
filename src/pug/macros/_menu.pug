@@ -2,16 +2,36 @@
 //- ==========
 -
   var headerMenuArr = [
-    "Инвесторам",
+    "Реализованные проекты",
     "Ипотека",
     "Контакты",
     "О компании"
   ];
+  var headerHrefArr = [
+    "finishedProject.html",
+    "calcCredit.html",
+    "contacts.html",
+    "aboutCompany.html"
+  ];
 //- ==========
+
+
+mixin menuComponent(className)
+  li.menu__item.wow.wowFadeDown(class!= className)
+    a(href!= headerHrefArr[i] class="menu__link" title="")!= headerMenuArr[i]
+
 
 
 .menu--cover(js-teleport data-teleport-to="mobile-menu" data-teleport-condition="<768")
   ul.menu
     -for(var i = 0, len = headerMenuArr.length; i < len; i++)
-      li.menu__item.wow.wowFadeDown
-        a(href="#" class="menu__link" title="")!= headerMenuArr[i]
+      if(bodyClass === "about-company" && i === 3)
+        +menuComponent("is-active")
+      else if(bodyClass === "calc-credit" && i === 1)
+        +menuComponent("is-active")
+      else if(bodyClass === "contacts" && i === 2)
+        +menuComponent("is-active")
+      else if(bodyClass === "finished-project" && i === 0)
+        +menuComponent("is-active")
+      else
+        +menuComponent("")

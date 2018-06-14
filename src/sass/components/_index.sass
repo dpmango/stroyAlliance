@@ -17,7 +17,6 @@
   +rmin($wide)
     font-size: 50px
 
-
 // FORM COMPONENT
 // ===============
 .form
@@ -34,6 +33,68 @@
       border-color: $colorGold
       box-shadow: 0 0 20px 0 rgba($colorBlack, 0.03)
       +transition(border-color, box-shadow)
+
+  &__field
+    &-group
+      display: flex
+      justify-content: space-between
+      margin-top: 30px
+      +r(767)
+        flex-direction: column
+        margin-top: 15px
+
+      input[type="file"]
+        opacity: 0
+        z-index: -1
+        overflow: hidden
+        position: absolute
+        width: 0.1px
+        height: 0.1px
+
+        + label
+          display: inline-block
+
+          p
+            width: 203px
+            text-align: center
+            border-color: #999
+            background-color: #999
+            color: #fff
+            text-transform: uppercase
+            +transition(color, background-color)
+
+            &:hover
+              color: #999
+              background-color: transparent
+              +transition(color, background-color)
+
+          span
+            display: block
+            color: $colorBlack
+            font-weight: 300
+            margin-top: 5px
+            text-decoration: underline
+
+    .form__button
+      width: 170px
+      margin: 0
+      +r(767)
+        margin-top: 15px
+
+    &-select
+      display: flex
+      align-items: center
+
+      label
+        width: 85px
+        font-size: 20px
+
+      .select
+        width: calc(100% - 85px)
+
+        .selectric
+          span
+            text-align: left
 
   &__input
     width: 100%
@@ -64,7 +125,6 @@
     &:hover
       background-color: transparent
       +transition(background-color)
-
 
 // SELECT
 // ===============
@@ -116,7 +176,6 @@
       +rmin($mobile)
         font-size: 16px
 
-
 // RADIO
 // ===============
 .radio
@@ -146,7 +205,6 @@
     background-color: $colorSolitude
     +transition(background-color, color)
 
-
     span
       font-size: 20px
 
@@ -155,7 +213,6 @@
       color: $colorWhite
       background-color: $colorIrisBlue
       +transition(background-color, color)
-
 
 // CHECKBOX
 // ===============
@@ -225,8 +282,6 @@
   &__name
     font-size: 14px
 
-
-
 //  ANIMATED
 // ===============
 //.animated
@@ -259,7 +314,6 @@
 
   .banner__slider &
     animation-duration: 0s
-
 
 //  SLIDE-IN-DOWN
 // ===============

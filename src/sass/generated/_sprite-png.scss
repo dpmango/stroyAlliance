@@ -1,47 +1,47 @@
 $sprite: (
 	arrow: (
-		offset-x: -90px,
-		offset-y: -70px,
+		offset-x: 0px,
+		offset-y: -125px,
 		width: 16px,
 		height: 9px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	corner: (
-		offset-x: -116px,
-		offset-y: -70px,
+		offset-x: -33px,
+		offset-y: -108px,
 		width: 11px,
 		height: 7px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	doc: (
-		offset-x: -33px,
+		offset-x: -69px,
 		offset-y: -70px,
 		width: 22px,
 		height: 28px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	done: (
-		offset-x: -65px,
+		offset-x: -101px,
 		offset-y: -70px,
 		width: 15px,
 		height: 15px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	marker--hover: (
 		offset-x: 0px,
-		offset-y: -125px,
+		offset-y: -144px,
 		width: 10px,
 		height: 13px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	marker-active: (
@@ -50,7 +50,7 @@ $sprite: (
 		width: 11px,
 		height: 14px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	marker-black: (
@@ -59,16 +59,16 @@ $sprite: (
 		width: 11px,
 		height: 14px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	marker: (
 		offset-x: -20px,
-		offset-y: -125px,
+		offset-y: -144px,
 		width: 10px,
 		height: 13px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	next-slider-gallery: (
@@ -77,25 +77,34 @@ $sprite: (
 		width: 60px,
 		height: 60px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	next-swap-gallery: (
-		offset-x: -140px,
-		offset-y: 0px,
-		width: 12px,
-		height: 30px,
-		total-width: 174px,
-		total-height: 138px,
-		image: '../img/sprite.png'
-	),
-	next: (
 		offset-x: -162px,
 		offset-y: 0px,
 		width: 12px,
 		height: 30px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
+		image: '../img/sprite.png'
+	),
+	next: (
+		offset-x: -140px,
+		offset-y: 0px,
+		width: 12px,
+		height: 30px,
+		total-width: 174px,
+		total-height: 157px,
+		image: '../img/sprite.png'
+	),
+	pdf: (
+		offset-x: -33px,
+		offset-y: -70px,
+		width: 26px,
+		height: 28px,
+		total-width: 174px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	prev-slider-gallery: (
@@ -104,7 +113,7 @@ $sprite: (
 		width: 60px,
 		height: 60px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	prev-swap-gallery: (
@@ -113,7 +122,7 @@ $sprite: (
 		width: 12px,
 		height: 30px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	prev: (
@@ -122,7 +131,7 @@ $sprite: (
 		width: 12px,
 		height: 30px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	submenuArrow: (
@@ -131,7 +140,7 @@ $sprite: (
 		width: 9px,
 		height: 20px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 	table-arrow: (
@@ -140,7 +149,7 @@ $sprite: (
 		width: 23px,
 		height: 45px,
 		total-width: 174px,
-		total-height: 138px,
+		total-height: 157px,
 		image: '../img/sprite.png'
 	),
 );
@@ -231,6 +240,9 @@ $sprite: (
 	}
 	.icon-next {
 		@include sprite(next)
+	}
+	.icon-pdf {
+		@include sprite(pdf)
 	}
 	.icon-prev-slider-gallery {
 		@include sprite(prev-slider-gallery)

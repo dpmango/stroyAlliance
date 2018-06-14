@@ -133,3 +133,7 @@ mixin checkboxBtn(className, text)
         span
       .checkbox__name
         p!= text
+        
+mixin backgroundInHeader(image, text)
+  div(class="background-in-header " style="background-image: url('" + image + "')")
+    p.wow.wowFadeUp(data-animation-delay="0.4s")!= text

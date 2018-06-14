@@ -29,6 +29,7 @@ $(document).ready(function(){
 
     initPopups();
     initSliders();
+    initTeleport();
     initScrollMonitor();
     initMasks();
     // initLazyLoad();
@@ -58,6 +59,43 @@ $(document).ready(function(){
   //////////
   // COMMON
   //////////
+
+  //
+  // ====================
+  function initTeleport(){
+    $('[js-teleport]').each(function (i, val) {
+      let self = $(val);
+      let objHtml = $(val).html();
+      let target = $('[data-teleport-target=' + $(val).data('teleport-to') + ']');
+      let conditionMedia = $(val).data('teleport-condition').substring(1);
+      let conditionPosition = $(val).data('teleport-condition').substring(0, 1);
+
+      if (target && objHtml && conditionPosition) {
+
+        function teleport() {
+          let condition;
+
+          if (conditionPosition === "<") {
+            condition = _window.width() < conditionMedia;
+          } else if (conditionPosition === ">") {
+            condition = _window.width() > conditionMedia;
+          }
+
+          if (condition) {
+            target.html(objHtml);
+            self.html('')
+          } else {
+            self.html(objHtml);
+            target.html("")
+          }
+        }
+
+        teleport();
+        _window.on('resize', debounce(teleport, 100));
+      }
+    })
+  }
+
 
   function legacySupport(){
     // svg support for laggy browsers
@@ -255,7 +293,13 @@ $(document).ready(function(){
     });
   }
   if($("#map-buy").length || $("#map-nearby").length) {
-    initMap();
+    var timerID = setInterval(function() {
+      if (window.google) {
+        initMap();
+        clearInterval(timerID)
+      }
+    }, 200);
+
   }
   // ====================
 
@@ -292,6 +336,8 @@ $(document).ready(function(){
 
       $(this).toggleClass('is-active');
 
+
+      // table data filters
       if($(this).is(".realty-js.is-active")) {
         if(tableSale) {
           tableSale.removeClass("is-active");
@@ -303,6 +349,23 @@ $(document).ready(function(){
           tableRent.removeClass("is-active");
         }
       }
+
+      // filter finished project
+      const projectRes = $("[project-residential-js]"),
+        projectComm = $("[project-commercial-js]");
+
+      if($(this).is(".project-js.is-active")) {
+        if(projectRes || projectComm) {
+          projectRes.removeClass("is-active");
+          projectComm.addClass("is-active");
+        }
+      } else if ($(this).is(".project-js")) {
+        if(projectRes || projectComm) {
+          projectRes.addClass("is-active");
+          projectComm.removeClass("is-active");
+        }
+      }
+
 
       if(inputCheckbox.prop('checked') === true){
         inputCheckbox.prop('checked', false).change();
@@ -610,42 +673,38 @@ $(document).ready(function(){
   // ====================
 
 
-  //
+  // BLOCK
   // ====================
-  function initTeleport(){
-    $('[js-teleport]').each(function (i, val) {
-      let self = $(val);
-      let objHtml = $(val).html();
-      let target = $('[data-teleport-target=' + $(val).data('teleport-to') + ']');
-      let conditionMedia = $(val).data('teleport-condition').substring(1);
-      let conditionPosition = $(val).data('teleport-condition').substring(0, 1);
+  _document.on("click", "[block-js]", function(e) {
+    var elem = $(e.currentTarget);
 
-      if (target && objHtml && conditionPosition) {
+    // $("[block-js]").removeClass("is-active");
+    elem.toggleClass("is-active");
+  });
+  // ====================
 
-        function teleport() {
-          let condition;
 
-          if (conditionPosition === "<") {
-            condition = _window.width() < conditionMedia;
-          } else if (conditionPosition === ">") {
-            condition = _window.width() > conditionMedia;
-          }
+  // CHOOSE FILE...
+  // ====================
+  var inputs = document.querySelectorAll('[inputfile-js]');
+  Array.prototype.forEach.call(inputs, function(el) {
+    var label	 = el.nextElementSibling,
+      labelVal = label.innerHTML;
 
-          if (condition) {
-            target.html(objHtml);
-            self.html('')
-          } else {
-            self.html(objHtml);
-            target.html("")
-          }
-        }
+    el.addEventListener('change', function(ev) {
+      var fileName = '';
 
-        teleport();
-        _window.on('resize', debounce(teleport, 100));
-      }
-    })
-  }
-  initTeleport();
+      fileName = ev.target.value.split('\\').pop();
+
+      if(fileName)
+        label.querySelector('span').innerHTML = fileName;
+      else
+        label.innerHTML = labelVal;
+    });
+  });
+
+
+
   // ====================
 
 
@@ -929,6 +988,32 @@ $(document).ready(function(){
     $(swapGallery0).not('.slick-initialized').slick(swapGalleryOption(sliderGallery0));
     $(swapGallery1).not('.slick-initialized').slick(swapGalleryOption(sliderGallery1));
     $(swapGallery2).not('.slick-initialized').slick(swapGalleryOption(sliderGallery2));
+
+    $('[data-js="progress"]').on('afterChange', function(event, slick, direction){
+      console.log(direction);
+      var index = $('[data-js="progress"] .slick-slide').index($('[data-js="progress"] .slick-current'))
+      console.log('index', index)
+
+      $('[data-js="progress"] .slick-slide').each(function( i ) {
+        console.log('i', i, this)
+        $(this).attr('data-offset', i - index )
+      })
+      // left
+    });
+    $('[data-js="progress"]').not('.slick-initialized').slick({
+      variableWidth: true,
+      infinite: true,
+      centerMode: true,
+      draggable: false,
+      dots: false,
+      prevArrow: sliderPrevBtn,
+      nextArrow: sliderNextBtn,
+    });
+
+    setTimeout(function() {
+      $('[data-js="progress"]').slick('slickNext');
+    }, 400)
+
     // ===============
   }
 
@@ -1003,6 +1088,8 @@ $(document).ready(function(){
   // Masked input
   function initMasks(){
     $("[js-dateMask]").mask("99.99.99",{placeholder:"ДД.ММ.ГГ"});
+    $("[percentMask-js]").mask('##0,00%', {reverse: true});
+    $("[numberMask-js]").mask('#');
     $("input[type='tel']").mask("+7 (000) 000-0000", {placeholder: "+7 (___) ___-____"});
   }
 

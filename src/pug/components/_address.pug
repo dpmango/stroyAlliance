@@ -1,0 +1,28 @@
+// ADDRESS :: START
+
+-
+  var downloadName = [
+    "ООО «Альянс-Строй»",
+    "ООО «Альянс-Гарант»",
+    "ООО «Альянс-Проект»",
+    "ООО «Энергопроект»"
+  ];
+
+
+.address
+  .container
+    h2.address__title!= 'ГК "Строй-Альянс"'
+    p.address__text.address__text--p!= "Юридический адрес: 300013, г.Тула, ул. Болдина, 33, 2-ой этаж, офис 1"
+    p.address__text.address__text--m!= "Телефон/факс секретаря: (4872) 70-22-81, (4872) 70-42-81"
+
+    p.address__subtitle!= "Скачать реквизиты"
+
+    ul.address__list
+      -for(var i = 0, len = downloadName.length; i < len; i++)
+        li.address__item
+          a.address__link(href="#" title="")
+            .address__link-iconWrap
+              i.icon-pdf
+            p.address__link-desc!= downloadName[i]
+
+// ADDRESS :: START

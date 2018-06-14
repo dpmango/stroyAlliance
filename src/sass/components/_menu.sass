@@ -3,6 +3,7 @@
 .menu
   display: none
   position: relative
+  flex-wrap: wrap
   top: -6px
   left: -2px
   +rmin($tablet)
@@ -25,6 +26,7 @@
 
   &__item
     white-space: nowrap
+    display: inline-block
 
     &:nth-child(1)
       .no-preloader &
@@ -70,7 +72,12 @@
       background-color: $colorWhite
       color: $colorNero
       +transition(background-color, color)
-      
+
+    .is-active &
+      background-color: $colorWhite
+      color: $colorNero
+      +transition(background-color, color)
+
     +rmin($tablet)
       font-size: 11px
     +rmin($desktop)
