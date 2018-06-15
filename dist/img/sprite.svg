@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><defs>
         <style>
+            .cls-1{fill:none;stroke:#505070;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    
+        <style>
             .cls-1{fill:#fff}
         </style>
     
@@ -14,7 +18,21 @@
         <style>
             .cls-1{fill:#fff}
         </style>
-    </defs><symbol id="ico-fb" viewBox="0 0 6.21 6.21">
+    </defs><symbol id="ico-doc" viewBox="0 0 44 56">
+    
+    <title>
+        doc
+    </title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Multimedia">
+            <path class="cls-1" d="M17 21h10"/>
+            <path class="cls-1" d="M9 29h26"/>
+            <path class="cls-1" d="M9 37h26"/>
+            <path class="cls-1" d="M43 55H1V1h32l10 10v44z"/>
+            <path class="cls-1" d="M33 1v10h10"/>
+        </g>
+    </g>
+</symbol><symbol id="ico-fb" viewBox="0 0 6.21 6.21">
     
     <title>
         fb
